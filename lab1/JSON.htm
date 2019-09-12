@@ -1,0 +1,617 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0020)http://www.json.org/ -->
+<HTML><HEAD><TITLE>JSON</TITLE>
+<META content="text/html; charset=utf-8" http-equiv=Content-Type>
+<META content=en http-equiv=Content-Language><LINK rel=icon type=image/gif 
+href="http://www.JSON.org/favicon.gif">
+<STYLE>UL UL {
+	LIST-STYLE-TYPE: disc
+}
+HR {
+	BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; PADDING-BOTTOM: 0px; BACKGROUND-COLOR: black; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; HEIGHT: 2px; COLOR: black; BORDER-TOP: 0px; BORDER-RIGHT: 0px; PADDING-TOP: 0px
+}
+A {
+	TEXT-DECORATION: none
+}
+A:link {
+	COLOR: navy
+}
+A:visited {
+	COLOR: maroon
+}
+A:hover {
+	COLOR: blue; TEXT-DECORATION: underline
+}
+A:active {
+	COLOR: red
+}
+</STYLE>
+
+<META name=GENERATOR content="MSHTML 9.00.8112.16496"></HEAD>
+<BODY bgColor=linen>
+<TABLE border=0 width="100%">
+  <TBODY>
+  <TR>
+    <TD vAlign=middle width=160 align=center><IMG border=0 alt="json logo" 
+      align=left src="JSON_files/json160.gif" width=160 height=160></TD>
+    <TD vAlign=middle align=center>
+      <DIV 
+      style="BORDER-BOTTOM: black 2px solid; BORDER-LEFT: black 2px solid; PADDING-BOTTOM: 10px; BACKGROUND-COLOR: white; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; FONT-FAMILY: serif; MARGIN-LEFT: 40px; BORDER-TOP: black 2px solid; MARGIN-RIGHT: 40px; BORDER-RIGHT: black 2px solid; PADDING-TOP: 10px">
+      <H1 align=center>Introducing JSON</H1></DIV></TD></TR></TBODY></TABLE>
+<HR>
+
+<DIV align=center><SMALL><A href="http://www.json.org/json-ar.html">العربية</A> 
+<A href="http://www.json.org/json-bg.html">Български</A> <A 
+href="http://www.json.org/json-zh.html">中文</A> <A 
+href="http://www.json.org/json-cz.html">Český</A> <A 
+href="http://www.json.org/json-da.html">Dansk</A> <A 
+href="http://www.json.org/json-nl.html">Nederlands</A> <A 
+href="http://www.json.org/index.html">English</A> <A 
+href="http://www.json.org/json-eo.html">Esperanto</A> <A 
+href="http://www.json.org/json-fr.html">Français</A> <A 
+href="http://www.json.org/json-de.html">Deutsch</A> <A 
+href="http://www.json.org/json-el.html">Ελληνικά</A> <A 
+href="http://www.json.org/json-he.html">עברית</A> <A 
+href="http://www.json.org/json-hu.html">Magyar</A> <A 
+href="http://www.json.org/json-id.html">Indonesia</A> <BR><A 
+href="http://www.json.org/json-it.html">Italiano</A> <A 
+href="http://www.json.org/json-ja.html">日本</A> <A 
+href="http://www.json.org/json-ko.html">한국어</A> <A 
+href="http://www.json.org/json-fa.html">فارسی</A> <A 
+href="http://www.json.org/json-pl.html">Polski</A> <A 
+href="http://www.json.org/json-pt.html">Português</A> <A 
+href="http://www.json.org/json-ro.html">Română</A> <A 
+href="http://www.json.org/json-ru.html">Русский</A> <A 
+href="http://www.json.org/json-sr.html">Српско-хрватски</A> <A 
+href="http://www.json.org/json-sl.html">Slovenščina</A> <A 
+href="http://www.json.org/json-es.html">Español</A> <A 
+href="http://www.json.org/json-sv.html">Svenska</A> <A 
+href="http://www.json.org/json-tr.html">Türkçe</A> <A 
+href="http://www.json.org/json-vi.html">Tiếng Việt</A> </SMALL></DIV>
+<HR>
+
+<DIV 
+style="BORDER-BOTTOM: black 2px solid; BORDER-LEFT: black 2px solid; PADDING-BOTTOM: 10px; BACKGROUND-COLOR: white; MARGIN: 10px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; FLOAT: right; BORDER-TOP: black 2px solid; BORDER-RIGHT: black 2px solid; PADDING-TOP: 10px">
+<DL>
+  <DT><I>object</I> 
+  <DD><TT><B>{}</B></TT><BR><TT><B>{</B></TT> <I>members</I> <TT><B>}</B></TT> 
+  <DT><TT><B></B></TT>
+  <DT><I>members</I> 
+  <DD><I>pair</I><BR><I>pair</I> <TT><B>,</B></TT> <I>members</I> 
+  <DT><I>pair</I> 
+  <DD><I>string</I> <TT><B>:</B></TT> <I>value</I> 
+  <DT><I>array</I> 
+  <DD><TT><B>[]</B></TT><BR><TT><B>[</B></TT> <I>elements</I> <TT><B>]</B></TT> 
+  <DT><I>elements</I> 
+  <DD><I>value</I> <BR><I>value</I> <TT><B>,</B></TT> <I>elements</I> 
+  <DT><I>value</I> 
+  <DD><I>string</I><BR><I>number</I><BR><I>object</I><BR><I>array</I><BR><TT><B>true</B></TT><BR><TT><B>false</B></TT><BR><TT><B>null</B></TT> 
+  </DD></DL>
+<HR align=center width=144>
+
+<DL>
+  <DT><I>string</I> 
+  <DD><TT><B>""</B></TT><BR><TT><B>"</B></TT> <I>chars</I> <TT><B>"</B></TT> 
+  <DT><I>chars</I> 
+  <DD><I>char</I><BR><I>char chars</I> 
+  <DT><I>char</I> 
+  <DD><SMALL><I>any-Unicode-character-</I></SMALL><BR><SMALL>&nbsp;&nbsp;&nbsp;&nbsp;<I>except-</I></SMALL><B><TT>"</TT></B><SMALL><I>-or-</I></SMALL><B><TT>\</TT></B><SMALL><I>-or-</I></SMALL><BR><SMALL>&nbsp;&nbsp;&nbsp;&nbsp;<I>control-character</I></SMALL><BR><TT><B>\"</B></TT><BR><TT><B>\\</B></TT><BR><TT><B>\/</B></TT><BR><TT><B>\b</B></TT><BR><TT><B>\f</B></TT><BR><TT><B>\n</B></TT><BR><TT><B>\r</B></TT><BR><TT><B>\t</B></TT><BR><TT><B>\u</B></TT> 
+  <I>four-hex-digits</I> 
+  <DT><I>number</I> 
+  <DD><I>int</I><BR><I>int frac</I><BR><I>int exp</I><BR><I>int frac exp</I> 
+  <DT><I>int</I> 
+  <DD><I>digit</I><BR><I>digit1-9 digits</I> <BR><TT><B>-</B></TT> 
+  <I>digit</I><BR><TT><B>-</B></TT> <I>digit1-9 digits</I> 
+  <DT><I>frac</I> 
+  <DD><B><TT>.</TT></B> <I>digits</I> 
+  <DT><I>exp</I> 
+  <DD><I>e</I> <I>digits</I> 
+  <DT><I>digits</I> 
+  <DD><I>digit</I><BR><I>digit</I> <I>digits</I> 
+  <DT><I>e</I> 
+  <DD><B><TT>e</TT></B><BR><B><TT>e+</TT></B><BR><B><TT>e-</TT></B><BR><B><TT>E</TT></B><BR><B><TT>E+</TT></B><BR><B><TT>E-</TT></B> 
+  </DD></DL></DIV>
+<P><B>JSON</B> (JavaScript Object Notation) is a lightweight data-interchange 
+format. It is easy for humans to read and write. It is easy for machines to 
+parse and generate. It is based on a subset of the <A 
+href="http://javascript.crockford.com/">JavaScript Programming Language</A>, <A 
+href="http://www.ecma-international.org/publications/files/ecma-st/ECMA-262.pdf">Standard 
+ECMA-262 3rd Edition - December 1999</A>. JSON is a text format that is 
+completely language independent but uses conventions that are familiar to 
+programmers of the C-family of languages, including C, C++, C#, Java, 
+JavaScript, Perl, Python, and many others. These properties make JSON an ideal 
+data-interchange language.</P>
+<P>JSON is built on two structures:</P>
+<UL>
+  <LI>A collection of name/value pairs. In various languages, this is realized 
+  as an <I>object</I>, record, struct, dictionary, hash table, keyed list, or 
+  associative array. 
+  <LI>An ordered list of values. In most languages, this is realized as an 
+  <I>array</I>, vector, list, or sequence. </LI></UL>
+<P>These are universal data structures. Virtually all modern programming 
+languages support them in one form or another. It makes sense that a data format 
+that is interchangeable with programming languages also be based on these 
+structures.</P>
+<P>In JSON, they take on these forms:</P>
+<P>An <I>object</I> is an unordered set of name/value pairs. An object begins 
+with <TT>{</TT>&nbsp;<SMALL>(left brace)</SMALL> and ends with 
+<TT>}</TT>&nbsp;<SMALL>(right brace)</SMALL>. Each name is followed by 
+<TT>:</TT>&nbsp;<SMALL>(colon)</SMALL> and the name/value pairs are separated by 
+<TT>,</TT>&nbsp;<SMALL>(comma)</SMALL>.</P>
+<P><IMG src="JSON_files/object.gif" width=598 height=113></P>
+<P>An <I>array</I> is an ordered collection of values. An array begins with 
+<TT>[</TT>&nbsp;<SMALL>(left bracket)</SMALL> and ends with 
+<TT>]</TT>&nbsp;<SMALL>(right bracket)</SMALL>. Values are separated by 
+<TT>,</TT>&nbsp;<SMALL>(comma)</SMALL>.</P>
+<P><IMG src="JSON_files/array.gif" width=598 height=113></P>
+<P>A <I>value</I> can be a <I>string</I> in double quotes, or a <I>number</I>, 
+or <TT>true</TT> or <TT>false</TT> or <TT>null</TT>, or an <I>object</I> or an 
+<I>array</I>. These structures can be nested.</P>
+<P><IMG src="JSON_files/value.gif" width=598 height=278></P>
+<P>A <I>string</I> is a sequence of zero or more Unicode characters, wrapped in 
+double quotes, using backslash escapes. A character is represented as a single 
+character string. A string is very much like a C or Java string.</P>
+<P><IMG src="JSON_files/string.gif" width=598 height=413></P>
+<P>A <I>number</I> is very much like a C or Java number, except that the octal 
+and hexadecimal formats are not used.</P>
+<P><IMG src="JSON_files/number.gif" width=598 height=266></P>
+<P>Whitespace can be inserted between any pair of tokens. Excepting a few 
+encoding details, that completely describes the language.</P>
+<HR>
+
+<DIV style="FLOAT: left">
+<UL>
+  <LI>ABAP:
+  <UL>
+    <LI><A 
+    href="http://www.epoconsulting.com/index.php/en/solution/sap-integration">EPO 
+    Connector</A>. </LI></UL>
+  <LI>ActionScript:
+  <UL>
+    <LI><A href="http://github.com/mikechambers/as3corelib">ActionScript3</A>. 
+    <LI><A 
+    href="http://www.adobe.com/cfusion/exchange/index.cfm?event=extensionDetail&amp;extid=1078469">JSONConnector</A>. 
+    </LI></UL>
+  <LI>Ada:
+  <UL>
+    <LI><A 
+    href="http://docs.adacore.com/gnatcoll-docs/json.html">GNATCOLL.JSON</A>. 
+    </LI></UL>
+  <LI>ASP:
+  <UL>
+    <LI><A href="http://code.google.com/p/aspjson/">JSON for ASP</A>. 
+    <LI><A 
+    href="http://www.webdevbros.net/2007/04/26/generate-json-from-asp-datatypes/">JSON 
+    ASP utility class</A>. </LI></UL>
+  <LI>AWK:
+  <UL>
+    <LI><A href="https://github.com/step-/JSON.awk">JSON.awk</A>. </LI></UL>
+  <LI>Bash:
+  <UL>
+    <LI><A href="http://kmkeen.com/jshon/">Jshon</A>. 
+    <LI><A href="https://github.com/dominictarr/JSON.sh">JSON.sh</A>. </LI></UL>
+  <LI>BlitzMax:
+  <UL>
+    <LI><A href="https://github.com/Trylobot/bmx-rjson">bmx-rjson</A>. </LI></UL>
+  <LI>C:
+  <UL>
+    <LI><A href="http://www.json.org/JSON_checker/">JSON_checker</A>. 
+    <LI><A href="http://lloyd.github.com/yajl/">YAJL</A>. 
+    <LI><A href="http://github.com/quartzjer/js0n/blob/master/js0n.c">js0n</A>. 
+    <LI><A 
+    href="http://github.com/koanlogic/libu/blob/master/srcs/toolbox/json.c">LibU</A>. 
+
+    <LI><A href="https://github.com/jehiah/json-c">json-c</A>. 
+    <LI><A href="https://github.com/udp/json-parser">json-parser</A>. 
+    <LI><A href="https://github.com/mnunberg/jsonsl">jsonsl</A>. 
+    <LI><A href="https://github.com/netmail-open/wjelement">WJElement</A>. 
+    <LI><A href="http://sourceforge.net/projects/mjson/">M's JSON parser</A>. 
+    <LI><A href="https://sourceforge.net/projects/cjson/">cJSON</A>. 
+    <LI><A href="http://www.digip.org/jansson/">Jansson</A>. 
+    <LI><A href="https://bitbucket.org/zserge/jsmn/wiki/Home">jsmn</A>. 
+    <LI><A 
+    href="http://fossil.wanderinghorse.net/wikis/cson/?page=cson">cson</A>. 
+    <LI><A href="http://kgabis.github.com/parson/">parson</A>. 
+    <LI><A href="https://github.com/esnme/ujson4c/">ujson4c</A>. 
+    <LI><A href="https://bitbucket.org/yarosla/nxjson/src">nxjson</A>. </LI></UL>
+  <LI>C++:
+  <UL>
+    <LI><A href="https://github.com/johnezang/JSONKit">JSONKit</A>. 
+    <LI><A href="https://github.com/pibara/jsonme--">jsonme--</A>. 
+    <LI><A 
+    href="https://github.com/Loki-Astari/ThorsSerializer">ThorsSerializer</A>. 
+    <LI><A href="https://github.com/anhero/JsonBox">JsonBox</A>. 
+    <LI><A href="http://sourceforge.net/projects/jsoncpp/">jsoncpp</A>. 
+    <LI><A href="http://www.zoolib.org/doc/">zoolib</A>. 
+    <LI><A 
+    href="http://ddsbench.svn.sourceforge.net/viewvc/ddsbench/trunk/jost/">JOST</A>. 
+
+    <LI><A href="http://cajun-jsonapi.sourceforge.net/">CAJUN</A>. 
+    <LI><A href="http://sourceforge.net/projects/libjson/">libjson</A>. 
+    <LI><A 
+    href="http://fossil.wanderinghorse.net/repos/nosjob/index.cgi/index">nosjob</A>. 
+
+    <LI><A href="http://code.google.com/p/rapidjson/">rapidjson</A>. 
+    <LI><A href="http://sourceforge.net/projects/jsoncons/">jsoncons</A>. 
+    <LI><A href="https://bitbucket.org/tunnuz/json">JSON++</A>. </LI></UL>
+  <LI>C#:
+  <UL>
+    <LI><A href="http://www.codeproject.com/KB/IP/fastJSON.aspx">fastJSON</A>. 
+    <LI><A href="http://www.raboof.com/projects/jsonchecker/">JSON_checker</A>. 
+    <LI><A href="http://jayrock.berlios.de/">Jayrock</A>. 
+    <LI><A href="http://james.newtonking.com/projects/json-net.aspx">Json.NET - 
+    LINQ to JSON</A>. 
+    <LI><A href="http://lbv.github.io/litjson/">LitJSON</A>. 
+    <LI><A href="http://sourceforge.net/projects/csjson">JSON for .NET</A>. 
+    <LI><A href="http://jsonfx.net/download/">JsonFx</A>. 
+    <LI><A href="http://codetitans.codeplex.com/">JSON@CodeTitans</A> 
+    <LI><A 
+    href="http://techblog.procurios.nl/k/618/news/view/14605/14863/How-do-I-write-my-own-parser-for-JSON.html">How 
+    do I write my own parser?</A> 
+    <LI><A href="http://code.google.com/p/jsonsharp/">JSONSharp</A>. 
+    <LI><A 
+    href="http://code.google.com/p/jsonexserializer/">JsonExSerializer</A>. 
+    <LI><A href="http://code.google.com/p/fluent-json/">fluent-json</A> 
+    <LI><A href="http://sourceforge.net/projects/manateejson/">Manatee Json</A> 
+    </LI></UL>
+  <LI>Ciao: 
+  <UL>
+    <LI><A href="http://ciaohome.org/docs/ciao/json.html">Ciao JSON encoder and 
+    decoder</A> </LI></UL>
+  <LI>Clojure: 
+  <UL>
+    <LI><A href="http://clojure.github.com/data.json/">data.json</A>. </LI></UL>
+  <LI>Cobol: 
+  <UL>
+    <LI><A href="http://www.xmlthunder.com/">XML Thunder</A>. </LI></UL>
+  <LI>ColdFusion: 
+  <UL>
+    <LI><A 
+    href="http://help.adobe.com/en_US/ColdFusion/10.0/CFMLRef/WSc3ff6d0ea77859461172e0811cbec22c24-79fa.html">SerializeJSON</A>. 
+
+    <LI><A href="http://tojson.riaforge.org/">toJSON</A>. </LI></UL>
+  <LI>D: 
+  <UL>
+    <LI><A 
+    href="http://www.dsource.org/projects/cashew/wiki/WikiStart">Cashew</A>. 
+    <LI><A 
+    href="https://256.makerslocal.org/wiki/index.php/Libdjson">Libdjson</A>. 
+    </LI></UL></LI></UL></DIV>
+<DIV style="FLOAT: left">
+<UL>
+  <LI>Dart: 
+  <UL>
+    <LI><A href="http://api.dartlang.org/json.html">json library</A>. </LI></UL>
+  <LI>Delphi: 
+  <UL>
+    <LI><A href="https://sourceforge.net/projects/is-webstart/">Delphi Web 
+    Utils</A>. 
+    <LI><A href="http://sourceforge.net/projects/lkjson">JSON Delphi 
+    Library</A>. 
+    <LI><A href="http://code.google.com/p/tiny-json/">tiny-json</A>. </LI></UL>
+  <LI>E:
+  <UL>
+    <LI><A href="http://erights.org/data/terml/embeddings.html">JSON in 
+    TermL</A>.</LI></UL>
+  <LI>Erlang:
+  <UL>
+    <LI><A href="http://github.com/davisp/ejson">ejson</A>. 
+    <LI><A 
+    href="http://code.google.com/p/mochiweb/source/browse/trunk/src/mochijson2.erl">mochijson2</A>. 
+    </LI></UL>
+  <LI>Fantom:
+  <UL>
+    <LI><A href="http://fantom.org/doc/docLib/Json.html">Json</A>.</LI></UL>
+  <LI>Fortran:
+  <UL>
+    <LI><A 
+  href="http://sourceforge.net/projects/yajl-fort/">YAJL-Fort</A>.</LI></UL>
+  <LI>Go:
+  <UL>
+    <LI><A href="http://golang.org/pkg/encoding/json/">package json</A>.</LI></UL>
+  <LI>Haskell: 
+  <UL>
+    <LI><A 
+    href="http://hackage.haskell.org/cgi-bin/hackage-scripts/package/RJson">RJson 
+    package</A>. 
+    <LI><A 
+    href="http://hackage.haskell.org/cgi-bin/hackage-scripts/package/json">json 
+    package</A>. </LI></UL>
+  <LI>Java: 
+  <UL>
+    <LI><A href="http://www.json.org/java/index.html">org.json</A>. 
+    <LI><A href="https://github.com/upictec/org.json.me/">org.json.me</A>. 
+    <LI><A href="http://jackson.codehaus.org/">Jackson JSON Processor</A>. 
+    <LI><A href="http://json-lib.sourceforge.net/">Json-lib</A>. 
+    <LI><A href="http://developer.berlios.de/projects/jsontools/">JSON 
+    Tools</A>. 
+    <LI><A href="http://www.stringtree.org/stringtree-json.html">Stringtree</A>. 
+
+    <LI><A href="http://sojo.sourceforge.net/">SOJO</A>. 
+    <LI><A href="http://jettison.codehaus.org/">Jettison</A>. 
+    <LI><A href="http://json-taglib.sourceforge.net/">json-taglib</A>. 
+    <LI><A href="http://xstream.codehaus.org/">XStream</A>. 
+    <LI><A href="http://flexjson.sourceforge.net/">Flexjson</A>. 
+    <LI><A href="http://sourceforge.net/projects/jontools/">JON tools</A>. 
+    <LI><A href="http://argo.sourceforge.net/">Argo</A>. 
+    <LI><A href="https://bitbucket.org/jmarsden/jsonij">jsonij</A>. 
+    <LI><A href="http://sourceforge.net/projects/fastjson/">fastjson</A>. 
+    <LI><A 
+    href="http://sharegov.blogspot.com/2011/06/json-library.html">mjson</A>. 
+    <LI><A href="https://github.com/grobmeier/jjson">jjson</A>. 
+    <LI><A href="http://code.google.com/p/json-simple/">json-simple</A>. 
+    <LI><A href="http://code.google.com/p/json-io/">json-io</A>. 
+    <LI><A href="http://code.google.com/p/jsonmarshaller/">JsonMarshaller</A>. 
+    <LI><A href="http://code.google.com/p/google-gson/">google-gson</A>. 
+    <LI><A href="http://code.google.com/p/json-smart/">Json-smart</A>. 
+    <LI><A href="https://github.com/fossnova/json">FOSS Nova JSON</A>. 
+    <LI><A 
+    href="https://sites.google.com/site/javacornproject/corn-converter">Corn 
+    CONVERTER</A>. </LI></UL>
+  <LI>JavaScript: 
+  <UL>
+    <LI><A 
+    href="http://www.ecma-international.org/publications/standards/Ecma-262.htm">JSON</A>. 
+
+    <LI><A href="https://github.com/douglascrockford/JSON-js">json2.js</A>. 
+    <LI><A href="http://code.google.com/p/json-sans-eval/">json_sans_eval</A>. 
+    <LI><A href="https://github.com/dscape/clarinet">clarinet</A>. 
+    <LI><A href="https://github.com/jimhigson/oboe.js">oboe.js</A>. </LI></UL>
+  <LI>LabVIEW:
+  <UL>
+    <LI><A 
+    href="https://decibel.ni.com/content/groups/interactive-internet-interface-json-toolkit-for-labview">i3-JSON</A>. 
+
+    <LI><A href="http://lavag.org/files/file/216-json-labview/">LAVA JSON</A>. 
+    </LI></UL>
+  <LI>Lisp:
+  <UL>
+    <LI><A href="http://common-lisp.net/project/cl-json/">Common Lisp JSON</A>. 
+    <LI><A href="http://common-lisp.net/project/yason/">Yason</A>. 
+    <LI><A href="http://edward.oconnor.cx/elisp/json.el">Emacs Lisp</A>. 
+</LI></UL>
+  <LI>LiveCode:
+  <UL>
+    <LI><A href="https://github.com/montegoulding/mergJSON">mergJSON</A>. 
+  </LI></UL>
+  <LI>LotusScript:
+  <UL>
+    <LI><A 
+    href="http://www.openntf.org/Projects/pmt.nsf/ProjectHome?ReadForm&amp;Query=JSON%20LS">JSON 
+    LS</A>. </LI></UL>
+  <LI>Lua:
+  <UL>
+    <LI><A href="http://lua-users.org/wiki/JsonModules">JSON Modules</A>. 
+  </LI></UL>
+  <LI>M:
+  <UL>
+    <LI><A 
+    href="https://github.com/lparenteau/DataBallet/blob/master/r/json.m">DataBallet</A>. 
+    </LI></UL>
+  <LI>Matlab: 
+  <UL>
+    <LI><A 
+    href="http://iso2mesh.sourceforge.net/cgi-bin/index.cgi?jsonlab">JSONlab</A>. 
+
+    <LI><A 
+    href="http://www.mathworks.com/matlabcentral/fileexchange/20565">20565</A>. 
+    <LI><A 
+    href="http://www.mathworks.com/matlabcentral/fileexchange/23393">23393</A>. 
+    </LI></UL>
+  <LI>Net.Data:
+  <UL>
+    <LI><A href="https://github.com/blackchair/netdata-json">netdata-json</A>. 
+    </LI></UL></LI></UL></DIV>
+<DIV style="FLOAT: left">
+<UL>
+  <LI>Objective C: 
+  <UL>
+    <LI><A href="https://github.com/stig/json-framework/">json-framework</A>. 
+    <LI><A href="https://github.com/johnezang/JSONKit">JSONKit</A>. 
+    <LI><A href="https://github.com/gabriel/yajl-objc">yajl-objc</A>. 
+    <LI><A href="https://github.com/TouchCode/TouchJSON">TouchJSON</A>. 
+    <LI><A 
+    href="https://webkeks.org/objfw/docs/latest/protocol_o_f_j_s_o_n_representation-p.html">ObjFW</A>. 
+    </LI></UL>
+  <LI>OCaml: 
+  <UL>
+    <LI><A href="http://martin.jambon.free.fr/yojson.html">Yojson</A>. 
+    <LI><A href="http://erratique.ch/software/jsonm">jsonm</A>. </LI></UL>
+  <LI>OpenLaszlo: 
+  <UL>
+    <LI><A href="http://osteele.com/sources/openlaszlo/json/">JSON</A>. </LI></UL>
+  <LI>PascalScript: 
+  <UL>
+    <LI><A href="https://github.com/koldev/JsonParser">JsonParser</A>. </LI></UL>
+  <LI>Perl:
+  <UL>
+    <LI><A href="http://search.cpan.org/search?query=JSON">CPAN</A>. 
+    <LI><A href="https://github.com/mnunberg/perl-JSON-SL">perl-JSON-SL</A>. 
+    </LI></UL>
+  <LI>PHP:
+  <UL>
+    <LI><A href="http://www.php.net/releases/5_2_0.php">PHP 5.2</A>. 
+    <LI><A href="http://pecl.php.net/package/json">json</A>. 
+    <LI><A 
+    href="http://pear.php.net/pepr/pepr-proposal-show.php?id=198">Services_JSON</A>. 
+
+    <LI><A 
+    href="http://framework.zend.com/manual/en/zend.json.html">Zend_JSON</A>. 
+    <LI><A href="http://solarphp.com/class/Solar_Json">Solar_Json</A>. 
+    <LI><A 
+    href="http://gggeek.altervista.org/sw/article_20061113.html">Comparison of 
+    php json libraries</A>. </LI></UL>
+  <LI>Pike:
+  <UL>
+    <LI><A 
+    href="http://modules.gotpike.org/module_info.html?module_id=33">Public.Parser.JSON</A>. 
+
+    <LI><A 
+    href="http://modules.gotpike.org/module_info.html?select=0.2&amp;module_id=43">Public.Parser.JSON2</A>. 
+    </LI></UL>
+  <LI>PL/SQL</A>:
+  <UL>
+    <LI><A href="http://sourceforge.net/projects/pljson">pljson</A>: 
+    <LI><A 
+    href="http://reseau.erasme.org/Librairie-JSON">Librairie-JSON</A>.</LI></UL>
+  <LI>PowerShell:
+  <UL>
+    <LI><A href="http://www.codeplex.com/PowerShellJSON">PowerShell</A>.</LI></UL>
+  <LI>Prolog:
+  <UL>
+    <LI><A href="http://www.swi-prolog.org/">SWI-Prolog HTTP support</A> 
+</LI></UL>
+  <LI>Puredata:
+  <UL>
+    <LI><A href="https://github.com/residuum/PuRestJson">PuRestJson</A> </LI></UL>
+  <LI>Python:
+  <UL>
+    <LI><A href="http://docs.python.org/library/json.html">The Python Standard 
+    Library</A>. 
+    <LI><A href="http://pypi.python.org/pypi/simplejson/">simplejson</A>. 
+    <LI><A href="http://jyson.xhaus.com/">pyson</A>. 
+    <LI><A href="http://pykler.github.com/yajl-py/">Yajl-Py</A>. 
+    <LI><A href="https://github.com/esnme/ultrajson">ultrajson</A>. 
+    <LI><A 
+    href="http://pypi.python.org/pypi/metamagic.json/">metamagic.json</A>. 
+  </LI></UL>
+  <LI>Qt:
+  <UL>
+    <LI><A href="http://qjson.sourceforge.net/">QJson</A>.</LI></UL>
+  <LI>R:
+  <UL>
+    <LI><A 
+    href="http://cran.r-project.org/web/packages/rjson/index.html">rjson</A>.</LI></UL>
+  <LI>Racket:
+  <UL>
+    <LI><A 
+    href="http://www.neilvandyke.org/racket-json-parsing/">json-parsing</A>.</LI></UL>
+  <LI>Rebol:
+  <UL>
+    <LI><A href="http://www.json.org/json.r">json.r</A>.</LI></UL>
+  <LI>RPG:
+  <UL>
+    <LI><A href="http://rpgnextgen.com/index.php?content=json">JSON 
+    Utilities</A>.</LI></UL>
+  <LI>Ruby:
+  <UL>
+    <LI><A href="http://json.rubyforge.org/">json</A>. 
+    <LI><A href="http://github.com/brianmario/yajl-ruby">yajl-ruby</A>. 
+    <LI><A href="https://github.com/dgraham/json-stream">json-stream</A>. 
+  </LI></UL>
+  <LI>Scala:
+  <UL>
+    <LI><A 
+    href="http://www.scala-lang.org/api/current/index.html#scala.util.parsing.json.package">package 
+    json</A>. </LI></UL>
+  <LI>Scheme:
+  <UL>
+    <LI><A 
+    href="http://www.lshift.net/blog/2005/08/22/json-for-mzscheme-and-a-portable-packrat-parsing-combinator-library">MZScheme</A>. 
+
+    <LI><A 
+    href="http://planet.plt-scheme.org/display.ss?package=json.plt&amp;owner=dherman">PLT 
+    Scheme</A>. </LI></UL>
+  <LI>Squeak:
+  <UL>
+    <LI><A 
+    href="http://map1.squeakfoundation.org/sm/package/d38bdc2d-e52a-4167-ae73-2cf438c65c2f">Squeak</A>.</LI></UL>
+  <LI>Symbian:
+  <UL>
+    <LI><A 
+    href="http://code.google.com/p/s60-json-library/">s60-json-library</A>.</LI></UL>
+  <LI>Tcl:
+  <UL>
+    <LI><A href="http://wiki.tcl.tk/13419">JSON</A>.</LI></UL>
+  <LI>Visual Basic:
+  <UL>
+    <LI><A 
+    href="http://www.ediy.co.nz/vbjson-json-parser-library-in-vb6-xidc55680.html">VB-JSON</A>. 
+
+    <LI><A 
+    href="http://www.pozzware.com/pozzware/Corsi/Programmazione/VB.NET/JSON%20Library.aspx">PW.JSON</A>. 
+    </LI></UL>
+  <LI>Visual FoxPro:
+  <UL>
+    <LI><A 
+    href="http://www.foxweb.com/document/index.htm?page=/document/fwJSONObject.htm">fwJSON</A>. 
+
+    <LI><A 
+    href="http://www.sweetpotatosoftware.com/SPSBlog/PermaLink,guid,5f96efd7-f350-4bc8-86c5-caffd9e833eb.aspx">JSON</A>. 
+
+    <LI><A href="http://code.google.com/p/vfpjson/">vfpjson</A>. 
+</LI></UL></LI></UL></DIV><BR clear=left>
+<HR>
+
+<DIV style="FLOAT: left">
+<UL>
+  <LI><A 
+  href="http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf">ECMA-404 
+  The JSON Data Interchange Standard</A>. 
+  <LI><A href="http://www.ietf.org/rfc/rfc4627.txt?number=4627">RFC 4627 MIME: 
+  application/json</A>. <BR>
+  <LI><A href="http://tech.groups.yahoo.com/group/json/">The JSON Group on 
+  Yahoo!</A> <BR>
+  <LI><A href="http://www.jslint.com/">JSLint, Syntax Checker.</A> 
+  <LI><A href="http://www.jsonlint.com/">JSONLint, The JSON Validator</A>. 
+  <LI><A href="http://waterken.sourceforge.net/web_send/">JSON shell for the 
+  browser</A> 
+  <LI><A href="http://www.freeformatter.com/json-formatter.html">JSON 
+  Formatter</A> 
+  <LI><A href="http://www.jsondesigner.com/">JSON Designer</A> 
+  <LI><A href="http://www.jsoneditoronline.org/">JSON Editor</A> 
+  <LI><A href="http://json.parser.online.fr/">JSON Parser</A> 
+  <LI><A href="http://www.jsontest.com/">JSON Test</A> 
+  <LI><A href="http://www.ist.rit.edu/~jxs/services/JSON/">JSON Explorer</A> 
+  </LI></UL></DIV>
+<DIV style="FLOAT: left">
+<UL>
+  <LI><A href="http://goessner.net/articles/jsont/">JSONT</A>. 
+  <LI><A href="http://goessner.net/articles/JsonPath/">JSONPath</A>. 
+  <LI><A href="http://adriank.github.io/ObjectPath/">ObjectPath</A>. 
+  <LI><A href="http://jsonselect.org/">JSONSelect</A>. 
+  <LI><A href="http://www.jsoniq.org/">JSONiq</A>. 
+  <LI><A href="http://tools.ietf.org/html/draft-zyp-json-schema-03">Draft JSON 
+  Schema</A>. 
+  <LI><A href="http://code.google.com/p/json-template/">json-template</A>. 
+  <LI><A href="http://bluelinecity.com/software/jpath">JPath</A>. 
+  <LI><A href="http://code.google.com/p/jaql/">jaql</A>. 
+  <LI><A href="http://itemscript.org/">Itemscript</A>. 
+  <LI><A href="http://www.jspon.org/">JSPON</A>. 
+  <LI><A href="http://jsonml.org/">JsonML</A>. 
+  <LI><A href="http://www.mongodb.org/display/DOCS/BSON">BSON</A>. 
+  <LI><A href="http://code.google.com/p/rson/">RSON</A>. 
+  <LI><A href="http://json-ld.org/">JSON-LD</A>. </LI></UL></DIV>
+<DIV style="FLOAT: left">
+<UL>
+  <LI><A href="http://couchdb.apache.org/">CouchDB</A>. 
+  <LI><A href="http://www.mongodb.org/display/DOCS/Home">MongoDB</A>. 
+  <LI><A 
+  href="http://code.nytimes.com/projects/dbslayer/wiki/WikiStart">DBSlayer</A>. 
+  <LI><A href="http://mql.freebaseapps.com/">Metaweb Query Language</A>. 
+  <LI><A href="http://sourceforge.net/projects/chaidb/">ChaiDB</A>. 
+  <LI><A href="http://code.google.com/p/persevere-framework/">Persevere</A>. 
+  <LI><A href="http://fleetdb.org/">FleetDB</A>. 
+  <LI><A href="http://www.orientechnologies.com/orient-db.htm">OrientDB</A>. 
+  <LI><A href="http://code.google.com/p/terrastore/">terrastore</A>. 
+  <LI><A href="https://github.com/isubiker/mljson">MLJSON</A>. 
+  <LI><A href="https://plus.google.com/102996492799476998051" 
+  rel=publisher>Google+</A>. </LI></UL></DIV>
+<DIV style="FLOAT: left">
+<UL>
+  <LI><A href="http://json-rpc.org/">JSON-RPC</A>. 
+  <LI><A href="http://jabsorb.org/">jabsorb</A>. 
+  <LI><A href="http://sites.google.com/site/simpleremoting/home">Simple 
+  Remoting</A>. <BR>
+  <LI><A 
+  href="https://www.p6r.com/articles/2008/05/06/xslt-and-xpath-for-json/">XSLT 
+  and XPath for JSON</A>. 
+  <LI><A href="http://code.google.com/p/xml2json-xslt/">xml2json-xslt</A>. 
+  <LI><A href="http://www.bramstein.com/projects/xsltjson/">XSLTJSON</A>. 
+  <LI><A 
+  href="http://www.ibm.com/developerworks/xml/library/x-xml2jsonphp/">x-xml2jsonphp</A>. 
+
+  <LI><A href="http://beebole.com/pure/">Pure</A>. 
+  <LI><A href="http://github.com/darwin/csv2json">csv2json</A>. 
+  <LI><A href="http://www.json.org/fatfree.html">The Fat-free Alternative to 
+  XML</A> </LI></UL></DIV></BODY></HTML>
