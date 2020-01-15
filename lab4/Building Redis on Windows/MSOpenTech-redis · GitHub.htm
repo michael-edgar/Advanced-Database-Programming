@@ -1,0 +1,1620 @@
+﻿<!DOCTYPE HTML>
+<!-- saved from url=(0035)https://github.com/MSOpenTech/redis -->
+<!DOCTYPE html PUBLIC "" ""><HTML lang="en"><HEAD prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# object: http://ogp.me/ns/object# article: http://ogp.me/ns/article# profile: http://ogp.me/ns/profile#"><META 
+content="IE=11.0000" http-equiv="X-UA-Compatible">
+     
+<META charset="utf-8">     
+<META http-equiv="X-UA-Compatible" content="IE=edge">     
+<META http-equiv="Content-Language" content="en">             
+<TITLE>MSOpenTech/redis · GitHub</TITLE>     <LINK title="GitHub" href="/opensearch.xml" 
+rel="search" type="application/opensearchdescription+xml">     <LINK title="GitHub" 
+href="https://github.com/fluidicon.png" rel="fluid-icon">     <LINK href="/apple-touch-icon-114.png" 
+rel="apple-touch-icon" sizes="57x57">     <LINK href="/apple-touch-icon-114.png" 
+rel="apple-touch-icon" sizes="114x114">     <LINK href="/apple-touch-icon-144.png" 
+rel="apple-touch-icon" sizes="72x72">     <LINK href="/apple-touch-icon-144.png" 
+rel="apple-touch-icon" sizes="144x144">     
+<META content="1401488693436528" property="fb:app_id">       
+<META name="twitter:site" content="@github">
+<META name="twitter:card" content="summary">
+<META name="twitter:title" content="MSOpenTech/redis">
+<META name="twitter:description" content="redis - Redis is an in-memory database that persists on disk. The data model is key-value, but many different kind of values are supported: Strings, Lists, Sets, Sorted Sets, Hashes">
+<META name="twitter:image:src" content="https://avatars2.githubusercontent.com/u/1638184?v=2&amp;s=400"> 
+<META content="GitHub" property="og:site_name">
+<META content="object" property="og:type">
+<META content="https://avatars2.githubusercontent.com/u/1638184?v=2&amp;s=400" 
+property="og:image">
+<META content="MSOpenTech/redis" property="og:title">
+<META content="https://github.com/MSOpenTech/redis" property="og:url">
+<META content="redis - Redis is an in-memory database that persists on disk. The data model is key-value, but many different kind of values are supported: Strings, Lists, Sets, Sorted Sets, Hashes" 
+property="og:description">       
+<META name="browser-stats-url" content="/_stats">     <LINK href="https://assets-cdn.github.com/" 
+rel="assets">     <LINK href="https://ghconduit.com:25035" rel="conduit-xhr">    
+     
+<META name="msapplication-TileImage" content="/windows-tile.png">     
+<META name="msapplication-TileColor" content="#ffffff">     
+<META name="selected-link" data-pjax-transient="" value="repo_source">       
+<META name="google-analytics" content="UA-3769691-2">     
+<META name="octolytics-host" content="collector.githubapp.com">
+<META name="octolytics-script-host" content="collector-cdn.github.com">
+<META name="octolytics-app-id" content="github">
+<META name="octolytics-dimension-request_id" content="C101B022:3B42:5AFEFF2:54198FFB"> 
+    
+<META name="analytics-event" content="Rails, view, files#disambiguate">          
+   <LINK href="https://assets-cdn.github.com/favicon.ico" rel="icon" type="image/x-icon"> 
+    
+<META name="csrf-param" content="authenticity_token"> 
+<META name="csrf-token" content="Ml+oQNSnxz8of/yj+Usn9Blkw/ubll+W7lV7fpADQaRzvVZO4XHeYZ3ohii3R6um/VMO1boauTLsST18uBkPwQ=="> 
+    <LINK href="MSOpenTech-redis%20·%20GitHub_files/github-afb3bfc1eb4eece441856e100e7b0a566f9d2c4b.css" 
+rel="stylesheet" type="text/css" media="all">     <LINK href="MSOpenTech-redis%20·%20GitHub_files/github2-f6fbb85fa702ec56c88489fd2170fddd6c9096df.css" 
+rel="stylesheet" type="text/css" media="all">         
+<META http-equiv="x-pjax-version" content="fc4fe28c49d50301a4f104be9c102aac">    
+     
+<META name="description" content="redis - Redis is an in-memory database that persists on disk. The data model is key-value, but many different kind of values are supported: Strings, Lists, Sets, Sorted Sets, Hashes"> 
+  
+<META name="go-import" content="github.com/MSOpenTech/redis git https://github.com/MSOpenTech/redis.git"> 
+  
+<META name="octolytics-dimension-user_id" content="1638184">
+<META name="octolytics-dimension-user_login" content="MSOpenTech">
+<META name="octolytics-dimension-repository_id" content="3402186">
+<META name="octolytics-dimension-repository_nwo" content="MSOpenTech/redis">
+<META name="octolytics-dimension-repository_public" content="true">
+<META name="octolytics-dimension-repository_is_fork" content="true">
+<META name="octolytics-dimension-repository_parent_id" content="156018">
+<META name="octolytics-dimension-repository_parent_nwo" content="antirez/redis">
+<META name="octolytics-dimension-repository_network_root_id" content="156018">
+<META name="octolytics-dimension-repository_network_root_nwo" content="antirez/redis"> 
+  <LINK title="Recent Commits to redis:2.8" href="https://github.com/MSOpenTech/redis/commits/2.8.atom" 
+rel="alternate" type="application/atom+xml">   
+<META name="GENERATOR" content="MSHTML 11.00.9600.17207"></HEAD>   
+<BODY class="logged_out  env-production windows vis-public fork"><A tabindex="1" 
+class="accessibility-aid js-skip-to-content" href="https://github.com/MSOpenTech/redis#start-of-content">Skip 
+to content</A>     
+<DIV class="wrapper">
+<DIV class="header header-logged-out">
+<DIV class="container clearfix"><A class="header-logo-wordmark" href="https://github.com/" 
+ga-data-click="(Logged out) Header, go to homepage, icon:logo-wordmark"><SPAN 
+class="mega-octicon octicon-logo-github"></SPAN>     </A>     
+<DIV class="header-actions"><A class="button primary" href="https://github.com/join" 
+data-ga-click="(Logged out) Header, clicked Sign up, text:sign-up">Sign up</A>   
+    <A class="button signin" href="https://github.com/login?return_to=%2FMSOpenTech%2Fredis" 
+data-ga-click="(Logged out) Header, clicked Sign in, text:sign-in">Sign in</A>   
+  </DIV>
+<DIV class="site-search repo-scope js-site-search">
+<FORM class="js-site-search-form" action="/MSOpenTech/redis/search" method="get" 
+accept-charset="UTF-8" data-repo-search-url="/MSOpenTech/redis/search" 
+data-global-search-url="/search">
+<DIV 
+style="margin: 0px; padding: 0px; display: inline;"><INPUT name="utf8" type="hidden" value="✓"></DIV> 
+  <INPUT name="q" tabindex="1" class="js-site-search-field is-clearable" type="text" placeholder="Search" value="" autocapitalize="off" data-repo-scope-placeholder="Search" data-global-scope-placeholder="Search GitHub" data-hotkey="s"> 
+  
+<DIV class="scope-badge">This repository</DIV></FORM></DIV>
+<UL class="header-nav left">
+  <LI class="header-nav-item"><A class="header-nav-link" href="https://github.com/explore" 
+  data-ga-click="(Logged out) Header, go to explore, text:explore">Explore</A></LI>
+  <LI class="header-nav-item"><A class="header-nav-link" href="https://github.com/features" 
+  data-ga-click="(Logged out) Header, go to features, text:features">Features</A></LI>
+  <LI class="header-nav-item"><A class="header-nav-link" href="https://enterprise.github.com/" 
+  data-ga-click="(Logged out) Header, go to enterprise, text:enterprise">Enterprise</A></LI>
+  <LI class="header-nav-item"><A class="header-nav-link" href="https://github.com/blog" 
+  data-ga-click="(Logged out) Header, go to blog, text:blog">Blog</A></LI></UL></DIV></DIV>
+<DIV class="accessibility-aid" id="start-of-content"></DIV>
+<DIV class="site" itemtype="http://schema.org/WebPage" itemscope="">
+<DIV id="js-flash-container"></DIV>
+<DIV class="pagehead repohead instapaper_ignore readability-menu">
+<DIV class="container">
+<UL class="pagehead-actions">
+  <LI><A class="minibutton with-count star-button tooltipped tooltipped-n" 
+  aria-label="You must be signed in to star a repository" href="https://github.com/login?return_to=%2FMSOpenTech%2Fredis" 
+  rel="nofollow"><SPAN class="octicon octicon-star"></SPAN>    Star   </A>     
+  <A class="social-count js-social-count" href="https://github.com/MSOpenTech/redis/stargazers"> 
+       1,554     </A>   </LI>
+  <LI><A class="minibutton with-count js-toggler-target fork-button tooltipped tooltipped-n" 
+  aria-label="You must be signed in to fork a repository" href="https://github.com/login?return_to=%2FMSOpenTech%2Fredis" 
+  rel="nofollow"><SPAN class="octicon octicon-repo-forked"></SPAN>        Fork   
+      </A>       <A class="social-count" href="https://github.com/MSOpenTech/redis/network"> 
+         3,113       </A>     </LI></UL>
+<H1 class="entry-title public" itemtype="http://data-vocabulary.org/Breadcrumb" 
+itemscope=""><SPAN class="mega-octicon octicon-repo-forked"></SPAN>           
+<SPAN class="author"><A class="url fn" href="https://github.com/MSOpenTech" rel="author" 
+itemprop="url"><SPAN itemprop="title">MSOpenTech</SPAN></A></SPAN><!--
+       --><SPAN 
+class="path-divider">/</SPAN><!--
+       --><STRONG><A class="js-current-repository js-repo-home-link" 
+href="https://github.com/MSOpenTech/redis">redis</A></STRONG>           <SPAN 
+class="page-context-loader"><IMG width="16" height="16" alt="" src="MSOpenTech-redis%20·%20GitHub_files/octocat-spinner-32.gif"> 
+          </SPAN>             <SPAN class="fork-flag"><SPAN class="text">forked 
+from <A href="https://github.com/antirez/redis">antirez/redis</A></SPAN>         
+    </SPAN></H1></DIV><!-- /.container -->     </DIV><!-- /.repohead -->     
+<DIV class="container">
+<DIV class="repository-with-sidebar repo-container new-discussion-timeline with-full-navigation ">
+<DIV class="repository-sidebar clearfix">
+<DIV class="sunken-menu vertical-right repo-nav js-repo-nav js-repository-container-pjax js-octicon-loaders" 
+data-issue-count-url="/MSOpenTech/redis/issues/counts">
+<DIV class="sunken-menu-contents">
+<UL class="sunken-menu-group">
+  <LI class="tooltipped tooltipped-w" aria-label="Code"><A class="selected js-selected-navigation-item sunken-menu-item" 
+  aria-label="Code" href="https://github.com/MSOpenTech/redis" data-hotkey="g c" 
+  data-selected-links="repo_source repo_downloads repo_commits repo_releases repo_tags repo_branches /MSOpenTech/redis" 
+  data-pjax="true"><SPAN class="octicon octicon-code"></SPAN> <SPAN class="full-word">Code</SPAN> 
+            <IMG width="16" height="16" class="mini-loader" alt="" src="MSOpenTech-redis%20·%20GitHub_files/octocat-spinner-32.gif"> 
+  </A></LI>
+  <LI class="tooltipped tooltipped-w" aria-label="Issues"><A class="js-selected-navigation-item sunken-menu-item js-disable-pjax" 
+  aria-label="Issues" href="https://github.com/MSOpenTech/redis/issues" 
+  data-hotkey="g i" data-selected-links="repo_issues repo_labels repo_milestones /MSOpenTech/redis/issues"><SPAN 
+  class="octicon octicon-issue-opened"></SPAN> <SPAN 
+  class="full-word">Issues</SPAN>             <SPAN class="js-issue-replace-counter"></SPAN> 
+              <IMG width="16" height="16" class="mini-loader" alt="" src="MSOpenTech-redis%20·%20GitHub_files/octocat-spinner-32.gif"> 
+  </A></LI>
+  <LI class="tooltipped tooltipped-w" aria-label="Pull Requests"><A class="js-selected-navigation-item sunken-menu-item js-disable-pjax" 
+  aria-label="Pull Requests" href="https://github.com/MSOpenTech/redis/pulls" 
+  data-hotkey="g p" 
+  data-selected-links="repo_pulls /MSOpenTech/redis/pulls"><SPAN class="octicon octicon-git-pull-request"></SPAN> 
+  <SPAN class="full-word">Pull Requests</SPAN>             <SPAN class="js-pull-replace-counter"></SPAN> 
+              <IMG width="16" height="16" class="mini-loader" alt="" src="MSOpenTech-redis%20·%20GitHub_files/octocat-spinner-32.gif"> 
+  </A></LI>
+  <LI class="tooltipped tooltipped-w" aria-label="Wiki"><A class="js-selected-navigation-item sunken-menu-item js-disable-pjax" 
+  aria-label="Wiki" href="https://github.com/MSOpenTech/redis/wiki" data-hotkey="g w" 
+  data-selected-links="repo_wiki /MSOpenTech/redis/wiki"><SPAN class="octicon octicon-book"></SPAN> 
+  <SPAN class="full-word">Wiki</SPAN>             <IMG width="16" height="16" 
+  class="mini-loader" alt="" src="MSOpenTech-redis%20·%20GitHub_files/octocat-spinner-32.gif"> 
+  </A></LI></UL>
+<DIV class="sunken-menu-separator"></DIV>
+<UL class="sunken-menu-group">
+  <LI class="tooltipped tooltipped-w" aria-label="Pulse"><A class="js-selected-navigation-item sunken-menu-item" 
+  aria-label="Pulse" href="https://github.com/MSOpenTech/redis/pulse/weekly" 
+  data-selected-links="pulse /MSOpenTech/redis/pulse/weekly" 
+  data-pjax="true"><SPAN class="octicon octicon-pulse"></SPAN> <SPAN class="full-word">Pulse</SPAN> 
+            <IMG width="16" height="16" class="mini-loader" alt="" src="MSOpenTech-redis%20·%20GitHub_files/octocat-spinner-32.gif"> 
+  </A></LI>
+  <LI class="tooltipped tooltipped-w" aria-label="Graphs"><A class="js-selected-navigation-item sunken-menu-item" 
+  aria-label="Graphs" href="https://github.com/MSOpenTech/redis/graphs" 
+  data-selected-links="repo_graphs repo_contributors /MSOpenTech/redis/graphs" 
+  data-pjax="true"><SPAN class="octicon octicon-graph"></SPAN> <SPAN class="full-word">Graphs</SPAN> 
+            <IMG width="16" height="16" class="mini-loader" alt="" src="MSOpenTech-redis%20·%20GitHub_files/octocat-spinner-32.gif"> 
+  </A></LI></UL></DIV></DIV>
+<DIV class="only-with-full-nav">
+<DIV class="clone-url open" data-url="/users/set_protocol?protocol_selector=http&amp;protocol_type=clone" 
+data-protocol-type="http">
+<H3><SPAN class="text-emphasized">HTTPS</SPAN> clone URL</H3>
+<DIV 
+class="input-group"><INPUT class="input-mini input-monospace js-url-field" type="text" readonly="readonly" value="https://github.com/MSOpenTech/redis.git"> 
+    <SPAN class="input-group-button"><BUTTON class="js-zeroclipboard minibutton zeroclipboard-button" 
+aria-label="Copy to clipboard" type="button" data-copied-hint="Copied!" 
+data-clipboard-text="https://github.com/MSOpenTech/redis.git"><SPAN class="octicon octicon-clippy"></SPAN></BUTTON> 
+    </SPAN>   </DIV></DIV>
+<DIV class="clone-url " data-url="/users/set_protocol?protocol_selector=subversion&amp;protocol_type=clone" 
+data-protocol-type="subversion">
+<H3><SPAN class="text-emphasized">Subversion</SPAN> checkout URL</H3>
+<DIV 
+class="input-group"><INPUT class="input-mini input-monospace js-url-field" type="text" readonly="readonly" value="https://github.com/MSOpenTech/redis"> 
+    <SPAN class="input-group-button"><BUTTON class="js-zeroclipboard minibutton zeroclipboard-button" 
+aria-label="Copy to clipboard" type="button" data-copied-hint="Copied!" 
+data-clipboard-text="https://github.com/MSOpenTech/redis"><SPAN class="octicon octicon-clippy"></SPAN></BUTTON> 
+    </SPAN>   </DIV></DIV>
+<P class="clone-options">You can clone with       <A class="js-clone-selector" 
+href="https://github.com/MSOpenTech/redis#" data-protocol="http">HTTPS</A>      
+or <A class="js-clone-selector" href="https://github.com/MSOpenTech/redis#" 
+data-protocol="subversion">Subversion</A>.   <A class="help tooltipped tooltipped-n" 
+aria-label="Get help on which URL is right for you." href="https://help.github.com/articles/which-remote-url-should-i-use"><SPAN 
+class="octicon octicon-question"></SPAN>   </A> </P><A title="Save MSOpenTech/redis to your computer and use it in GitHub Desktop." 
+class="minibutton sidebar-button" aria-label="Save MSOpenTech/redis to your computer and use it in GitHub Desktop." 
+href="http://windows.github.com/"><SPAN 
+class="octicon octicon-device-desktop"></SPAN>    Clone in Desktop   </A>        
+         <A title="Download the contents of MSOpenTech/redis as a zip file" 
+class="minibutton sidebar-button" aria-label="Download the contents of MSOpenTech/redis as a zip file" 
+href="https://github.com/MSOpenTech/redis/archive/2.8.zip" rel="nofollow"><SPAN 
+class="octicon octicon-cloud-download"></SPAN>                  Download ZIP     
+            </A>               </DIV></DIV><!-- /.repository-sidebar -->         
+<DIV class="repository-content context-loader-container" id="js-repo-pjax-container" 
+data-pjax-container=""><SPAN id="js-show-full-navigation"></SPAN> 
+<DIV class="repository-meta js-details-container ">
+<DIV class="repository-description">
+<P>Redis is an in-memory database that persists on disk. The data model is 
+key-value, but many different kind of values are supported: Strings, Lists, 
+Sets, Sorted Sets, Hashes</P>     </DIV>     
+<DIV class="repository-website">
+<P><A href="http://redis.io/" 
+rel="nofollow">http://redis.io/</A></P></DIV></DIV>
+<DIV class="overall-summary overall-summary-bottomless">
+<DIV class="stats-switcher-viewport js-stats-switcher-viewport">
+<DIV class="stats-switcher-wrapper">
+<UL class="numbers-summary">
+  <LI class="commits"><A href="https://github.com/MSOpenTech/redis/commits/2.8" 
+  data-pjax=""><SPAN class="octicon octicon-history"></SPAN>             <SPAN 
+  class="num text-emphasized">              4,375             </SPAN>            
+  commits         </A></LI>
+  <LI><A href="https://github.com/MSOpenTech/redis/branches" data-pjax=""><SPAN 
+  class="octicon octicon-git-branch"></SPAN>           <SPAN class="num text-emphasized"> 
+             7           </SPAN>          branches         </A></LI>
+  <LI><A href="https://github.com/MSOpenTech/redis/releases" data-pjax=""><SPAN 
+  class="octicon octicon-tag"></SPAN>           <SPAN class="num text-emphasized"> 
+             156           </SPAN>          releases         </A></LI>
+  <LI><A href="https://github.com/MSOpenTech/redis/graphs/contributors"><SPAN 
+  class="octicon octicon-organization"></SPAN>     <SPAN class="num text-emphasized"> 
+       130     </SPAN>    contributors   </A></LI></UL>
+<DIV class="repository-lang-stats">
+<OL class="repository-lang-stats-numbers">
+  <LI><A href="https://github.com/MSOpenTech/redis/search?l=c"><SPAN class="color-block language-color" 
+  style="background-color: rgb(85, 85, 85);"></SPAN>                 <SPAN 
+  class="lang">C</SPAN>                 <SPAN class="percent">76.6%</SPAN>       
+          </A>           </LI>
+  <LI><A href="https://github.com/MSOpenTech/redis/search?l=tcl"><SPAN class="color-block language-color" 
+  style="background-color: rgb(228, 204, 152);"></SPAN>                 <SPAN 
+  class="lang">Tcl</SPAN>                 <SPAN class="percent">16.4%</SPAN>     
+            </A>           </LI>
+  <LI><A href="https://github.com/MSOpenTech/redis/search?l=cpp"><SPAN class="color-block language-color" 
+  style="background-color: rgb(243, 75, 125);"></SPAN>                 <SPAN 
+  class="lang">C++</SPAN>                 <SPAN class="percent">6.2%</SPAN>      
+           </A>           </LI>
+  <LI><SPAN class="other"><SPAN class="color-block language-color" data-lang="Other"></SPAN> 
+                  <SPAN class="lang">Other</SPAN>                 <SPAN class="percent">0.8%</SPAN> 
+                </SPAN>           </LI></OL></DIV></DIV></DIV></DIV>
+<DIV class="tooltipped tooltipped-s" aria-label="Show language statistics"><A 
+class="repository-lang-stats-graph js-toggle-lang-stats" style="background-color: rgb(204, 204, 204);" 
+href="https://github.com/MSOpenTech/redis#"><SPAN class="language-color" style="width: 76.6%; background-color: rgb(85, 85, 85);" 
+itemprop="keywords">C</SPAN><SPAN class="language-color" style="width: 16.4%; background-color: rgb(228, 204, 152);" 
+itemprop="keywords">Tcl</SPAN><SPAN class="language-color" style="width: 6.2%; background-color: rgb(243, 75, 125);" 
+itemprop="keywords">C++</SPAN><SPAN class="language-color" style="width: 0.8%; background-color: rgb(204, 204, 204);" 
+itemprop="keywords">Other</SPAN>     </A></DIV>
+<DIV class="file-navigation in-mid-page"><A class="js-show-file-finder minibutton empty-icon tooltipped tooltipped-s right" 
+aria-label="Quickly jump between files" href="https://github.com/MSOpenTech/redis/find/2.8" 
+data-hotkey="t" data-pjax=""><SPAN 
+class="octicon octicon-list-unordered"></SPAN>   </A>     <A class="minibutton primary tooltipped tooltipped-s left compare-button" 
+aria-label="Compare, review, create a pull request" href="https://github.com/MSOpenTech/redis/compare" 
+data-pjax=""><SPAN class="octicon octicon-git-compare"></SPAN>     </A>   
+<DIV class="select-menu js-menu-container js-select-menu left"><SPAN tabindex="0" 
+title="2.8" class="minibutton select-menu-button js-menu-target css-truncate" 
+role="button" aria-haspopup="true" aria-label="Switch branches or tags" 
+data-hotkey="w" data-ref="2.8" data-master-branch="2.8"><SPAN class="octicon octicon-git-branch"></SPAN> 
+    <I>branch:</I>     <SPAN 
+class="js-select-button css-truncate-target">2.8</SPAN>   </SPAN>   
+<DIV class="select-menu-modal-holder js-menu-content js-navigation-container" 
+aria-hidden="true" data-pjax="">
+<DIV class="select-menu-modal">
+<DIV class="select-menu-header"><SPAN class="select-menu-title">Switch 
+branches/tags</SPAN>         <SPAN class="octicon octicon-x js-menu-close" role="button" 
+aria-label="Close"></SPAN></DIV><!-- /.select-menu-header -->       
+<DIV class="select-menu-filters">
+<DIV class="select-menu-text-filter"><INPUT class="js-filterable-field js-navigation-enable" id="context-commitish-filter-field" aria-label="Filter branches/tags" type="text" placeholder="Filter branches/tags" value=""></DIV>
+<DIV class="select-menu-tabs">
+<UL>
+  <LI class="select-menu-tab"><A class="js-select-menu-tab" href="https://github.com/MSOpenTech/redis#" 
+  data-tab-filter="branches">Branches</A>             </LI>
+  <LI class="select-menu-tab"><A class="js-select-menu-tab" href="https://github.com/MSOpenTech/redis#" 
+  data-tab-filter="tags">Tags</A>             </LI></UL></DIV><!-- /.select-menu-tabs --> 
+      </DIV><!-- /.select-menu-filters -->       
+<DIV class="select-menu-list select-menu-tab-bucket js-select-menu-tab-bucket" 
+data-tab-filter="branches">
+<DIV data-filterable-type="substring" data-filterable-for="context-commitish-filter-field">
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="2.4" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/2.4" rel="nofollow" 
+data-skip-pjax="true" data-name="2.4">2.4</A>             </DIV><!-- /.select-menu-item --> 
+            
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="2.4_bufsave" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/2.4_bufsave" rel="nofollow" 
+data-skip-pjax="true" data-name="2.4_bufsave">2.4_bufsave</A>             </DIV><!-- /.select-menu-item --> 
+            
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="2.4_fgsave" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/2.4_fgsave" rel="nofollow" 
+data-skip-pjax="true" data-name="2.4_fgsave">2.4_fgsave</A>             </DIV><!-- /.select-menu-item --> 
+            
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="2.6" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/2.6" rel="nofollow" 
+data-skip-pjax="true" data-name="2.6">2.6</A>             </DIV><!-- /.select-menu-item --> 
+            
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="2_6_14_rebase" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/2_6_14_rebase" rel="nofollow" 
+data-skip-pjax="true" data-name="2_6_14_rebase">2_6_14_rebase</A>             
+</DIV><!-- /.select-menu-item -->             
+<DIV class="select-menu-item js-navigation-item selected"><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="2.8" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/2.8" rel="nofollow" 
+data-skip-pjax="true" data-name="2.8">2.8</A>             </DIV><!-- /.select-menu-item --> 
+            
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="kirk_sec_reserve" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/kirk_sec_reserve" rel="nofollow" 
+data-skip-pjax="true" data-name="kirk_sec_reserve">kirk_sec_reserve</A>          
+   </DIV><!-- /.select-menu-item -->         </DIV>
+<DIV class="select-menu-no-results">Nothing to show</DIV></DIV><!-- /.select-menu-list --> 
+      
+<DIV class="select-menu-list select-menu-tab-bucket js-select-menu-tab-bucket" 
+data-tab-filter="tags">
+<DIV data-filterable-type="substring" data-filterable-for="context-commitish-filter-field">
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="with-deprecated-diskstore" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/with-deprecated-diskstore" rel="nofollow" 
+data-skip-pjax="true" 
+data-name="with-deprecated-diskstore">with-deprecated-diskstore</A>             
+</DIV><!-- /.select-menu-item -->             
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="win2.8.12" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/win2.8.12" rel="nofollow" 
+data-skip-pjax="true" data-name="win2.8.12">win2.8.12</A>             </DIV><!-- /.select-menu-item --> 
+            
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="win_2.8.9" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/win_2.8.9" rel="nofollow" 
+data-skip-pjax="true" data-name="win_2.8.9">win_2.8.9</A>             </DIV><!-- /.select-menu-item --> 
+            
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="vm-playpen" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/vm-playpen" rel="nofollow" 
+data-skip-pjax="true" data-name="vm-playpen">vm-playpen</A>             </DIV><!-- /.select-menu-item --> 
+            
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="v2.1.1-watch" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/v2.1.1-watch" rel="nofollow" 
+data-skip-pjax="true" data-name="v2.1.1-watch">v2.1.1-watch</A>             
+</DIV><!-- /.select-menu-item -->             
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="v2.0.4-stable" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/v2.0.4-stable" rel="nofollow" 
+data-skip-pjax="true" data-name="v2.0.4-stable">v2.0.4-stable</A>             
+</DIV><!-- /.select-menu-item -->             
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="v2.0.3-stable" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/v2.0.3-stable" rel="nofollow" 
+data-skip-pjax="true" data-name="v2.0.3-stable">v2.0.3-stable</A>             
+</DIV><!-- /.select-menu-item -->             
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="v2.0.2-stable" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/v2.0.2-stable" rel="nofollow" 
+data-skip-pjax="true" data-name="v2.0.2-stable">v2.0.2-stable</A>             
+</DIV><!-- /.select-menu-item -->             
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="v2.0.1-stable" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/v2.0.1-stable" rel="nofollow" 
+data-skip-pjax="true" data-name="v2.0.1-stable">v2.0.1-stable</A>             
+</DIV><!-- /.select-menu-item -->             
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="v2.0.0-stable" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/v2.0.0-stable" rel="nofollow" 
+data-skip-pjax="true" data-name="v2.0.0-stable">v2.0.0-stable</A>             
+</DIV><!-- /.select-menu-item -->             
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="v2.0.0-rc4" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/v2.0.0-rc4" rel="nofollow" 
+data-skip-pjax="true" data-name="v2.0.0-rc4">v2.0.0-rc4</A>             </DIV><!-- /.select-menu-item --> 
+            
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="v2.0.0-rc3" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/v2.0.0-rc3" rel="nofollow" 
+data-skip-pjax="true" data-name="v2.0.0-rc3">v2.0.0-rc3</A>             </DIV><!-- /.select-menu-item --> 
+            
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="v2.0.0-rc2" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/v2.0.0-rc2" rel="nofollow" 
+data-skip-pjax="true" data-name="v2.0.0-rc2">v2.0.0-rc2</A>             </DIV><!-- /.select-menu-item --> 
+            
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="v2.0.0-rc1b" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/v2.0.0-rc1b" rel="nofollow" 
+data-skip-pjax="true" data-name="v2.0.0-rc1b">v2.0.0-rc1b</A>             </DIV><!-- /.select-menu-item --> 
+            
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="v2.0.0-rc1" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/v2.0.0-rc1" rel="nofollow" 
+data-skip-pjax="true" data-name="v2.0.0-rc1">v2.0.0-rc1</A>             </DIV><!-- /.select-menu-item --> 
+            
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="v1.3.12" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/v1.3.12" rel="nofollow" 
+data-skip-pjax="true" data-name="v1.3.12">v1.3.12</A>             </DIV><!-- /.select-menu-item --> 
+            
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="v1.3.11" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/v1.3.11" rel="nofollow" 
+data-skip-pjax="true" data-name="v1.3.11">v1.3.11</A>             </DIV><!-- /.select-menu-item --> 
+            
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="v1.3.10" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/v1.3.10" rel="nofollow" 
+data-skip-pjax="true" data-name="v1.3.10">v1.3.10</A>             </DIV><!-- /.select-menu-item --> 
+            
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="v1.3.9" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/v1.3.9" rel="nofollow" 
+data-skip-pjax="true" data-name="v1.3.9">v1.3.9</A>             </DIV><!-- /.select-menu-item --> 
+            
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="v1.3.8" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/v1.3.8" rel="nofollow" 
+data-skip-pjax="true" data-name="v1.3.8">v1.3.8</A>             </DIV><!-- /.select-menu-item --> 
+            
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="v1.3.7" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/v1.3.7" rel="nofollow" 
+data-skip-pjax="true" data-name="v1.3.7">v1.3.7</A>             </DIV><!-- /.select-menu-item --> 
+            
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="twitter-20100825" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/twitter-20100825" rel="nofollow" 
+data-skip-pjax="true" data-name="twitter-20100825">twitter-20100825</A>          
+   </DIV><!-- /.select-menu-item -->             
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="twitter-20100804" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/twitter-20100804" rel="nofollow" 
+data-skip-pjax="true" data-name="twitter-20100804">twitter-20100804</A>          
+   </DIV><!-- /.select-menu-item -->             
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="Win2.6.8" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/Win2.6.8" rel="nofollow" 
+data-skip-pjax="true" data-name="Win2.6.8">Win2.6.8</A>             </DIV><!-- /.select-menu-item --> 
+            
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="3.0-alpha0" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/3.0-alpha0" rel="nofollow" 
+data-skip-pjax="true" data-name="3.0-alpha0">3.0-alpha0</A>             </DIV><!-- /.select-menu-item --> 
+            
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="3.0.0-beta8" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/3.0.0-beta8" rel="nofollow" 
+data-skip-pjax="true" data-name="3.0.0-beta8">3.0.0-beta8</A>             </DIV><!-- /.select-menu-item --> 
+            
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="3.0.0-beta7" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/3.0.0-beta7" rel="nofollow" 
+data-skip-pjax="true" data-name="3.0.0-beta7">3.0.0-beta7</A>             </DIV><!-- /.select-menu-item --> 
+            
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="3.0.0-beta6" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/3.0.0-beta6" rel="nofollow" 
+data-skip-pjax="true" data-name="3.0.0-beta6">3.0.0-beta6</A>             </DIV><!-- /.select-menu-item --> 
+            
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="3.0.0-beta5" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/3.0.0-beta5" rel="nofollow" 
+data-skip-pjax="true" data-name="3.0.0-beta5">3.0.0-beta5</A>             </DIV><!-- /.select-menu-item --> 
+            
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="3.0.0-beta4" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/3.0.0-beta4" rel="nofollow" 
+data-skip-pjax="true" data-name="3.0.0-beta4">3.0.0-beta4</A>             </DIV><!-- /.select-menu-item --> 
+            
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="3.0.0-beta3" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/3.0.0-beta3" rel="nofollow" 
+data-skip-pjax="true" data-name="3.0.0-beta3">3.0.0-beta3</A>             </DIV><!-- /.select-menu-item --> 
+            
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="3.0.0-beta2" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/3.0.0-beta2" rel="nofollow" 
+data-skip-pjax="true" data-name="3.0.0-beta2">3.0.0-beta2</A>             </DIV><!-- /.select-menu-item --> 
+            
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="3.0.0-beta1" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/3.0.0-beta1" rel="nofollow" 
+data-skip-pjax="true" data-name="3.0.0-beta1">3.0.0-beta1</A>             </DIV><!-- /.select-menu-item --> 
+            
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="2.8.16" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/2.8.16" rel="nofollow" 
+data-skip-pjax="true" data-name="2.8.16">2.8.16</A>             </DIV><!-- /.select-menu-item --> 
+            
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="2.8.15" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/2.8.15" rel="nofollow" 
+data-skip-pjax="true" data-name="2.8.15">2.8.15</A>             </DIV><!-- /.select-menu-item --> 
+            
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="2.8.14" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/2.8.14" rel="nofollow" 
+data-skip-pjax="true" data-name="2.8.14">2.8.14</A>             </DIV><!-- /.select-menu-item --> 
+            
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="2.8.13" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/2.8.13" rel="nofollow" 
+data-skip-pjax="true" data-name="2.8.13">2.8.13</A>             </DIV><!-- /.select-menu-item --> 
+            
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="2.8.12" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/2.8.12" rel="nofollow" 
+data-skip-pjax="true" data-name="2.8.12">2.8.12</A>             </DIV><!-- /.select-menu-item --> 
+            
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="2.8.11" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/2.8.11" rel="nofollow" 
+data-skip-pjax="true" data-name="2.8.11">2.8.11</A>             </DIV><!-- /.select-menu-item --> 
+            
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="2.8.10" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/2.8.10" rel="nofollow" 
+data-skip-pjax="true" data-name="2.8.10">2.8.10</A>             </DIV><!-- /.select-menu-item --> 
+            
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="2.8.9" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/2.8.9" rel="nofollow" 
+data-skip-pjax="true" data-name="2.8.9">2.8.9</A>             </DIV><!-- /.select-menu-item --> 
+            
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="2.8.8" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/2.8.8" rel="nofollow" 
+data-skip-pjax="true" data-name="2.8.8">2.8.8</A>             </DIV><!-- /.select-menu-item --> 
+            
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="2.8.7" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/2.8.7" rel="nofollow" 
+data-skip-pjax="true" data-name="2.8.7">2.8.7</A>             </DIV><!-- /.select-menu-item --> 
+            
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="2.8.6" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/2.8.6" rel="nofollow" 
+data-skip-pjax="true" data-name="2.8.6">2.8.6</A>             </DIV><!-- /.select-menu-item --> 
+            
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="2.8.5" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/2.8.5" rel="nofollow" 
+data-skip-pjax="true" data-name="2.8.5">2.8.5</A>             </DIV><!-- /.select-menu-item --> 
+            
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="2.8.4_msopentech" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/2.8.4_msopentech" rel="nofollow" 
+data-skip-pjax="true" data-name="2.8.4_msopentech">2.8.4_msopentech</A>          
+   </DIV><!-- /.select-menu-item -->             
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="2.8.4" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/2.8.4" rel="nofollow" 
+data-skip-pjax="true" data-name="2.8.4">2.8.4</A>             </DIV><!-- /.select-menu-item --> 
+            
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="2.8.3" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/2.8.3" rel="nofollow" 
+data-skip-pjax="true" data-name="2.8.3">2.8.3</A>             </DIV><!-- /.select-menu-item --> 
+            
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="2.8.2" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/2.8.2" rel="nofollow" 
+data-skip-pjax="true" data-name="2.8.2">2.8.2</A>             </DIV><!-- /.select-menu-item --> 
+            
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="2.8.1" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/2.8.1" rel="nofollow" 
+data-skip-pjax="true" data-name="2.8.1">2.8.1</A>             </DIV><!-- /.select-menu-item --> 
+            
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="2.8.0-rc6" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/2.8.0-rc6" rel="nofollow" 
+data-skip-pjax="true" data-name="2.8.0-rc6">2.8.0-rc6</A>             </DIV><!-- /.select-menu-item --> 
+            
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="2.8.0-rc5" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/2.8.0-rc5" rel="nofollow" 
+data-skip-pjax="true" data-name="2.8.0-rc5">2.8.0-rc5</A>             </DIV><!-- /.select-menu-item --> 
+            
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="2.8.0-rc4" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/2.8.0-rc4" rel="nofollow" 
+data-skip-pjax="true" data-name="2.8.0-rc4">2.8.0-rc4</A>             </DIV><!-- /.select-menu-item --> 
+            
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="2.8.0-rc3" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/2.8.0-rc3" rel="nofollow" 
+data-skip-pjax="true" data-name="2.8.0-rc3">2.8.0-rc3</A>             </DIV><!-- /.select-menu-item --> 
+            
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="2.8.0-rc2" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/2.8.0-rc2" rel="nofollow" 
+data-skip-pjax="true" data-name="2.8.0-rc2">2.8.0-rc2</A>             </DIV><!-- /.select-menu-item --> 
+            
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="2.8.0-rc1" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/2.8.0-rc1" rel="nofollow" 
+data-skip-pjax="true" data-name="2.8.0-rc1">2.8.0-rc1</A>             </DIV><!-- /.select-menu-item --> 
+            
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="2.8.0" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/2.8.0" rel="nofollow" 
+data-skip-pjax="true" data-name="2.8.0">2.8.0</A>             </DIV><!-- /.select-menu-item --> 
+            
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="2.6.17" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/2.6.17" rel="nofollow" 
+data-skip-pjax="true" data-name="2.6.17">2.6.17</A>             </DIV><!-- /.select-menu-item --> 
+            
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="2.6.16" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/2.6.16" rel="nofollow" 
+data-skip-pjax="true" data-name="2.6.16">2.6.16</A>             </DIV><!-- /.select-menu-item --> 
+            
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="2.6.15" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/2.6.15" rel="nofollow" 
+data-skip-pjax="true" data-name="2.6.15">2.6.15</A>             </DIV><!-- /.select-menu-item --> 
+            
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="2.6.14_msopentech" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/2.6.14_msopentech" rel="nofollow" 
+data-skip-pjax="true" data-name="2.6.14_msopentech">2.6.14_msopentech</A>        
+     </DIV><!-- /.select-menu-item -->             
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="2.6.14-2" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/2.6.14-2" rel="nofollow" 
+data-skip-pjax="true" data-name="2.6.14-2">2.6.14-2</A>             </DIV><!-- /.select-menu-item --> 
+            
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="2.6.14-1" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/2.6.14-1" rel="nofollow" 
+data-skip-pjax="true" data-name="2.6.14-1">2.6.14-1</A>             </DIV><!-- /.select-menu-item --> 
+            
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="2.6.14" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/2.6.14" rel="nofollow" 
+data-skip-pjax="true" data-name="2.6.14">2.6.14</A>             </DIV><!-- /.select-menu-item --> 
+            
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="2.6.13" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/2.6.13" rel="nofollow" 
+data-skip-pjax="true" data-name="2.6.13">2.6.13</A>             </DIV><!-- /.select-menu-item --> 
+            
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="2.6.12" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/2.6.12" rel="nofollow" 
+data-skip-pjax="true" data-name="2.6.12">2.6.12</A>             </DIV><!-- /.select-menu-item --> 
+            
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="2.6.11" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/2.6.11" rel="nofollow" 
+data-skip-pjax="true" data-name="2.6.11">2.6.11</A>             </DIV><!-- /.select-menu-item --> 
+            
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="2.6.10-3" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/2.6.10-3" rel="nofollow" 
+data-skip-pjax="true" data-name="2.6.10-3">2.6.10-3</A>             </DIV><!-- /.select-menu-item --> 
+            
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="2.6.10-2" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/2.6.10-2" rel="nofollow" 
+data-skip-pjax="true" data-name="2.6.10-2">2.6.10-2</A>             </DIV><!-- /.select-menu-item --> 
+            
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="2.6.10-1" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/2.6.10-1" rel="nofollow" 
+data-skip-pjax="true" data-name="2.6.10-1">2.6.10-1</A>             </DIV><!-- /.select-menu-item --> 
+            
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="2.6.10" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/2.6.10" rel="nofollow" 
+data-skip-pjax="true" data-name="2.6.10">2.6.10</A>             </DIV><!-- /.select-menu-item --> 
+            
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="2.6.9-1" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/2.6.9-1" rel="nofollow" 
+data-skip-pjax="true" data-name="2.6.9-1">2.6.9-1</A>             </DIV><!-- /.select-menu-item --> 
+            
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="2.6.9" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/2.6.9" rel="nofollow" 
+data-skip-pjax="true" data-name="2.6.9">2.6.9</A>             </DIV><!-- /.select-menu-item --> 
+            
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="2.6.8-1" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/2.6.8-1" rel="nofollow" 
+data-skip-pjax="true" data-name="2.6.8-1">2.6.8-1</A>             </DIV><!-- /.select-menu-item --> 
+            
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="2.6.8" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/2.6.8" rel="nofollow" 
+data-skip-pjax="true" data-name="2.6.8">2.6.8</A>             </DIV><!-- /.select-menu-item --> 
+            
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="2.6.7-1" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/2.6.7-1" rel="nofollow" 
+data-skip-pjax="true" data-name="2.6.7-1">2.6.7-1</A>             </DIV><!-- /.select-menu-item --> 
+            
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="2.6.7" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/2.6.7" rel="nofollow" 
+data-skip-pjax="true" data-name="2.6.7">2.6.7</A>             </DIV><!-- /.select-menu-item --> 
+            
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="2.6.6" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/2.6.6" rel="nofollow" 
+data-skip-pjax="true" data-name="2.6.6">2.6.6</A>             </DIV><!-- /.select-menu-item --> 
+            
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="2.6.5" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/2.6.5" rel="nofollow" 
+data-skip-pjax="true" data-name="2.6.5">2.6.5</A>             </DIV><!-- /.select-menu-item --> 
+            
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="2.6.4" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/2.6.4" rel="nofollow" 
+data-skip-pjax="true" data-name="2.6.4">2.6.4</A>             </DIV><!-- /.select-menu-item --> 
+            
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="2.6.3" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/2.6.3" rel="nofollow" 
+data-skip-pjax="true" data-name="2.6.3">2.6.3</A>             </DIV><!-- /.select-menu-item --> 
+            
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="2.6.2" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/2.6.2" rel="nofollow" 
+data-skip-pjax="true" data-name="2.6.2">2.6.2</A>             </DIV><!-- /.select-menu-item --> 
+            
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="2.6.1" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/2.6.1" rel="nofollow" 
+data-skip-pjax="true" data-name="2.6.1">2.6.1</A>             </DIV><!-- /.select-menu-item --> 
+            
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="2.6.0-rc8" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/2.6.0-rc8" rel="nofollow" 
+data-skip-pjax="true" data-name="2.6.0-rc8">2.6.0-rc8</A>             </DIV><!-- /.select-menu-item --> 
+            
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="2.6.0-rc7" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/2.6.0-rc7" rel="nofollow" 
+data-skip-pjax="true" data-name="2.6.0-rc7">2.6.0-rc7</A>             </DIV><!-- /.select-menu-item --> 
+            
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="2.6.0-rc6" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/2.6.0-rc6" rel="nofollow" 
+data-skip-pjax="true" data-name="2.6.0-rc6">2.6.0-rc6</A>             </DIV><!-- /.select-menu-item --> 
+            
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="2.6.0-rc5" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/2.6.0-rc5" rel="nofollow" 
+data-skip-pjax="true" data-name="2.6.0-rc5">2.6.0-rc5</A>             </DIV><!-- /.select-menu-item --> 
+            
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="2.6.0-rc4" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/2.6.0-rc4" rel="nofollow" 
+data-skip-pjax="true" data-name="2.6.0-rc4">2.6.0-rc4</A>             </DIV><!-- /.select-menu-item --> 
+            
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="2.6.0-rc3" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/2.6.0-rc3" rel="nofollow" 
+data-skip-pjax="true" data-name="2.6.0-rc3">2.6.0-rc3</A>             </DIV><!-- /.select-menu-item --> 
+            
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="2.6.0-rc2" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/2.6.0-rc2" rel="nofollow" 
+data-skip-pjax="true" data-name="2.6.0-rc2">2.6.0-rc2</A>             </DIV><!-- /.select-menu-item --> 
+            
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="2.6.0-rc1" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/2.6.0-rc1" rel="nofollow" 
+data-skip-pjax="true" data-name="2.6.0-rc1">2.6.0-rc1</A>             </DIV><!-- /.select-menu-item --> 
+            
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="2.6.0" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/2.6.0" rel="nofollow" 
+data-skip-pjax="true" data-name="2.6.0">2.6.0</A>             </DIV><!-- /.select-menu-item --> 
+            
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="2.4.18" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/2.4.18" rel="nofollow" 
+data-skip-pjax="true" data-name="2.4.18">2.4.18</A>             </DIV><!-- /.select-menu-item --> 
+            
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="2.4.17" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/2.4.17" rel="nofollow" 
+data-skip-pjax="true" data-name="2.4.17">2.4.17</A>             </DIV><!-- /.select-menu-item --> 
+            
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="2.4.16" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/2.4.16" rel="nofollow" 
+data-skip-pjax="true" data-name="2.4.16">2.4.16</A>             </DIV><!-- /.select-menu-item --> 
+            
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="2.4.15" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/2.4.15" rel="nofollow" 
+data-skip-pjax="true" data-name="2.4.15">2.4.15</A>             </DIV><!-- /.select-menu-item --> 
+            
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="2.4.14" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/2.4.14" rel="nofollow" 
+data-skip-pjax="true" data-name="2.4.14">2.4.14</A>             </DIV><!-- /.select-menu-item --> 
+            
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="2.4.13" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/2.4.13" rel="nofollow" 
+data-skip-pjax="true" data-name="2.4.13">2.4.13</A>             </DIV><!-- /.select-menu-item --> 
+            
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="2.4.12" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/2.4.12" rel="nofollow" 
+data-skip-pjax="true" data-name="2.4.12">2.4.12</A>             </DIV><!-- /.select-menu-item --> 
+            
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="2.4.11" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/2.4.11" rel="nofollow" 
+data-skip-pjax="true" data-name="2.4.11">2.4.11</A>             </DIV><!-- /.select-menu-item --> 
+            
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="2.4.10" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/2.4.10" rel="nofollow" 
+data-skip-pjax="true" data-name="2.4.10">2.4.10</A>             </DIV><!-- /.select-menu-item --> 
+            
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="2.4.9" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/2.4.9" rel="nofollow" 
+data-skip-pjax="true" data-name="2.4.9">2.4.9</A>             </DIV><!-- /.select-menu-item --> 
+            
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="2.4.8" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/2.4.8" rel="nofollow" 
+data-skip-pjax="true" data-name="2.4.8">2.4.8</A>             </DIV><!-- /.select-menu-item --> 
+            
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="2.4.7" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/2.4.7" rel="nofollow" 
+data-skip-pjax="true" data-name="2.4.7">2.4.7</A>             </DIV><!-- /.select-menu-item --> 
+            
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="2.4.6_win32" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/2.4.6_win32" rel="nofollow" 
+data-skip-pjax="true" data-name="2.4.6_win32">2.4.6_win32</A>             </DIV><!-- /.select-menu-item --> 
+            
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="2.4.6" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/2.4.6" rel="nofollow" 
+data-skip-pjax="true" data-name="2.4.6">2.4.6</A>             </DIV><!-- /.select-menu-item --> 
+            
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="2.4.5" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/2.4.5" rel="nofollow" 
+data-skip-pjax="true" data-name="2.4.5">2.4.5</A>             </DIV><!-- /.select-menu-item --> 
+            
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="2.4.4" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/2.4.4" rel="nofollow" 
+data-skip-pjax="true" data-name="2.4.4">2.4.4</A>             </DIV><!-- /.select-menu-item --> 
+            
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="2.4.3" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/2.4.3" rel="nofollow" 
+data-skip-pjax="true" data-name="2.4.3">2.4.3</A>             </DIV><!-- /.select-menu-item --> 
+            
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="2.4.2" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/2.4.2" rel="nofollow" 
+data-skip-pjax="true" data-name="2.4.2">2.4.2</A>             </DIV><!-- /.select-menu-item --> 
+            
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="2.4.1" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/2.4.1" rel="nofollow" 
+data-skip-pjax="true" data-name="2.4.1">2.4.1</A>             </DIV><!-- /.select-menu-item --> 
+            
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="2.4.0-rc8" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/2.4.0-rc8" rel="nofollow" 
+data-skip-pjax="true" data-name="2.4.0-rc8">2.4.0-rc8</A>             </DIV><!-- /.select-menu-item --> 
+            
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="2.4.0-rc7" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/2.4.0-rc7" rel="nofollow" 
+data-skip-pjax="true" data-name="2.4.0-rc7">2.4.0-rc7</A>             </DIV><!-- /.select-menu-item --> 
+            
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="2.4.0-rc6" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/2.4.0-rc6" rel="nofollow" 
+data-skip-pjax="true" data-name="2.4.0-rc6">2.4.0-rc6</A>             </DIV><!-- /.select-menu-item --> 
+            
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="2.4.0-rc5" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/2.4.0-rc5" rel="nofollow" 
+data-skip-pjax="true" data-name="2.4.0-rc5">2.4.0-rc5</A>             </DIV><!-- /.select-menu-item --> 
+            
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="2.4.0-rc4" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/2.4.0-rc4" rel="nofollow" 
+data-skip-pjax="true" data-name="2.4.0-rc4">2.4.0-rc4</A>             </DIV><!-- /.select-menu-item --> 
+            
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="2.4.0-rc3" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/2.4.0-rc3" rel="nofollow" 
+data-skip-pjax="true" data-name="2.4.0-rc3">2.4.0-rc3</A>             </DIV><!-- /.select-menu-item --> 
+            
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="2.4.0-rc2" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/2.4.0-rc2" rel="nofollow" 
+data-skip-pjax="true" data-name="2.4.0-rc2">2.4.0-rc2</A>             </DIV><!-- /.select-menu-item --> 
+            
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="2.4.0-rc1" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/2.4.0-rc1" rel="nofollow" 
+data-skip-pjax="true" data-name="2.4.0-rc1">2.4.0-rc1</A>             </DIV><!-- /.select-menu-item --> 
+            
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="2.4.0" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/2.4.0" rel="nofollow" 
+data-skip-pjax="true" data-name="2.4.0">2.4.0</A>             </DIV><!-- /.select-menu-item --> 
+            
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="2.3-alpha0" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/2.3-alpha0" rel="nofollow" 
+data-skip-pjax="true" data-name="2.3-alpha0">2.3-alpha0</A>             </DIV><!-- /.select-menu-item --> 
+            
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="2.2-alpha6" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/2.2-alpha6" rel="nofollow" 
+data-skip-pjax="true" data-name="2.2-alpha6">2.2-alpha6</A>             </DIV><!-- /.select-menu-item --> 
+            
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="2.2-alpha5" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/2.2-alpha5" rel="nofollow" 
+data-skip-pjax="true" data-name="2.2-alpha5">2.2-alpha5</A>             </DIV><!-- /.select-menu-item --> 
+            
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="2.2-alpha4" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/2.2-alpha4" rel="nofollow" 
+data-skip-pjax="true" data-name="2.2-alpha4">2.2-alpha4</A>             </DIV><!-- /.select-menu-item --> 
+            
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="2.2-alpha3" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/2.2-alpha3" rel="nofollow" 
+data-skip-pjax="true" data-name="2.2-alpha3">2.2-alpha3</A>             </DIV><!-- /.select-menu-item --> 
+            
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="2.2-alpha2" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/2.2-alpha2" rel="nofollow" 
+data-skip-pjax="true" data-name="2.2-alpha2">2.2-alpha2</A>             </DIV><!-- /.select-menu-item --> 
+            
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="2.2-alpha1" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/2.2-alpha1" rel="nofollow" 
+data-skip-pjax="true" data-name="2.2-alpha1">2.2-alpha1</A>             </DIV><!-- /.select-menu-item --> 
+            
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="2.2-alpha0" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/2.2-alpha0" rel="nofollow" 
+data-skip-pjax="true" data-name="2.2-alpha0">2.2-alpha0</A>             </DIV><!-- /.select-menu-item --> 
+            
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="2.2.111-scripting" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/2.2.111-scripting" rel="nofollow" 
+data-skip-pjax="true" data-name="2.2.111-scripting">2.2.111-scripting</A>        
+     </DIV><!-- /.select-menu-item -->             
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="2.2.110-scripting" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/2.2.110-scripting" rel="nofollow" 
+data-skip-pjax="true" data-name="2.2.110-scripting">2.2.110-scripting</A>        
+     </DIV><!-- /.select-menu-item -->             
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="2.2.107-scripting" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/2.2.107-scripting" rel="nofollow" 
+data-skip-pjax="true" data-name="2.2.107-scripting">2.2.107-scripting</A>        
+     </DIV><!-- /.select-menu-item -->             
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="2.2.106-scripting" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/2.2.106-scripting" rel="nofollow" 
+data-skip-pjax="true" data-name="2.2.106-scripting">2.2.106-scripting</A>        
+     </DIV><!-- /.select-menu-item -->             
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="2.2.105-scripting" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/2.2.105-scripting" rel="nofollow" 
+data-skip-pjax="true" data-name="2.2.105-scripting">2.2.105-scripting</A>        
+     </DIV><!-- /.select-menu-item -->             
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="2.2.15" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/2.2.15" rel="nofollow" 
+data-skip-pjax="true" data-name="2.2.15">2.2.15</A>             </DIV><!-- /.select-menu-item --> 
+            
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="2.2.14" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/2.2.14" rel="nofollow" 
+data-skip-pjax="true" data-name="2.2.14">2.2.14</A>             </DIV><!-- /.select-menu-item --> 
+            
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="2.2.13" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/2.2.13" rel="nofollow" 
+data-skip-pjax="true" data-name="2.2.13">2.2.13</A>             </DIV><!-- /.select-menu-item --> 
+            
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="2.2.12" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/2.2.12" rel="nofollow" 
+data-skip-pjax="true" data-name="2.2.12">2.2.12</A>             </DIV><!-- /.select-menu-item --> 
+            
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="2.2.11" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/2.2.11" rel="nofollow" 
+data-skip-pjax="true" data-name="2.2.11">2.2.11</A>             </DIV><!-- /.select-menu-item --> 
+            
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="2.2.10" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/2.2.10" rel="nofollow" 
+data-skip-pjax="true" data-name="2.2.10">2.2.10</A>             </DIV><!-- /.select-menu-item --> 
+            
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="2.2.9" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/2.2.9" rel="nofollow" 
+data-skip-pjax="true" data-name="2.2.9">2.2.9</A>             </DIV><!-- /.select-menu-item --> 
+            
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="2.2.8" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/2.2.8" rel="nofollow" 
+data-skip-pjax="true" data-name="2.2.8">2.2.8</A>             </DIV><!-- /.select-menu-item --> 
+            
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="2.2.7" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/2.2.7" rel="nofollow" 
+data-skip-pjax="true" data-name="2.2.7">2.2.7</A>             </DIV><!-- /.select-menu-item --> 
+            
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="2.2.6" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/2.2.6" rel="nofollow" 
+data-skip-pjax="true" data-name="2.2.6">2.2.6</A>             </DIV><!-- /.select-menu-item --> 
+            
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="2.2.5" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/2.2.5" rel="nofollow" 
+data-skip-pjax="true" data-name="2.2.5">2.2.5</A>             </DIV><!-- /.select-menu-item --> 
+            
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="2.2.4" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/2.2.4" rel="nofollow" 
+data-skip-pjax="true" data-name="2.2.4">2.2.4</A>             </DIV><!-- /.select-menu-item --> 
+            
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="2.2.3" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/2.2.3" rel="nofollow" 
+data-skip-pjax="true" data-name="2.2.3">2.2.3</A>             </DIV><!-- /.select-menu-item --> 
+            
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="2.2.2" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/2.2.2" rel="nofollow" 
+data-skip-pjax="true" data-name="2.2.2">2.2.2</A>             </DIV><!-- /.select-menu-item --> 
+            
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="2.2.1" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/2.2.1" rel="nofollow" 
+data-skip-pjax="true" data-name="2.2.1">2.2.1</A>             </DIV><!-- /.select-menu-item --> 
+            
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="2.2.0-rc4" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/2.2.0-rc4" rel="nofollow" 
+data-skip-pjax="true" data-name="2.2.0-rc4">2.2.0-rc4</A>             </DIV><!-- /.select-menu-item --> 
+            
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="2.2.0-rc3" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/2.2.0-rc3" rel="nofollow" 
+data-skip-pjax="true" data-name="2.2.0-rc3">2.2.0-rc3</A>             </DIV><!-- /.select-menu-item --> 
+            
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="2.2.0-rc2" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/2.2.0-rc2" rel="nofollow" 
+data-skip-pjax="true" data-name="2.2.0-rc2">2.2.0-rc2</A>             </DIV><!-- /.select-menu-item --> 
+            
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="2.2.0-rc1" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/2.2.0-rc1" rel="nofollow" 
+data-skip-pjax="true" data-name="2.2.0-rc1">2.2.0-rc1</A>             </DIV><!-- /.select-menu-item --> 
+            
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="2.2.0" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/2.2.0" rel="nofollow" 
+data-skip-pjax="true" data-name="2.2.0">2.2.0</A>             </DIV><!-- /.select-menu-item --> 
+            
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="2.0.5" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/2.0.5" rel="nofollow" 
+data-skip-pjax="true" data-name="2.0.5">2.0.5</A>             </DIV><!-- /.select-menu-item --> 
+            
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="2.0.0" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/2.0.0" rel="nofollow" 
+data-skip-pjax="true" data-name="2.0.0">2.0.0</A>             </DIV><!-- /.select-menu-item --> 
+            
+<DIV class="select-menu-item js-navigation-item "><SPAN class="select-menu-item-icon octicon octicon-check"></SPAN> 
+              <A title="1.3.6" class="js-navigation-open select-menu-item-text css-truncate-target" 
+href="https://github.com/MSOpenTech/redis/tree/1.3.6" rel="nofollow" 
+data-skip-pjax="true" data-name="1.3.6">1.3.6</A>             </DIV><!-- /.select-menu-item --> 
+        </DIV>
+<DIV class="select-menu-no-results">Nothing to show</DIV></DIV><!-- /.select-menu-list --> 
+    </DIV><!-- /.select-menu-modal -->   </DIV><!-- /.select-menu-modal-holder --> 
+</DIV><!-- /.select-menu -->   
+<DIV class="breadcrumb"><SPAN class="repo-root js-repo-root"><SPAN itemtype="http://data-vocabulary.org/Breadcrumb" 
+itemscope=""><A href="https://github.com/MSOpenTech/redis" itemscope="url" 
+data-pjax="true" data-direction="back" data-branch="2.8"><SPAN 
+itemprop="title">redis</SPAN></A></SPAN></SPAN><SPAN class="separator"> / 
+</SPAN>
+<FORM class="js-new-blob-form tooltipped tooltipped-e new-file-link" aria-label="Sign in to make or propose changes" 
+action="/login?return_to=%2FMSOpenTech%2Fredis" method="post"><SPAN class="js-new-blob-submit octicon octicon-plus" 
+role="button" aria-label="Sign in to make or propose changes" data-test-id="create-new-git-file"></SPAN></FORM></DIV></DIV>
+<DIV class="branch-infobar clearfix">
+<P>          This branch is 387 commits ahead of antirez:2.8         </P>
+<UL class="lightweight-actions">
+  <LI><A href="https://github.com/MSOpenTech/redis/pull/new/2.8"><SPAN class="octicon octicon-git-pull-request"></SPAN> 
+               Pull Request             </A>         </LI>
+  <LI><A href="https://github.com/MSOpenTech/redis/compare"><SPAN class="octicon octicon-diff"></SPAN> 
+             Compare           </A>         </LI></UL></DIV>
+<DIV class="commit commit-tease js-details-container">
+<P class="commit-title "><A title="finishing 2.8.15-->2.8.16 version update" 
+class="message" href="https://github.com/MSOpenTech/redis/commit/c7b6d311df4bc515ed8da4e6215d0873191e07c9" 
+data-pjax="true">finishing 2.8.15--&gt;2.8.16 version update</A>             
+</P>
+<DIV class="commit-meta"><BUTTON class="js-zeroclipboard zeroclipboard-link" 
+aria-label="Copy SHA" type="button" data-copied-hint="Copied!" 
+data-clipboard-text="c7b6d311df4bc515ed8da4e6215d0873191e07c9"><SPAN class="octicon octicon-clippy"></SPAN></BUTTON> 
+      <A class="sha-block" href="https://github.com/MSOpenTech/redis/commit/c7b6d311df4bc515ed8da4e6215d0873191e07c9" 
+data-pjax="">latest commit <SPAN class="sha">c7b6d311df</SPAN></A>       
+<DIV class="authorship"><IMG width="20" height="20" class="avatar" alt="Jonathan Pickett" 
+src="MSOpenTech-redis%20·%20GitHub_files/5193368.png" data-user="5193368">       
+  <SPAN class="author-name"><A href="https://github.com/jepickett" rel="contributor">jepickett</A></SPAN> 
+       authored <time class="updated" is="relative-time" datetime="2014-09-16T18:53:49-07:00">September 
+16, 2014</time>       </DIV></DIV></DIV>
+<DIV class="file-wrap">
+<TABLE class="files" data-pjax="">
+  <TBODY data-url="/MSOpenTech/redis/file-list/2.8" data-deferred-content-error="Failed to load latest commit information.">
+  <TR>
+    <TD class="icon"><SPAN class="octicon octicon-file-directory"></SPAN>      
+         <IMG width="16" height="16" class="spinner" alt="" src="MSOpenTech-redis%20·%20GitHub_files/octocat-spinner-32.gif"> 
+            </TD>
+    <TD class="content"><SPAN class="css-truncate css-truncate-target"><A 
+      title="bin" class="js-directory-link" id="c1111bd512b29e821b120b86446026b8-5fdd8ccb2c72f8cf765bcaa3ab771d3ccd3af2ea" 
+      href="https://github.com/MSOpenTech/redis/tree/2.8/bin">bin</A></SPAN>     
+        </TD>
+    <TD class="message"><SPAN class="css-truncate css-truncate-target "><A 
+      title="finishing 2.8.15-->2.8.16 version update" class="message" href="https://github.com/MSOpenTech/redis/commit/c7b6d311df4bc515ed8da4e6215d0873191e07c9" 
+      data-pjax="true">finishing 2.8.15--&gt;2.8.16 version update</A>         
+      </SPAN>       </TD>
+    <TD class="age"><SPAN class="css-truncate css-truncate-target"><time is="time-ago" 
+      datetime="2014-09-17T01:53:49Z">September 16, 2014</time></SPAN>       
+  </TD></TR>
+  <TR>
+    <TD class="icon"><SPAN class="octicon octicon-file-directory"></SPAN>      
+         <IMG width="16" height="16" class="spinner" alt="" src="MSOpenTech-redis%20·%20GitHub_files/octocat-spinner-32.gif"> 
+            </TD>
+    <TD class="content"><SPAN class="css-truncate css-truncate-target"><A 
+      title="deps" class="js-directory-link" id="44f85496bf6930d196d5904271343563-b28461b93fc4df6ace90cc66baff2fdbce3980dc" 
+      href="https://github.com/MSOpenTech/redis/tree/2.8/deps">deps</A></SPAN>   
+          </TD>
+    <TD class="message"><SPAN class="css-truncate css-truncate-target "><A 
+      title="Merge antirez 2.8.14 into MSOPENTech 2.8 branch&#10;&#10;Conflicts:&#10;&#9;src/ae.c&#10;&#9;src/bitops.c&#10;&#9;src/dict.c&#10;&#9;src/fmacros.h&#10;&#9;src/hyperloglog.c&#10;&#9;src/networking.c&#10;&#9;src/redis-check-dump.c&#10;&#9;src/redis.c&#10;&#9;src/sds.c&#10;&#9;src/t_string.c&#10;&#9;src/t_zset.c&#10;&#9;src/util.c" 
+      class="message" href="https://github.com/MSOpenTech/redis/commit/1688851b137ba5e381663592bfa55c40adc5d733" 
+      data-pjax="true">Merge antirez 2.8.14 into MSOPENTech 2.8 branch</A>       
+        </SPAN>       </TD>
+    <TD class="age"><SPAN class="css-truncate css-truncate-target"><time is="time-ago" 
+      datetime="2014-09-06T20:44:19Z">September 06, 2014</time></SPAN>       
+  </TD></TR>
+  <TR>
+    <TD class="icon"><SPAN class="octicon octicon-file-directory"></SPAN>      
+         <IMG width="16" height="16" class="spinner" alt="" src="MSOpenTech-redis%20·%20GitHub_files/octocat-spinner-32.gif"> 
+            </TD>
+    <TD class="content"><SPAN class="css-truncate css-truncate-target"><A 
+      title="msvs" class="js-directory-link" id="bc490f142e5b6a4527c10b3d135d1ec6-ce4cebb5df97bd515f78db33f73c4c83c16d0a9e" 
+      href="https://github.com/MSOpenTech/redis/tree/2.8/msvs">msvs</A></SPAN>   
+          </TD>
+    <TD class="message"><SPAN class="css-truncate css-truncate-target "><A 
+      title="finishing 2.8.15-->2.8.16 version update" class="message" href="https://github.com/MSOpenTech/redis/commit/c7b6d311df4bc515ed8da4e6215d0873191e07c9" 
+      data-pjax="true">finishing 2.8.15--&gt;2.8.16 version update</A>         
+      </SPAN>       </TD>
+    <TD class="age"><SPAN class="css-truncate css-truncate-target"><time is="time-ago" 
+      datetime="2014-09-17T01:53:49Z">September 17, 2014</time></SPAN>       
+  </TD></TR>
+  <TR>
+    <TD class="icon"><SPAN class="octicon octicon-file-directory"></SPAN>      
+         <IMG width="16" height="16" class="spinner" alt="" src="MSOpenTech-redis%20·%20GitHub_files/octocat-spinner-32.gif"> 
+            </TD>
+    <TD class="content"><SPAN class="css-truncate css-truncate-target"><A 
+      title="src" class="js-directory-link" id="25d902c24283ab8cfbac54dfa101ad31-7239b60a1cf77b9eb67ea85ac2523c194a2b5633" 
+      href="https://github.com/MSOpenTech/redis/tree/2.8/src">src</A></SPAN>     
+        </TD>
+    <TD class="message"><SPAN class="css-truncate css-truncate-target "><A 
+      title="finishing 2.8.15-->2.8.16 version update" class="message" href="https://github.com/MSOpenTech/redis/commit/c7b6d311df4bc515ed8da4e6215d0873191e07c9" 
+      data-pjax="true">finishing 2.8.15--&gt;2.8.16 version update</A>         
+      </SPAN>       </TD>
+    <TD class="age"><SPAN class="css-truncate css-truncate-target"><time is="time-ago" 
+      datetime="2014-09-17T01:53:49Z">September 17, 2014</time></SPAN>       
+  </TD></TR>
+  <TR>
+    <TD class="icon"><SPAN class="octicon octicon-file-directory"></SPAN>      
+         <IMG width="16" height="16" class="spinner" alt="" src="MSOpenTech-redis%20·%20GitHub_files/octocat-spinner-32.gif"> 
+            </TD>
+    <TD class="content"><SPAN class="css-truncate css-truncate-target"><A 
+      title="tests" class="js-directory-link" id="b61a6d542f9036550ba9c401c80f00ef-d216d115d886028114436dc0ed7fddedaa174963" 
+      href="https://github.com/MSOpenTech/redis/tree/2.8/tests">tests</A></SPAN> 
+            </TD>
+    <TD class="message"><SPAN class="css-truncate css-truncate-target "><A 
+      title="merge antirez changes 2.8.15-->2.8.16" class="message" href="https://github.com/MSOpenTech/redis/commit/18534064c954bf32235e6b26e070b6b803c9cfa8" 
+      data-pjax="true">merge antirez changes 2.8.15--&gt;2.8.16</A>         
+      </SPAN>       </TD>
+    <TD class="age"><SPAN class="css-truncate css-truncate-target"><time is="time-ago" 
+      datetime="2014-09-17T00:05:36Z">September 16, 2014</time></SPAN>       
+  </TD></TR>
+  <TR>
+    <TD class="icon"><SPAN class="octicon octicon-file-directory"></SPAN>      
+         <IMG width="16" height="16" class="spinner" alt="" src="MSOpenTech-redis%20·%20GitHub_files/octocat-spinner-32.gif"> 
+            </TD>
+    <TD class="content"><SPAN class="css-truncate css-truncate-target"><A 
+      title="utils" class="js-directory-link" id="2b3583e6e17721c54496bd04e57a0c15-02bdc1c6152387af85d7c228dae73345a3c59d15" 
+      href="https://github.com/MSOpenTech/redis/tree/2.8/utils">utils</A></SPAN> 
+            </TD>
+    <TD class="message"><SPAN class="css-truncate css-truncate-target "><A 
+      title="Use correct github url to find commands.json&#10;&#10;Once this is merged:&#10;  - merge the latest changes to commands.json in antirez/redis-doc&#10;  - re-run: utils/generate-command-help.rb > src/help.h&#10;&#10;Then we'll have nice and easy tab-completed help in redis-cli again.&#10;&#10;Closes #1909" 
+      class="message" href="https://github.com/MSOpenTech/redis/commit/32a94beca4fb5db78f4fb5271916fdac6327662c" 
+      data-pjax="true">Use correct github url to find commands.json</A>         
+      </SPAN>       </TD>
+    <TD class="age"><SPAN class="css-truncate css-truncate-target"><time is="time-ago" 
+      datetime="2014-08-27T08:30:34Z">August 27, 2014</time></SPAN>       </TD></TR>
+  <TR>
+    <TD class="icon"><SPAN class="octicon octicon-file-text"></SPAN>         
+      <IMG width="16" height="16" class="spinner" alt="" src="MSOpenTech-redis%20·%20GitHub_files/octocat-spinner-32.gif"> 
+            </TD>
+    <TD class="content"><SPAN class="css-truncate css-truncate-target"><A 
+      title=".gitignore" class="js-directory-link" id="a084b794bc0759e7a6b77810e01874f2-dd3ebbc2ea56a6ace628d38186fcc85c82d612d5" 
+      href="https://github.com/MSOpenTech/redis/blob/2.8/.gitignore">.gitignore</A></SPAN> 
+            </TD>
+    <TD class="message"><SPAN class="css-truncate css-truncate-target "><A 
+      title="Add missing exe files, quote for subscription, x64 switch, name conflict&#10;&#10;Conflicts:&#10;&#10;&#9;.gitignore" 
+      class="message" href="https://github.com/MSOpenTech/redis/commit/1e6147fadaca59eca096e2014902f1e7a8afc1c1" 
+      data-pjax="true">Add missing exe files, quote for subscription, x64 
+      switch, name conflict</A>         </SPAN>       </TD>
+    <TD class="age"><SPAN class="css-truncate css-truncate-target"><time is="time-ago" 
+      datetime="2013-07-21T19:44:22Z">July 21, 2013</time></SPAN>       </TD></TR>
+  <TR>
+    <TD class="icon"><SPAN class="octicon octicon-file-text"></SPAN>         
+      <IMG width="16" height="16" class="spinner" alt="" src="MSOpenTech-redis%20·%20GitHub_files/octocat-spinner-32.gif"> 
+            </TD>
+    <TD class="content"><SPAN class="css-truncate css-truncate-target"><A 
+      title="00-RELEASENOTES" class="js-directory-link" id="484d7b7e500d98f7c1889fbcc6cd2d72-bd5fb021fcd725469c055752a7c8d7c3474eab29" 
+      href="https://github.com/MSOpenTech/redis/blob/2.8/00-RELEASENOTES">00-RELEASENOTES</A></SPAN> 
+            </TD>
+    <TD class="message"><SPAN class="css-truncate css-truncate-target "><A 
+      title="Redis 2.8.16." class="message" href="https://github.com/MSOpenTech/redis/commit/a69534967bead5d1ff64abdce99c150fabda6546" 
+      data-pjax="true">Redis 2.8.16.</A>         </SPAN>       </TD>
+    <TD class="age"><SPAN class="css-truncate css-truncate-target"><time is="time-ago" 
+      datetime="2014-09-16T13:15:56Z">September 16, 2014</time></SPAN>       
+  </TD></TR>
+  <TR>
+    <TD class="icon"><SPAN class="octicon octicon-file-text"></SPAN>         
+      <IMG width="16" height="16" class="spinner" alt="" src="MSOpenTech-redis%20·%20GitHub_files/octocat-spinner-32.gif"> 
+            </TD>
+    <TD class="content"><SPAN class="css-truncate css-truncate-target"><A 
+      title="BUGS" class="js-directory-link" id="0885b1a15aeef0124d5d8796f94b2fc3-96d52bf8bd2cc06d0560a950ba429afaa358a57c" 
+      href="https://github.com/MSOpenTech/redis/blob/2.8/BUGS">BUGS</A></SPAN>   
+          </TD>
+    <TD class="message"><SPAN class="css-truncate css-truncate-target "><A 
+      title="Switched issues URL to Github in BUGS" class="message" href="https://github.com/MSOpenTech/redis/commit/61e02c4f6c1b5f4119bac41f9198240b035c26b1" 
+      data-pjax="true">Switched issues URL to Github in BUGS</A>         </SPAN> 
+            </TD>
+    <TD class="age"><SPAN class="css-truncate css-truncate-target"><time is="time-ago" 
+      datetime="2011-10-18T18:28:23Z">October 18, 2011</time></SPAN>       
+</TD></TR>
+  <TR>
+    <TD class="icon"><SPAN class="octicon octicon-file-text"></SPAN>         
+      <IMG width="16" height="16" class="spinner" alt="" src="MSOpenTech-redis%20·%20GitHub_files/octocat-spinner-32.gif"> 
+            </TD>
+    <TD class="content"><SPAN class="css-truncate css-truncate-target"><A 
+      title="CONTRIBUTING" class="js-directory-link" id="a1b080369a1999fce09f94befe66e350-f7b6836f701c10effb75682ef573c7c4c73275e9" 
+      href="https://github.com/MSOpenTech/redis/blob/2.8/CONTRIBUTING">CONTRIBUTING</A></SPAN> 
+            </TD>
+    <TD class="message"><SPAN class="css-truncate css-truncate-target "><A 
+      title="Grammar fix." class="message" href="https://github.com/MSOpenTech/redis/commit/4f9d30b33bd2e986ea9368aba6e202894a93aca6" 
+      data-pjax="true">Grammar fix.</A>         </SPAN>       </TD>
+    <TD class="age"><SPAN class="css-truncate css-truncate-target"><time is="time-ago" 
+      datetime="2013-12-05T17:54:01Z">December 05, 2013</time></SPAN>       
+  </TD></TR>
+  <TR>
+    <TD class="icon"><SPAN class="octicon octicon-file-text"></SPAN>         
+      <IMG width="16" height="16" class="spinner" alt="" src="MSOpenTech-redis%20·%20GitHub_files/octocat-spinner-32.gif"> 
+            </TD>
+    <TD class="content"><SPAN class="css-truncate css-truncate-target"><A 
+      title="COPYING" class="js-directory-link" id="7116ef0705885343c9e1b2171a06be0e-a58de44ddd254cf1748e425a41364583a65d4b01" 
+      href="https://github.com/MSOpenTech/redis/blob/2.8/COPYING">COPYING</A></SPAN> 
+            </TD>
+    <TD class="message"><SPAN class="css-truncate css-truncate-target "><A 
+      title="update copyright year" class="message" href="https://github.com/MSOpenTech/redis/commit/0be31e2d222cb7c578b9ff11320bc53a2f9a7c48" 
+      data-pjax="true">update copyright year</A>         </SPAN>       </TD>
+    <TD class="age"><SPAN class="css-truncate css-truncate-target"><time is="time-ago" 
+      datetime="2014-02-03T10:19:25Z">February 03, 2014</time></SPAN>       
+  </TD></TR>
+  <TR>
+    <TD class="icon"><SPAN class="octicon octicon-file-text"></SPAN>         
+      <IMG width="16" height="16" class="spinner" alt="" src="MSOpenTech-redis%20·%20GitHub_files/octocat-spinner-32.gif"> 
+            </TD>
+    <TD class="content"><SPAN class="css-truncate css-truncate-target"><A 
+      title="INSTALL" class="js-directory-link" id="6a755e7d228a2b491321dbae0a7a248b-3083f1afd50c34e1139ab1577510a17e968b0ed4" 
+      href="https://github.com/MSOpenTech/redis/blob/2.8/INSTALL">INSTALL</A></SPAN> 
+            </TD>
+    <TD class="message"><SPAN class="css-truncate css-truncate-target "><A 
+      title="INSTALL now redirects the user to README" class="message" href="https://github.com/MSOpenTech/redis/commit/3508899944aa0797cf52563493b4bc295b0ec2fd" 
+      data-pjax="true">INSTALL now redirects the user to README</A>         
+      </SPAN>       </TD>
+    <TD class="age"><SPAN class="css-truncate css-truncate-target"><time is="time-ago" 
+      datetime="2012-02-05T08:38:41Z">February 05, 2012</time></SPAN>       
+  </TD></TR>
+  <TR>
+    <TD class="icon"><SPAN class="octicon octicon-file-text"></SPAN>         
+      <IMG width="16" height="16" class="spinner" alt="" src="MSOpenTech-redis%20·%20GitHub_files/octocat-spinner-32.gif"> 
+            </TD>
+    <TD class="content"><SPAN class="css-truncate css-truncate-target"><A 
+      title="MANIFESTO" class="js-directory-link" id="75a9b6bcd8953302712b8420669483e0-2b719057ee756b112a98dab7de399f41853d1f73" 
+      href="https://github.com/MSOpenTech/redis/blob/2.8/MANIFESTO">MANIFESTO</A></SPAN> 
+            </TD>
+    <TD class="message"><SPAN class="css-truncate css-truncate-target "><A 
+      title="Format to fit 80 columns&#10;&#10;This makes it readable on GitHub and editors without auto wrapping." 
+      class="message" href="https://github.com/MSOpenTech/redis/commit/45bfab8596db6e36617ed4396847e37aa6db98f0" 
+      data-pjax="true">Format to fit 80 columns</A>         </SPAN>       </TD>
+    <TD class="age"><SPAN class="css-truncate css-truncate-target"><time is="time-ago" 
+      datetime="2013-02-12T12:11:47Z">February 12, 2013</time></SPAN>       
+  </TD></TR>
+  <TR>
+    <TD class="icon"><SPAN class="octicon octicon-file-text"></SPAN>         
+      <IMG width="16" height="16" class="spinner" alt="" src="MSOpenTech-redis%20·%20GitHub_files/octocat-spinner-32.gif"> 
+            </TD>
+    <TD class="content"><SPAN class="css-truncate css-truncate-target"><A 
+      title="Makefile" class="js-directory-link" id="b67911656ef5d18c4ae36cb6741b7965-e614ede891f2dd183a3ae41ea1ac3b63fe2e7634" 
+      href="https://github.com/MSOpenTech/redis/blob/2.8/Makefile">Makefile</A></SPAN> 
+            </TD>
+    <TD class="message"><SPAN class="css-truncate css-truncate-target "><A 
+      title="Fix `install` target on OSX (see #495)" class="message" href="https://github.com/MSOpenTech/redis/commit/1b1cf8e7bf8d3088caa25159a964b1692ae791c9" 
+      data-pjax="true">Fix `install` target on OSX (see</A> <A title="Really silly failure with 'make install'" 
+      class="issue-link" 
+      href="https://github.com/antirez/redis/issues/495">#495</A><A title="Fix `install` target on OSX (see #495)" 
+      class="message" href="https://github.com/MSOpenTech/redis/commit/1b1cf8e7bf8d3088caa25159a964b1692ae791c9" 
+      data-pjax="true">)</A>         </SPAN>       </TD>
+    <TD class="age"><SPAN class="css-truncate css-truncate-target"><time is="time-ago" 
+      datetime="2012-05-04T18:54:25Z">May 04, 2012</time></SPAN>       </TD></TR>
+  <TR>
+    <TD class="icon"><SPAN class="octicon octicon-file-text"></SPAN>         
+      <IMG width="16" height="16" class="spinner" alt="" src="MSOpenTech-redis%20·%20GitHub_files/octocat-spinner-32.gif"> 
+            </TD>
+    <TD class="content"><SPAN class="css-truncate css-truncate-target"><A 
+      title="README" class="js-directory-link" id="c47c7c7383225ab55ff591cb59c41e6b-b7a12b828e8121da4480cd5889c847e9260ef8cd" 
+      href="https://github.com/MSOpenTech/redis/blob/2.8/README">README</A></SPAN> 
+            </TD>
+    <TD class="message"><SPAN class="css-truncate css-truncate-target "><A 
+      title="Finally fix the `install_server.sh` script.&#10;&#10;Includes changes from a dozen bug reports and pull requests.&#10;Was tested on Ubuntu, Debian and CentOS." 
+      class="message" href="https://github.com/MSOpenTech/redis/commit/6182dad37cf13be93c8cf15eadae6c77fe692e86" 
+      data-pjax="true">Finally fix the `install_server.sh` script.</A>         
+      </SPAN>       </TD>
+    <TD class="age"><SPAN class="css-truncate css-truncate-target"><time is="time-ago" 
+      datetime="2014-03-24T17:12:58Z">March 24, 2014</time></SPAN>       </TD></TR>
+  <TR>
+    <TD class="icon"><SPAN class="octicon octicon-file-text"></SPAN>         
+      <IMG width="16" height="16" class="spinner" alt="" src="MSOpenTech-redis%20·%20GitHub_files/octocat-spinner-32.gif"> 
+            </TD>
+    <TD class="content"><SPAN class="css-truncate css-truncate-target"><A 
+      title="README.md" class="js-directory-link" id="04c6e90faac2675aa89e2176d2eec7d8-9b6af883af996f9cce3b3b425986c9c1c3078448" 
+      href="https://github.com/MSOpenTech/redis/blob/2.8/README.md">README.md</A></SPAN> 
+            </TD>
+    <TD class="message"><SPAN class="css-truncate css-truncate-target "><A 
+      title="updated release package, nuspecs, and docs" class="message" href="https://github.com/MSOpenTech/redis/commit/c9c6ac205637d6933234d2d848a399bcd1a6440e" 
+      data-pjax="true">updated release package, nuspecs, and docs</A>         
+      </SPAN>       </TD>
+    <TD class="age"><SPAN class="css-truncate css-truncate-target"><time is="time-ago" 
+      datetime="2014-09-06T21:14:04Z">September 06, 2014</time></SPAN>       
+  </TD></TR>
+  <TR>
+    <TD class="icon"><SPAN class="octicon octicon-file-text"></SPAN>         
+      <IMG width="16" height="16" class="spinner" alt="" src="MSOpenTech-redis%20·%20GitHub_files/octocat-spinner-32.gif"> 
+            </TD>
+    <TD class="content"><SPAN class="css-truncate css-truncate-target"><A 
+      title="appveyor.yml" class="js-directory-link" id="180360612c6b8c4ed830919bbb4dd459-d0988ada50a284ff6aeb1de194c73cc531f6f3b7" 
+      href="https://github.com/MSOpenTech/redis/blob/2.8/appveyor.yml">appveyor.yml</A></SPAN> 
+            </TD>
+    <TD class="message"><SPAN class="css-truncate css-truncate-target "><A 
+      title="appveyor config" class="message" href="https://github.com/MSOpenTech/redis/commit/a2119ce3a574c389af8269444077bdd5431c219b" 
+      data-pjax="true">appveyor config</A>         </SPAN>       </TD>
+    <TD class="age"><SPAN class="css-truncate css-truncate-target"><time is="time-ago" 
+      datetime="2014-09-04T07:22:25Z">September 04, 2014</time></SPAN>       
+  </TD></TR>
+  <TR>
+    <TD class="icon"><SPAN class="octicon octicon-file-text"></SPAN>         
+      <IMG width="16" height="16" class="spinner" alt="" src="MSOpenTech-redis%20·%20GitHub_files/octocat-spinner-32.gif"> 
+            </TD>
+    <TD class="content"><SPAN class="css-truncate css-truncate-target"><A 
+      title="license.txt" class="js-directory-link" id="98cd14c95bb22f9d397da0603a77d950-d595cedab0006f2b5207637747583969db09f2de" 
+      href="https://github.com/MSOpenTech/redis/blob/2.8/license.txt">license.txt</A></SPAN> 
+            </TD>
+    <TD class="message"><SPAN class="css-truncate css-truncate-target "><A 
+      title="add license" class="message" href="https://github.com/MSOpenTech/redis/commit/097dd94bb4c85ab30180bd87292c82fb7b77aae4" 
+      data-pjax="true">add license</A>         </SPAN>       </TD>
+    <TD class="age"><SPAN class="css-truncate css-truncate-target"><time is="time-ago" 
+      datetime="2013-07-21T19:26:05Z">July 21, 2013</time></SPAN>       </TD></TR>
+  <TR>
+    <TD class="icon"><SPAN class="octicon octicon-file-text"></SPAN>         
+      <IMG width="16" height="16" class="spinner" alt="" src="MSOpenTech-redis%20·%20GitHub_files/octocat-spinner-32.gif"> 
+            </TD>
+    <TD class="content"><SPAN class="css-truncate css-truncate-target"><A 
+      title="redis.conf" class="js-directory-link" id="1a75827fc1e080d1600e2a6843aa311d-32e38de445d55a4509333561f2937949b1d341e9" 
+      href="https://github.com/MSOpenTech/redis/blob/2.8/redis.conf">redis.conf</A></SPAN> 
+            </TD>
+    <TD class="message"><SPAN class="css-truncate css-truncate-target "><A 
+      title="Merge changes from Posix Redis through 2.8.15 into MSOpenTech branch" 
+      class="message" href="https://github.com/MSOpenTech/redis/commit/915c0dd6563a09ed56b1d6caab3fdf0cb6c7705a" 
+      data-pjax="true">Merge changes from Posix Redis through 2.8.15 into 
+      MSOpenTech branch</A>         </SPAN>       </TD>
+    <TD class="age"><SPAN class="css-truncate css-truncate-target"><time is="time-ago" 
+      datetime="2014-09-16T01:10:10Z">September 15, 2014</time></SPAN>       
+  </TD></TR>
+  <TR>
+    <TD class="icon"><SPAN class="octicon octicon-file-text"></SPAN>         
+      <IMG width="16" height="16" class="spinner" alt="" src="MSOpenTech-redis%20·%20GitHub_files/octocat-spinner-32.gif"> 
+            </TD>
+    <TD class="content"><SPAN class="css-truncate css-truncate-target"><A 
+      title="runtest" class="js-directory-link" id="c20b6030cffccdab6efcb43dc5abcf66-d8451df57eb6144547e8262da3184f7ec555a85d" 
+      href="https://github.com/MSOpenTech/redis/blob/2.8/runtest">runtest</A></SPAN> 
+            </TD>
+    <TD class="message"><SPAN class="css-truncate css-truncate-target "><A 
+      title="Check available tcl versions" class="message" href="https://github.com/MSOpenTech/redis/commit/6da090e916c56284054d846dbbe0b78e0cfd8914" 
+      data-pjax="true">Check available tcl versions</A>         </SPAN>       
+</TD>
+    <TD class="age"><SPAN class="css-truncate css-truncate-target"><time is="time-ago" 
+      datetime="2013-02-05T10:45:05Z">February 05, 2013</time></SPAN>       
+  </TD></TR>
+  <TR>
+    <TD class="icon"><SPAN class="octicon octicon-file-text"></SPAN>         
+      <IMG width="16" height="16" class="spinner" alt="" src="MSOpenTech-redis%20·%20GitHub_files/octocat-spinner-32.gif"> 
+            </TD>
+    <TD class="content"><SPAN class="css-truncate css-truncate-target"><A 
+      title="runtest-sentinel" class="js-directory-link" id="ee8c1ec62015f62505f6050e71139f67-3fb1ef61561289b2bf8622e49645f66dab83eeea" 
+      href="https://github.com/MSOpenTech/redis/blob/2.8/runtest-sentinel">runtest-sentinel</A></SPAN> 
+            </TD>
+    <TD class="message"><SPAN class="css-truncate css-truncate-target "><A 
+      title="Sentinel framework new layout back ported 2.8.&#10;&#10;Functionally the same, but makes cherry picking simpler." 
+      class="message" href="https://github.com/MSOpenTech/redis/commit/eef369b66a1ef64bdcd45d3d60f46d352fd5235b" 
+      data-pjax="true">Sentinel framework new layout back ported 2.8.</A>        
+       </SPAN>       </TD>
+    <TD class="age"><SPAN class="css-truncate css-truncate-target"><time is="time-ago" 
+      datetime="2014-06-18T14:14:33Z">June 18, 2014</time></SPAN>       </TD></TR>
+  <TR>
+    <TD class="icon"><SPAN class="octicon octicon-file-text"></SPAN>         
+      <IMG width="16" height="16" class="spinner" alt="" src="MSOpenTech-redis%20·%20GitHub_files/octocat-spinner-32.gif"> 
+            </TD>
+    <TD class="content"><SPAN class="css-truncate css-truncate-target"><A 
+      title="sentinel.conf" class="js-directory-link" id="9cf0c48812ea7f4e98ef1281e344017f-4b3b79242053edf6663a0d3453fc04a0c51ff277" 
+      href="https://github.com/MSOpenTech/redis/blob/2.8/sentinel.conf">sentinel.conf</A></SPAN> 
+            </TD>
+    <TD class="message"><SPAN class="css-truncate css-truncate-target "><A 
+      title="Sentinel: clarify announce-ip/port options in sentinel.conf." 
+      class="message" href="https://github.com/MSOpenTech/redis/commit/3cc31da349a08218221d280ae41806ea7b86a18f" 
+      data-pjax="true">Sentinel: clarify announce-ip/port options in 
+      sentinel.conf.</A>         </SPAN>       </TD>
+    <TD class="age"><SPAN class="css-truncate css-truncate-target"><time is="time-ago" 
+      datetime="2014-09-10T07:26:29Z">September 10, 2014</time></SPAN>       
+  </TD></TR></TBODY></TABLE></DIV>
+<DIV class="boxed-group flush clearfix announce instapaper_body md" id="readme">
+<H3><SPAN class="octicon octicon-book"></SPAN>      README.md     </H3><ARTICLE 
+class="markdown-body entry-content" itemprop="mainContentOfPage">
+<P><A href="https://ci.appveyor.com/project/MSOpenTech-lab/redis"><IMG style="max-width: 100%;" 
+alt="Windows Status" src="" data-canonical-src="http://img.shields.io/appveyor/ci/MSOpenTech-lab/redis.svg?style=flat-square"></A></P>
+<P><A href="http://www.nuget.org/packages/redis-64/"><IMG style="max-width: 100%;" 
+alt="NuGet version" src="MSOpenTech-redis%20·%20GitHub_files/687474703a2f2f696d672e736869656c64732e696f2f6e756765742f762f72656469732d36342e7376673f7374796c653d666c61742d737175617265.svg" 
+data-canonical-src="http://img.shields.io/nuget/v/redis-64.svg?style=flat-square"></A> 
+<A href="http://www.nuget.org/packages/redis-64/"><IMG style="max-width: 100%;" 
+alt="NuGet downloads" src="MSOpenTech-redis%20·%20GitHub_files/687474703a2f2f696d672e736869656c64732e696f2f6e756765742f64742f72656469732d36342e7376673f7374796c653d666c61742d737175617265.svg" 
+data-canonical-src="http://img.shields.io/nuget/dt/redis-64.svg?style=flat-square"></A></P>
+<P><A href="http://www.chocolatey.org/packages/redis-64/"><IMG style="max-width: 100%;" 
+alt="Chocolatey version" src="MSOpenTech-redis%20·%20GitHub_files/687474703a2f2f696d672e736869656c64732e696f2f63686f636f6c617465792f762f72656469732d36342e7376673f7374796c653d666c61742d737175617265.svg" 
+data-canonical-src="http://img.shields.io/chocolatey/v/redis-64.svg?style=flat-square"></A> 
+<A href="http://www.chocolatey.org/packages/redis-64/"><IMG style="max-width: 100%;" 
+alt="Chocolatey downloads" src="MSOpenTech-redis%20·%20GitHub_files/687474703a2f2f696d672e736869656c64732e696f2f63686f636f6c617465792f64742f72656469732d36342e7376673f7374796c653d666c61742d737175617265.svg" 
+data-canonical-src="http://img.shields.io/chocolatey/dt/redis-64.svg?style=flat-square"></A></P>
+<H1><A name="user-content-redis-on-windows-" class="anchor" aria-hidden="true" 
+href="https://github.com/MSOpenTech/redis#redis-on-windows-"><SPAN class="octicon octicon-link"></SPAN></A>Redis 
+on Windows </H1>
+<H2><A name="user-content-redis-28-branch" class="anchor" aria-hidden="true" 
+href="https://github.com/MSOpenTech/redis#redis-28-branch"><SPAN class="octicon octicon-link"></SPAN></A>Redis 
+2.8 Branch</H2>
+<UL class="task-list">
+  <LI>This is a port for Windows based on Redis 2.8. The latest version merged 
+  in 2.8.14.</LI>
+  <LI>There is support for the 64-bit version. We have dropped official support 
+  for the 32-bit version, though you can build it from source if desired.</LI>
+  <LI>The binaries (unsigned) have been moved to a zip file in the \bin folder 
+  to make them easier to find. The Release build automatically updates the zip 
+  file.</LI>
+  <LI>Signed binaries can be downloaded using Nuget and Chocolatey.</LI>
+  <LI>There is a replacement for the UNIX fork() API that simulates the 
+  copy-on-write behavior using a memory mapped file.</LI>
+  <LI>Because Redis makes some assumptions about the values of File Descriptors, 
+  we have built a virtual file descriptor mapping layer. </LI>
+  <LI>We are moving towards moving all Windows-specific changes into the 
+  Win32_Interop library.</LI>
+  <LI>Redis can be installed as a Windows Service.</LI></UL>
+<H2><A name="user-content-whats-new-since-2812" class="anchor" aria-hidden="true" 
+href="https://github.com/MSOpenTech/redis#whats-new-since-2812"><SPAN class="octicon octicon-link"></SPAN></A>What's 
+new since 2.8.12</H2>
+<UL class="task-list">
+  <LI>See the Redis release notes: <A href="http://download.redis.io/redis-stable/00-RELEASENOTES">http://download.redis.io/redis-stable/00-RELEASENOTES</A> 
+  </LI></UL>
+<H2><A name="user-content-important-more-documentation-is-available" class="anchor" 
+aria-hidden="true" href="https://github.com/MSOpenTech/redis#important-more-documentation-is-available"><SPAN 
+class="octicon octicon-link"></SPAN></A>Important: More documentation is 
+available</H2>
+<P>Please read the documentation in msvs\setups\documentation. This is the 
+documentation that is bundled with the binaries, and contains vital information 
+about configuring and deploying Redis on Windows.</P>
+<H2><A name="user-content-how-to-build-redis-using-visual-studio" class="anchor" 
+aria-hidden="true" href="https://github.com/MSOpenTech/redis#how-to-build-redis-using-visual-studio"><SPAN 
+class="octicon octicon-link"></SPAN></A>How to build Redis using Visual 
+Studio</H2>
+<P>You can use the free Visual Studio Express 2013 for Windows Desktop edition 
+available at <A href="http://www.microsoft.com/en-us/download/details.aspx?id=40787">http://www.microsoft.com/en-us/download/details.aspx?id=40787</A>.</P>
+<UL class="task-list">
+  <LI>
+  <P>Open the solution file msvs\redisserver.sln in Visual Studio 2013, select a 
+  build configuration (Debug or Release) and target (Win32 or x64) then 
+  build.</P>
+  <P>This should create the following executables in the 
+  msvs\$(Target)\$(Configuration) folder:</P>
+  <UL class="task-list">
+    <LI>redis-server.exe</LI>
+    <LI>redis-benchmark.exe</LI>
+    <LI>redis-cli.exe</LI>
+    <LI>redis-check-dump.exe</LI>
+    <LI>redis-check-aof.exe</LI></UL></LI></UL>
+<H2><A name="user-content-unit-testing" class="anchor" aria-hidden="true" href="https://github.com/MSOpenTech/redis#unit-testing"><SPAN 
+class="octicon octicon-link"></SPAN></A>Unit Testing</H2>
+<P>To run the Redis test suite requires some manual work:</P>
+<UL class="task-list">
+  <LI>The tests assume that the binaries are in the src folder. Use mklink to 
+  create a symbolic link to the files in the msvs\x64\Debug|Release folders. You 
+  will need symbolic links for src\redis-server, src\redis-benchmark, 
+  src\redis-check-aof, src\redis-check-dump, src\redis-cli, and 
+  src\redis-sentinel.</LI>
+  <LI>The tests make use of TCL. This must be installed separately.</LI>
+  <LI>To run the tests you need to have a Unix shell on your machine, or MinGW 
+  tools in your path. To execute the tests, run the following command: 
+   "tclsh8.5.exe tests/test_helper.tcl --clients N", where N is the number of 
+  parallel clients . If a Unix shell is not installed you may see the  following 
+  error message: "couldn't execute "cat": no such file or directory".</LI>
+  <LI>By default the test suite launches 16 parallel tests. I will get time out 
+  errors on an iCore <A href="mailto:7-2620m@2.7Ghz">7-2620m@2.7Ghz</A> with 
+  some of the tests when the number of clients  is greater than 6. </LI></UL>
+<H2><A name="user-content-known-issues" class="anchor" aria-hidden="true" href="https://github.com/MSOpenTech/redis#known-issues"><SPAN 
+class="octicon octicon-link"></SPAN></A>Known issues</H2>
+<P>Problem: On versions of Windows prior to Windows 8/Server 2012, when an AOF 
+or RDB operation is complete and the child process is being rejoined with the 
+parent, it is  possible for Redis to unexpectedly terminate.</P>
+<P>Cause: The PAGE_REVERT_TO_FILE_MAP flag is not usable in VirtualProtect() in 
+earlier versions of the OS. This flag allows for removing copy on write(COW) 
+pages from  a memory mapped view without unmapping the view. In prior versions 
+of the OS, the only way to purge COW pages is to unmap and then remap the memory 
+mapped view.  Between the unmapping and remapping operations a third party 
+process(e.g., an anti-virus program) could allocate virtual memory occupied by 
+the memory mapped view.  As this view is used for the Redis heap, failure to 
+remap is a fatal error. (See RejoinCOWPages() in 
+src\Win32_Interop\Win32_QFork.cpp)</P>
+<P>Solution: If you encounter this problem, host Redis on Windows 8/Server 2012 
+or newer.</P></ARTICLE></DIV></DIV></DIV><!-- /.repo-container -->       
+<DIV class="modal-backdrop"></DIV></DIV><!-- /.container -->   </DIV><!-- /.site --> 
+    </DIV><!-- /.wrapper -->       
+<DIV class="container">
+<DIV class="site-footer">
+<UL class="site-footer-links right">
+  <LI><A href="https://status.github.com/">Status</A></LI>
+  <LI><A href="http://developer.github.com/">API</A></LI>
+  <LI><A href="http://training.github.com/">Training</A></LI>
+  <LI><A href="http://shop.github.com/">Shop</A></LI>
+  <LI><A href="https://github.com/blog">Blog</A></LI>
+  <LI><A href="https://github.com/about">About</A></LI></UL><A aria-label="Homepage" 
+href="https://github.com/"><SPAN title="GitHub" class="mega-octicon octicon-mark-github"></SPAN> 
+    </A>     
+<UL class="site-footer-links">
+  <LI>© 2014 <SPAN 
+  title="0.05117s from github-fe133-cp1-prd.iad.github.net">GitHub</SPAN>, 
+  Inc.</LI>
+  <LI><A href="https://github.com/site/terms">Terms</A></LI>
+  <LI><A href="https://github.com/site/privacy">Privacy</A></LI>
+  <LI><A href="https://github.com/security">Security</A></LI>
+  <LI><A href="https://github.com/contact">Contact</A></LI></UL></DIV><!-- /.site-footer --> 
+</DIV><!-- /.container -->     
+<DIV class="fullscreen-overlay js-fullscreen-overlay" id="fullscreen_overlay">
+<DIV class="fullscreen-container js-suggester-container">
+<DIV class="textarea-wrap"><TEXTAREA name="fullscreen-contents" class="fullscreen-contents js-fullscreen-contents js-suggester-field" id="fullscreen-contents" placeholder=""></TEXTAREA> 
+    </DIV></DIV>
+<DIV class="fullscreen-sidebar"><A class="exit-fullscreen js-exit-fullscreen tooltipped tooltipped-w" 
+aria-label="Exit Zen Mode" href="https://github.com/MSOpenTech/redis#"><SPAN 
+class="mega-octicon octicon-screen-normal"></SPAN>     </A>     <A class="theme-switcher js-theme-switcher tooltipped tooltipped-w" 
+aria-label="Switch themes" href="https://github.com/MSOpenTech/redis#"><SPAN 
+class="octicon octicon-color-mode"></SPAN>     </A>   </DIV></DIV>
+<DIV class="flash flash-error" id="ajax-error-message"><SPAN class="octicon octicon-alert"></SPAN> 
+      <A class="octicon octicon-x flash-close js-ajax-error-dismiss" aria-label="Dismiss error" 
+href="https://github.com/MSOpenTech/redis#"></A>      Something went wrong with 
+that request. Please try again.     </DIV>
+<SCRIPT src="MSOpenTech-redis%20·%20GitHub_files/frameworks-0c1b00f7935ae85624f5fc5d40d52d60febf92b4.js" type="text/javascript" crossorigin="anonymous"></SCRIPT>
+       
+<SCRIPT src="MSOpenTech-redis%20·%20GitHub_files/github-cfe587869551916e745decce50cc5ec895df6a28.js" type="text/javascript" async="async" crossorigin="anonymous"></SCRIPT>
+                     
+<SCRIPT src="MSOpenTech-redis%20·%20GitHub_files/analytics.js" async=""></SCRIPT>
+   </BODY></HTML>

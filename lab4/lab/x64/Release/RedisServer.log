@@ -1,0 +1,130 @@
+﻿Build started 17/09/2014 14:42:24.
+     1>Project "C:\New folder\msvs\RedisServer.vcxproj" on node 5 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\CL.exe /c /I"C:\New folder\msvs\..\deps\lua\src" /I"C:\New folder\msvs\..\deps\hiredis" /Zi /nologo /W3 /WX- /O2 /GL /D _WIN32IOCP /D WIN32 /D USE_DL_PREFIX /D LACKS_STDLIB_H /D NDEBUG /D _CONSOLE /D __x86_64__ /D WIN32_IOCP /D USE_DLMALLOC /Gm- /EHsc /MT /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"x64\Release\\" /Fd"x64\Release\vc120.pdb" /Gd /TC /wd4996 /wd4146 /errorReport:prompt ..\src\adlist.c ..\src\ae.c ..\src\anet.c ..\src\aof.c ..\src\bio.c ..\src\bitops.c ..\src\config.c ..\src\crc64.c ..\src\db.c ..\src\debug.c ..\src\dict.c ..\src\endianconv.c ..\src\hyperloglog.c ..\src\intset.c ..\src\latency.c ..\src\lzf_c.c ..\src\lzf_d.c ..\src\memtest.c ..\src\migrate.c ..\src\multi.c ..\src\networking.c ..\src\notify.c ..\src\object.c ..\src\pqsort.c ..\src\pubsub.c ..\src\rand.c ..\src\rdb.c ..\src\redis.c ..\src\release.c ..\src\replication.c ..\src\rio.c ..\src\scripting.c ..\src\sds.c ..\src\sentinel.c ..\src\sha1.c ..\src\slowlog.c ..\src\sort.c ..\src\sparkline.c ..\src\syncio.c ..\src\t_hash.c ..\src\t_list.c ..\src\t_set.c ..\src\t_string.c ..\src\t_zset.c ..\src\util.c ..\src\ziplist.c ..\src\zipmap.c ..\src\zmalloc.c
+         adlist.c
+         ae.c
+         anet.c
+         aof.c
+         bio.c
+         bitops.c
+         config.c
+         crc64.c
+         db.c
+     1>..\src\db.c(715): warning C4244: 'function' : conversion from '__int64' to 'int', possible loss of data
+         debug.c
+         dict.c
+         endianconv.c
+         hyperloglog.c
+     1>..\src\hyperloglog.c(1425): warning C4244: 'initializing' : conversion from 'double' to 'uint64_t', possible loss of data
+         intset.c
+         latency.c
+     1>..\src\latency.c(45): warning C4267: 'function' : conversion from 'size_t' to 'int', possible loss of data
+     1>..\src\latency.c(452): warning C4267: 'function' : conversion from 'size_t' to 'long', possible loss of data
+         lzf_c.c
+         lzf_d.c
+         memtest.c
+         migrate.c
+         multi.c
+         Compiling...
+         networking.c
+         notify.c
+         object.c
+         pqsort.c
+         pubsub.c
+         rand.c
+         rdb.c
+         redis.c
+     1>..\src\redis.c(741): warning C4018: '>' : signed/unsigned mismatch
+     1>..\src\redis.c(962): warning C4018: '>' : signed/unsigned mismatch
+     1>..\src\redis.c(2453): warning C4267: 'function' : conversion from 'size_t' to 'long', possible loss of data
+         release.c
+         replication.c
+         rio.c
+         scripting.c
+         sds.c
+         sentinel.c
+     1>..\src\sentinel.c(3391): warning C4267: '=' : conversion from 'size_t' to 'unsigned int', possible loss of data
+         sha1.c
+         slowlog.c
+         sort.c
+         sparkline.c
+         syncio.c
+         t_hash.c
+         Compiling...
+         t_list.c
+         t_set.c
+         t_string.c
+         t_zset.c
+     1>..\src\t_zset.c(2017): warning C4267: '=' : conversion from 'size_t' to 'unsigned int', possible loss of data
+         util.c
+         ziplist.c
+         zipmap.c
+         zmalloc.c
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"C:\New folder\msvs\x64\Release\redis-server.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:"C:\New folder\msvs\x64\Release\\" /LIBPATH:"C:\New folder\msvs\x64\Release\lib" psapi.lib kernel32.lib user32.lib gdi32.lib winspool.lib advapi32.lib shell32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST:NO /DEBUG /PDB:"C:\New folder\msvs\x64\Release\redis-server.pdb" /SUBSYSTEM:CONSOLE /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE:NO /NXCOMPAT /IMPLIB:"C:\New folder\msvs\x64\Release\redis-server.lib" /MACHINE:X64 x64\Release\adlist.obj
+         x64\Release\ae.obj
+         x64\Release\anet.obj
+         x64\Release\aof.obj
+         x64\Release\bio.obj
+         x64\Release\bitops.obj
+         x64\Release\config.obj
+         x64\Release\crc64.obj
+         x64\Release\db.obj
+         x64\Release\debug.obj
+         x64\Release\dict.obj
+         x64\Release\endianconv.obj
+         x64\Release\hyperloglog.obj
+         x64\Release\intset.obj
+         x64\Release\latency.obj
+         x64\Release\lzf_c.obj
+         x64\Release\lzf_d.obj
+         x64\Release\memtest.obj
+         x64\Release\migrate.obj
+         x64\Release\multi.obj
+         x64\Release\networking.obj
+         x64\Release\notify.obj
+         x64\Release\object.obj
+         x64\Release\pqsort.obj
+         x64\Release\pubsub.obj
+         x64\Release\rand.obj
+         x64\Release\rdb.obj
+         x64\Release\redis.obj
+         x64\Release\release.obj
+         x64\Release\replication.obj
+         x64\Release\rio.obj
+         x64\Release\scripting.obj
+         x64\Release\sds.obj
+         x64\Release\sentinel.obj
+         x64\Release\sha1.obj
+         x64\Release\slowlog.obj
+         x64\Release\sort.obj
+         x64\Release\sparkline.obj
+         x64\Release\syncio.obj
+         x64\Release\t_hash.obj
+         x64\Release\t_list.obj
+         x64\Release\t_set.obj
+         x64\Release\t_string.obj
+         x64\Release\t_zset.obj
+         x64\Release\util.obj
+         x64\Release\ziplist.obj
+         x64\Release\zipmap.obj
+         x64\Release\zmalloc.obj
+         ..\src\Win32_Interop\resources\EventLog.res
+         "C:\New folder\msvs\x64\Release\Win32_Interop.lib"
+         "C:\New folder\msvs\x64\Release\hiredis.lib"
+         "C:\New folder\msvs\x64\Release\lua.lib"
+         Generating code
+     1>c:\new folder\src\redis.c(1476): warning C4723: potential divide by 0
+     1>c:\new folder\src\redis.c(1475): warning C4723: potential divide by 0
+     1>c:\new folder\src\redis.c(1474): warning C4723: potential divide by 0
+         Finished generating code
+         RedisServer.vcxproj -> C:\New folder\msvs\x64\Release\redis-server.exe
+       PostBuildEvent:
+         powershell -executionpolicy unrestricted -command .\compressOutputToReleaseFolder.ps1
+         :VCEnd
+     1>Done Building Project "C:\New folder\msvs\RedisServer.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:12.32

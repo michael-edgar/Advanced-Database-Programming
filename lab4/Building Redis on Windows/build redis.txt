@@ -1,0 +1,12 @@
+Cloned Redis Windows from Github
+https://github.com/MSOpenTech/redis.git
+
+•Open the solution file msvs\redisserver.sln in Visual Studio 2013, select a build configuration (Debug or Release) and target (Win32 or x64) then build.
+
+This should create the following executables in the msvs\$(Target)\$(Configuration) folder:
+?redis-server.exe
+?redis-benchmark.exe
+?redis-cli.exe
+?redis-check-dump.exe
+?redis-check-aof.exe
+
