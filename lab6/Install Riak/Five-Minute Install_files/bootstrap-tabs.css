@@ -1,0 +1,204 @@
+.nav {
+	list-style: none; padding-left: 0px; margin-bottom: 0px;
+}
+.nav::before {
+	display: table; content: " ";
+}
+.nav::after {
+	display: table; content: " ";
+}
+.nav::after {
+	clear: both;
+}
+.nav > li {
+	display: block; position: relative;
+}
+.nav > li > a {
+	padding: 6px 12px; display: block; position: relative;
+}
+.nav > li > a:hover {
+	text-decoration: none; background-color: rgb(250, 250, 250);
+}
+.nav > li > a:focus {
+	text-decoration: none; background-color: rgb(250, 250, 250);
+}
+.nav > li.disabled > a {
+	color: rgb(153, 153, 153);
+}
+.nav > li.disabled > a:hover {
+	color: rgb(153, 153, 153); text-decoration: none; cursor: not-allowed; background-color: transparent;
+}
+.nav > li.disabled > a:focus {
+	color: rgb(153, 153, 153); text-decoration: none; cursor: not-allowed; background-color: transparent;
+}
+.nav .open > a {
+	border-color: rgb(66, 139, 202); background-color: rgb(238, 238, 238);
+}
+.nav .open > a:hover {
+	border-color: rgb(66, 139, 202); background-color: rgb(238, 238, 238);
+}
+.nav .open > a:focus {
+	border-color: rgb(66, 139, 202); background-color: rgb(238, 238, 238);
+}
+.nav .nav-divider {
+	margin: 9px 0px; height: 1px; overflow: hidden; background-color: rgb(229, 229, 229);
+}
+.nav > li > a > img {
+	max-width: none;
+}
+.nav-tabs {
+	
+}
+div[role='main'] ul.nav-tabs {
+	max-width: 100%;
+}
+.nav-tabs > li {
+	margin-bottom: -1px; float: left;
+}
+.nav-tabs > li > a {
+	border-radius: 4px 4px 0px 0px; transition:0.5s; line-height: 1.4285; font-family: "OpenSansBold",verdana,arial,sans-serif; margin-right: 2px; -webkit-transition: all .5s ease; -moz-transition: all .5s ease;
+}
+.nav-tabs > li > a:hover {
+	
+}
+.nav-tabs > li.active > a {
+	background: rgb(248, 248, 248); color: rgb(85, 85, 85); cursor: default;
+}
+.nav-tabs > li.active > a:hover {
+	background: rgb(248, 248, 248); color: rgb(85, 85, 85); cursor: default;
+}
+.nav-tabs > li.active > a:focus {
+	background: rgb(248, 248, 248); color: rgb(85, 85, 85); cursor: default;
+}
+.nav-justified.nav-tabs {
+	width: 100%; border-bottom-color: currentColor; border-bottom-width: 0px; border-bottom-style: none;
+}
+.nav-justified.nav-tabs > li {
+	float: none;
+}
+.nav-justified.nav-tabs > li > a {
+	text-align: center; margin-bottom: 5px;
+}
+.nav-justified.nav-tabs > .dropdown .dropdown-menu {
+	left: auto; top: auto;
+}
+@media all and (min-width:768px)
+{
+.nav-justified.nav-tabs > li {
+	width: 1%; display: table-cell;
+}
+.nav-justified.nav-tabs > li > a {
+	margin-bottom: 0px;
+}
+}
+.nav-justified.nav-tabs > li > a {
+	border-radius: 4px; margin-right: 0px;
+}
+.nav-justified.nav-tabs > .active > a {
+	border: 1px solid rgb(221, 221, 221); border-image: none;
+}
+.nav-justified.nav-tabs > .active > a:hover {
+	border: 1px solid rgb(221, 221, 221); border-image: none;
+}
+.nav-justified.nav-tabs > .active > a:focus {
+	border: 1px solid rgb(221, 221, 221); border-image: none;
+}
+@media all and (min-width:768px)
+{
+.nav-justified.nav-tabs > li > a {
+	border-radius: 4px 4px 0px 0px; border-bottom-color: rgb(221, 221, 221); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.nav-justified.nav-tabs > .active > a {
+	border-bottom-color: rgb(255, 255, 255);
+}
+.nav-justified.nav-tabs > .active > a:hover {
+	border-bottom-color: rgb(255, 255, 255);
+}
+.nav-justified.nav-tabs > .active > a:focus {
+	border-bottom-color: rgb(255, 255, 255);
+}
+}
+.nav-pills > li {
+	float: left;
+}
+.nav-pills > li > a {
+	border-radius: 4px;
+}
+.nav-pills > li + li {
+	margin-left: 2px;
+}
+.nav-pills > li.active > a {
+	color: rgb(255, 255, 255); background-color: rgb(66, 139, 202);
+}
+.nav-pills > li.active > a:hover {
+	color: rgb(255, 255, 255); background-color: rgb(66, 139, 202);
+}
+.nav-pills > li.active > a:focus {
+	color: rgb(255, 255, 255); background-color: rgb(66, 139, 202);
+}
+.nav-stacked > li {
+	float: none;
+}
+.nav-stacked > li + li {
+	margin-top: 2px; margin-left: 0px;
+}
+.nav-justified {
+	width: 100%;
+}
+.nav-justified > li {
+	float: none;
+}
+.nav-justified > li > a {
+	text-align: center; margin-bottom: 5px;
+}
+.nav-justified > .dropdown .dropdown-menu {
+	left: auto; top: auto;
+}
+@media all and (min-width:768px)
+{
+.nav-justified > li {
+	width: 1%; display: table-cell;
+}
+.nav-justified > li > a {
+	margin-bottom: 0px;
+}
+}
+.nav-tabs-justified {
+	border-bottom-color: currentColor; border-bottom-width: 0px; border-bottom-style: none;
+}
+.nav-tabs-justified > li > a {
+	border-radius: 4px; margin-right: 0px;
+}
+.nav-tabs-justified > .active > a {
+	border: 1px solid rgb(221, 221, 221); border-image: none;
+}
+.nav-tabs-justified > .active > a:hover {
+	border: 1px solid rgb(221, 221, 221); border-image: none;
+}
+.nav-tabs-justified > .active > a:focus {
+	border: 1px solid rgb(221, 221, 221); border-image: none;
+}
+@media all and (min-width:768px)
+{
+.nav-tabs-justified > li > a {
+	border-radius: 4px 4px 0px 0px; border-bottom-color: rgb(221, 221, 221); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.nav-tabs-justified > .active > a {
+	border-bottom-color: rgb(255, 255, 255);
+}
+.nav-tabs-justified > .active > a:hover {
+	border-bottom-color: rgb(255, 255, 255);
+}
+.nav-tabs-justified > .active > a:focus {
+	border-bottom-color: rgb(255, 255, 255);
+}
+}
+.tab-content > .tab-pane {
+	display: none;
+}
+.tab-content > .active {
+	display: block;
+}
+.nav-tabs .dropdown-menu {
+	margin-top: -1px; border-top-left-radius: 0px; border-top-right-radius: 0px;
+}

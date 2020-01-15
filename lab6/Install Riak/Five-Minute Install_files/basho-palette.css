@@ -1,0 +1,168 @@
+.basho-comment {
+	color: rgb(142, 144, 140);
+}
+pre .comment {
+	color: rgb(142, 144, 140);
+}
+pre .title {
+	color: rgb(142, 144, 140);
+}
+.basho-orange {
+	color: rgb(237, 154, 74);
+}
+pre .variable {
+	color: rgb(237, 154, 74);
+}
+pre .attribute {
+	color: rgb(237, 154, 74);
+}
+pre .tag {
+	color: rgb(237, 154, 74);
+}
+pre .regexp {
+	color: rgb(237, 154, 74);
+}
+pre .ruby .constant {
+	color: rgb(237, 154, 74);
+}
+pre .xml .tag .title {
+	color: rgb(237, 154, 74);
+}
+pre .xml .pi {
+	color: rgb(237, 154, 74);
+}
+pre .xml .doctype {
+	color: rgb(237, 154, 74);
+}
+pre .html .doctype {
+	color: rgb(237, 154, 74);
+}
+pre .css .id {
+	color: rgb(237, 154, 74);
+}
+pre .css .class {
+	color: rgb(237, 154, 74);
+}
+pre .css .pseudo {
+	color: rgb(237, 154, 74);
+}
+.basho-red-orange {
+	color: rgb(234, 113, 7);
+}
+pre .number {
+	color: rgb(234, 113, 7);
+}
+pre .preprocessor {
+	color: rgb(234, 113, 7);
+}
+pre .pragma {
+	color: rgb(234, 113, 7);
+}
+pre .built_in {
+	color: rgb(234, 113, 7);
+}
+pre .literal {
+	color: rgb(234, 113, 7);
+}
+pre .params {
+	color: rgb(234, 113, 7);
+}
+pre .constant {
+	color: rgb(234, 113, 7);
+}
+.basho-aqua {
+	color: rgb(113, 167, 175);
+}
+pre .ruby .class .title {
+	color: rgb(113, 167, 175);
+}
+pre .css .rules .attribute {
+	color: rgb(113, 167, 175);
+}
+.basho-light-orange {
+	color: rgb(242, 177, 86);
+}
+pre .string {
+	color: rgb(242, 177, 86);
+}
+pre .value {
+	color: rgb(242, 177, 86);
+}
+pre .inheritance {
+	color: rgb(242, 177, 86);
+}
+pre .header {
+	color: rgb(242, 177, 86);
+}
+pre .ruby .symbol {
+	color: rgb(242, 177, 86);
+}
+pre .xml .cdata {
+	color: rgb(242, 177, 86);
+}
+.basho-dark-blue {
+	color: rgb(59, 74, 93);
+}
+pre .css .hexcolor {
+	color: rgb(59, 74, 93);
+}
+.basho-dark-green {
+	color: rgb(90, 116, 113);
+}
+pre .function {
+	color: rgb(90, 116, 113);
+}
+pre .python .decorator {
+	color: rgb(90, 116, 113);
+}
+pre .python .title {
+	color: rgb(90, 116, 113);
+}
+pre .ruby .function .title {
+	color: rgb(90, 116, 113);
+}
+pre .ruby .title .keyword {
+	color: rgb(90, 116, 113);
+}
+pre .perl .sub {
+	color: rgb(90, 116, 113);
+}
+pre .javascript .title {
+	color: rgb(90, 116, 113);
+}
+pre .coffeescript .title {
+	color: rgb(90, 116, 113);
+}
+.basho-blue-grey {
+	color: rgb(108, 137, 151);
+}
+pre .keyword {
+	color: rgb(108, 137, 151);
+}
+pre .javascript .function {
+	color: rgb(108, 137, 151);
+}
+pre code {
+	background: rgb(248, 248, 248); padding: 0.5em; color: rgb(77, 77, 76); display: block;
+}
+pre .coffeescript .javascript {
+	opacity: 0.5;
+}
+pre .javascript .xml {
+	opacity: 0.5;
+}
+pre .tex .formula {
+	opacity: 0.5;
+}
+pre .xml .javascript {
+	opacity: 0.5;
+}
+pre .xml .vbscript {
+	opacity: 0.5;
+}
+pre .xml .css {
+	opacity: 0.5;
+}
+pre .xml .cdata {
+	opacity: 0.5;
+}

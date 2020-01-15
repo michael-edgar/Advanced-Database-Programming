@@ -1,0 +1,2 @@
+Riak Ring Explained
+http://stackoverflow.com/questions/2230088/a-simple-explanation-of-rings-in-riak

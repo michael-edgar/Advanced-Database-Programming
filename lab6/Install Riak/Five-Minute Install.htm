@@ -1,0 +1,1184 @@
+﻿<!DOCTYPE HTML>
+<!-- saved from url=(0045)http://docs.basho.com/riak/latest/quickstart/ -->
+<!DOCTYPE html PUBLIC "" ""><!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"></html><![endif]--><!--[if IE 7]><html class="no-js lt-ie9 lt-ie8" lang="en"></html><![endif]--><!--[if IE 8]><html class="no-js lt-ie9" lang="en"></html><![endif]--><!--[if gt IE 8]>
+<!--><HTML 
+class="no-js" lang="en"><!--<![endif]--><HEAD class="tutorials"><META 
+content="IE=11.0000" http-equiv="X-UA-Compatible">
+
+<META charset="utf-8">
+<META http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<META name="viewport" content="width=device-width">
+<META name="project" content="riak">
+<META name="version" content="2.0.0">
+<META name="moved-ranges" content='{"1.4.0-":"/tutorials/fast-track/Building-a-Development-Environment"}'>
+<META name="version-range" content="1.1.0+">
+<META name="base-url" content="/quickstart/"><TITLE>Five-Minute 
+Install</TITLE><LINK href="Five-Minute%20Install_files/version-bar.css" rel="stylesheet" 
+type="text/css" media="screen"><LINK href="Five-Minute%20Install_files/all.css" 
+rel="stylesheet" type="text/css" media="screen"><LINK href="Five-Minute%20Install_files/basho-palette.css" 
+rel="stylesheet" type="text/css" media="screen"><LINK href="Five-Minute%20Install_files/bootstrap-tabs.css" 
+rel="stylesheet" type="text/css" media="screen"><LINK href="Five-Minute%20Install_files/print.css" 
+rel="stylesheet" type="text/css" media="print">
+<SCRIPT src="Five-Minute%20Install_files/all.js" type="text/javascript"></SCRIPT>
+
+<SCRIPT src="Five-Minute%20Install_files/version-bar.js" type="text/javascript"></SCRIPT>
+
+<SCRIPT>hljs.initHighlightingOnLoad();</SCRIPT>
+
+<META name="GENERATOR" content="MSHTML 11.00.9600.17207"></HEAD>
+<BODY class="riak latest"><ASIDE id="nav-container" role="complementary"><NAV 
+class="overview" id="primary-nav" role="nav">
+<DIV id="primary-nav-content">
+<H2 class="responsive-link"><A class="responsive-toggle"></A></H2>
+<FORM action="http://search.basho.com">
+<DIV class="nav-field-container">
+<DIV id="icon-container-search">
+<DIV class="icon-container"><SPAN class="nav-icon nav-icon-search" aria-hidden="true" 
+data-icon=""></SPAN></DIV><SPAN 
+class="separator">|</SPAN></DIV><INPUT name="q" id="main-search" type="search" size="5" placeholder="Search" value=""></DIV></FORM>
+<DIV class="clear"></DIV>
+<H3 class="responsive-link visit-basho"><A href="http://www.basho.com/">
+<DIV class="icon-container"><SPAN class="nav-icon" aria-hidden="true" data-icon=""></SPAN></DIV><SPAN 
+class="separator">|</SPAN><SPAN class="menu-title">Visit Basho</SPAN>
+<DIV class="clear"></DIV></A></H3>
+<H3 class="responsive-link"><A href="http://docs.basho.com/index.html">
+<DIV class="icon-container"><SPAN class="nav-icon" aria-hidden="true" data-icon=""></SPAN></DIV><SPAN 
+class="separator">|</SPAN><SPAN class="menu-title">All Riak Projects</SPAN>
+<DIV class="clear"></DIV></A></H3>
+<H3 class="active start">
+<DIV class="icon-container"><SPAN class="nav-icon" aria-hidden="true" data-icon=""></SPAN></DIV><SPAN 
+class="separator">|</SPAN><SPAN class="menu-title">Start Here</SPAN>
+<DIV class="clear"></DIV></H3>
+<UL class="depth-1 start active">
+  <LI><A class="riak" href="http://docs.basho.com/riak/latest/">Start 
+  Here</A></LI>
+  <LI><A class="riak" href="http://docs.basho.com/riak/latest/intro-v20/">Riak 
+  2.0</A></LI>
+  <LI><A class="riak" 
+  href="http://docs.basho.com/riak/latest/upgrade-v20/">Upgrading to 
+2.0</A></LI>
+  <LI><A class="riak" 
+  href="http://docs.basho.com/riak/latest/theory/why-riak/">Why Riak?</A></LI>
+  <LI class="active current"><A class="riak" href="http://docs.basho.com/riak/latest/quickstart/">Five-Minute 
+  Install</A></LI></UL>
+<H3>
+<DIV class="icon-container"><SPAN class="nav-icon" aria-hidden="true" data-icon=""></SPAN></DIV><SPAN 
+class="separator">|</SPAN><SPAN class="menu-title">Riak for Developers</SPAN>
+<DIV class="clear"></DIV></H3>
+<UL class="depth-1 ">
+  <LI>
+  <H4><SPAN>A Taste of Riak</SPAN></H4>
+  <UL class="depth-2 ">
+    <LI>
+    <H4><SPAN>CRUD Operations</SPAN></H4>
+    <UL class="depth-3 ">
+      <LI><A class="riak" href="http://docs.basho.com/riak/latest/dev/taste-of-riak/">Prerequisites</A></LI>
+      <LI><A class="riak" href="http://docs.basho.com/riak/latest/dev/taste-of-riak/erlang/">Erlang</A></LI>
+      <LI><A class="riak" href="http://docs.basho.com/riak/latest/dev/taste-of-riak/java/">Java</A></LI>
+      <LI><A class="riak" href="http://docs.basho.com/riak/latest/dev/taste-of-riak/php/">PHP</A></LI>
+      <LI><A class="riak" href="http://docs.basho.com/riak/latest/dev/taste-of-riak/python/">Python</A></LI>
+      <LI><A class="riak" href="http://docs.basho.com/riak/latest/dev/taste-of-riak/ruby/">Ruby</A></LI>
+      <LI><A class="riak" href="http://docs.basho.com/riak/latest/dev/taste-of-riak/c/">C</A></LI>
+      <LI><A class="riak" href="http://docs.basho.com/riak/latest/dev/taste-of-riak/ocaml/">OCaml</A></LI>
+      <LI><A class="riak" href="http://docs.basho.com/riak/latest/dev/taste-of-riak/clojure/">Clojure</A></LI>
+      <LI><A class="riak" href="http://docs.basho.com/riak/latest/dev/taste-of-riak/csharp/">Csharp</A></LI>
+      <LI><A class="riak" href="http://docs.basho.com/riak/latest/dev/taste-of-riak/go/">Go</A></LI></UL></LI>
+    <LI>
+    <H4><SPAN>A Taste of Querying</SPAN></H4>
+    <UL class="depth-3 ">
+      <LI><A class="riak" href="http://docs.basho.com/riak/latest/dev/taste-of-riak/querying/">Prerequisites</A></LI>
+      <LI><A class="riak" href="http://docs.basho.com/riak/latest/dev/taste-of-riak/querying-erlang/">Erlang</A></LI>
+      <LI><A class="riak" href="http://docs.basho.com/riak/latest/dev/taste-of-riak/querying-java/">Java</A></LI>
+      <LI><A class="riak" href="http://docs.basho.com/riak/latest/dev/taste-of-riak/querying-php/">PHP</A></LI>
+      <LI><A class="riak" href="http://docs.basho.com/riak/latest/dev/taste-of-riak/querying-python/">Python</A></LI>
+      <LI><A class="riak" href="http://docs.basho.com/riak/latest/dev/taste-of-riak/querying-ruby/">Ruby</A></LI></UL></LI>
+    <LI>
+    <H4><SPAN>Object Modeling</SPAN></H4>
+    <UL class="depth-3 ">
+      <LI><A class="riak" href="http://docs.basho.com/riak/latest/dev/taste-of-riak/object-modeling/">Introduction</A></LI>
+      <LI><A class="riak" href="http://docs.basho.com/riak/latest/dev/taste-of-riak/object-modeling-erlang/">Erlang</A></LI>
+      <LI><A class="riak" href="http://docs.basho.com/riak/latest/dev/taste-of-riak/object-modeling-java/">Java</A></LI>
+      <LI><A class="riak" href="http://docs.basho.com/riak/latest/dev/taste-of-riak/object-modeling-python/">Python</A></LI>
+      <LI><A class="riak" href="http://docs.basho.com/riak/latest/dev/taste-of-riak/object-modeling-ruby/">Ruby</A></LI></UL></LI></UL></LI>
+  <LI>
+  <H4><SPAN>Basic Usage</SPAN></H4>
+  <UL class="depth-2 ">
+    <LI><A class="riak" href="http://docs.basho.com/riak/latest/dev/using/application-guide/">Application 
+    Guide</A></LI>
+    <LI><A class="riak" href="http://docs.basho.com/riak/latest/dev/using/libraries/">Client 
+    Libraries</A></LI>
+    <LI><A class="riak" href="http://docs.basho.com/riak/latest/dev/using/basics/">Key/Values</A></LI>
+    <LI><A class="riak" href="http://docs.basho.com/riak/latest/dev/using/search/">Search</A></LI>
+    <LI><A class="riak" href="http://docs.basho.com/riak/latest/dev/advanced/bucket-types/">Bucket 
+    Types</A></LI>
+    <LI><A class="riak" href="http://docs.basho.com/riak/latest/dev/using/data-types/">Data 
+    Types</A></LI>
+    <LI><A class="riak" href="http://docs.basho.com/riak/latest/dev/using/conflict-resolution/">Conflict 
+    Resolution</A></LI>
+    <LI><A class="riak" href="http://docs.basho.com/riak/latest/dev/using/mapreduce/">MapReduce</A></LI>
+    <LI><A class="riak" 
+    href="http://docs.basho.com/riak/latest/dev/using/2i/">Secondary 
+    Indexes</A></LI>
+    <LI><A class="riak" href="http://docs.basho.com/riak/latest/dev/using/commit-hooks/">Commit 
+    Hooks</A></LI></UL></LI>
+  <LI>
+  <H4><SPAN>Data Modeling</SPAN></H4>
+  <UL class="depth-2 ">
+    <LI><A class="riak" href="http://docs.basho.com/riak/latest/dev/data-modeling/">Use 
+    Cases for Riak</A></LI>
+    <LI><A class="riak" href="http://docs.basho.com/riak/latest/dev/data-modeling/key-value/">Key/Value 
+    Modeling</A></LI>
+    <LI><A class="riak" href="http://docs.basho.com/riak/latest/dev/data-modeling/data-types/">Data 
+    Types</A></LI>
+    <LI><A class="riak" href="http://docs.basho.com/riak/latest/dev/data-modeling/sql-migration/">Migrating 
+    from an SQL Database to Riak</A></LI></UL></LI>
+  <LI>
+  <H4><SPAN>Advanced</SPAN></H4>
+  <UL class="depth-2 ">
+    <LI><A class="riak" href="http://docs.basho.com/riak/latest/dev/advanced/search/">Search 
+    Details</A></LI>
+    <LI><A class="riak" href="http://docs.basho.com/riak/latest/dev/advanced/search-schema/">Search 
+    Schema</A></LI>
+    <LI><A class="riak" href="http://docs.basho.com/riak/latest/dev/advanced/mapreduce/">MapReduce</A></LI>
+    <LI><A class="riak" href="http://docs.basho.com/riak/latest/dev/advanced/2i/">Secondary 
+    Indexes</A></LI>
+    <LI><A class="riak" href="http://docs.basho.com/riak/latest/dev/advanced/commit-hooks/">Commit 
+    Hooks</A></LI>
+    <LI><A class="riak" href="http://docs.basho.com/riak/latest/dev/advanced/replication-properties/">Replication 
+    Properties</A></LI>
+    <LI><A class="riak" href="http://docs.basho.com/riak/latest/dev/advanced/strong-consistency/">Strong 
+    Consistency</A></LI>
+    <LI><A class="riak" href="http://docs.basho.com/riak/latest/dev/advanced/cluster-metadata/">Cluster 
+    Metadata</A></LI>
+    <LI>
+    <H4><SPAN>Client-side Security</SPAN></H4>
+    <UL class="depth-3 ">
+      <LI><A class="riak" href="http://docs.basho.com/riak/latest/dev/advanced/client-security/">Introduction</A></LI>
+      <LI><A class="riak" href="http://docs.basho.com/riak/latest/dev/advanced/client-security/ruby/">Ruby</A></LI>
+      <LI><A class="riak" href="http://docs.basho.com/riak/latest/dev/advanced/client-security/python/">Python</A></LI>
+      <LI><A class="riak" href="http://docs.basho.com/riak/latest/dev/advanced/client-security/erlang/">Erlang</A></LI></UL></LI>
+    <LI>
+    <H4><SPAN>Reference</SPAN></H4>
+    <UL class="depth-3 ">
+      <LI><A class="riak" href="http://docs.basho.com/riak/latest/dev/references/client-implementation/">Implementing 
+      a Client</A></LI>
+      <LI><A class="riak" href="http://docs.basho.com/riak/latest/dev/references/backend-api/">Implementing 
+      a Backend</A></LI></UL></LI></UL></LI></UL>
+<H3>
+<DIV class="icon-container"><SPAN class="nav-icon" aria-hidden="true" data-icon=""></SPAN></DIV><SPAN 
+class="separator">|</SPAN><SPAN class="menu-title">Riak for Operators</SPAN>
+<DIV class="clear"></DIV></H3>
+<UL class="depth-1 ">
+  <LI>
+  <H4><SPAN>Building a Cluster</SPAN></H4>
+  <UL class="depth-2 ">
+    <LI>
+    <H4><SPAN>Installation</SPAN></H4>
+    <UL class="depth-3 ">
+      <LI><A class="riak" 
+      href="http://docs.basho.com/riak/latest/downloads/">Download Riak</A></LI>
+      <LI><A class="riak" href="http://docs.basho.com/riak/latest/ops/building/installing/">Installing 
+      and Upgrading</A></LI>
+      <LI><A class="riak" href="http://docs.basho.com/riak/latest/ops/building/installing/erlang/">Installing 
+      Erlang</A></LI>
+      <LI><A class="riak" href="http://docs.basho.com/riak/latest/ops/building/installing/jvm/">Installing 
+      the JVM</A></LI>
+      <LI><A class="riak" href="http://docs.basho.com/riak/latest/ops/building/installing/debian-ubuntu/">Debian 
+      and Ubuntu</A></LI>
+      <LI><A class="riak" href="http://docs.basho.com/riak/latest/ops/building/installing/rhel-centos/">RHEL 
+      and CentOS</A></LI>
+      <LI><A class="riak" href="http://docs.basho.com/riak/latest/ops/building/installing/mac-osx/">Mac 
+      OS X</A></LI>
+      <LI><A class="riak" href="http://docs.basho.com/riak/latest/ops/building/installing/freebsd/">FreeBSD</A></LI>
+      <LI><A class="riak" href="http://docs.basho.com/riak/latest/ops/building/installing/smartos/">SmartOS</A></LI>
+      <LI><A class="riak" href="http://docs.basho.com/riak/latest/ops/building/installing/solaris/">Solaris 
+      10</A></LI>
+      <LI><A class="riak" href="http://docs.basho.com/riak/latest/ops/building/installing/suse/">SUSE</A></LI>
+      <LI><A class="riak" href="http://docs.basho.com/riak/latest/ops/building/installing/azure/">Windows 
+      Azure</A></LI>
+      <LI><A class="riak" href="http://docs.basho.com/riak/latest/ops/building/installing/aws-marketplace/">AWS 
+      Marketplace</A></LI>
+      <LI><A class="riak" href="http://docs.basho.com/riak/latest/ops/building/installing/from-source/">From 
+      Source</A></LI>
+      <LI><A class="riak" href="http://docs.basho.com/riak/latest/ops/building/installing/post-install/">Post 
+      Installation</A></LI></UL></LI>
+    <LI>
+    <H4><SPAN>Planning</SPAN></H4>
+    <UL class="depth-3 ">
+      <LI><A class="riak" href="http://docs.basho.com/riak/latest/ops/building/planning/system-planning/">Start 
+      Planning</A></LI>
+      <LI><A class="riak" href="http://docs.basho.com/riak/latest/ops/building/planning/cluster/">Cluster 
+      Capacity</A></LI>
+      <LI><A class="riak" href="http://docs.basho.com/riak/latest/ops/building/planning/bitcask/">Bitcask 
+      Capacity</A></LI>
+      <LI><A class="riak" href="http://docs.basho.com/riak/latest/ops/building/planning/backends/">Choosing 
+      a Backend</A></LI>
+      <LI><A class="riak" href="http://docs.basho.com/riak/latest/ops/building/planning/best-practices/">Best 
+      Practices</A></LI></UL></LI>
+    <LI><A class="riak" href="http://docs.basho.com/riak/latest/ops/building/configuration/">Basic 
+    Configuration</A></LI>
+    <LI><A class="riak" href="http://docs.basho.com/riak/latest/ops/building/basic-cluster-setup/">Basic 
+    Cluster Setup</A></LI>
+    <LI><A class="riak" href="http://docs.basho.com/riak/latest/ops/building/benchmarking/">Benchmarking</A></LI>
+    <LI><A class="riak" href="http://docs.basho.com/riak/latest/ops/running/authz/">Authentication 
+    and Authorization</A></LI>
+    <LI><A class="riak" href="http://docs.basho.com/riak/latest/ops/running/security-sources/">Managing 
+    Security Sources</A></LI></UL></LI>
+  <LI>
+  <H4><SPAN>Tuning</SPAN></H4>
+  <UL class="depth-2 ">
+    <LI><A class="riak" href="http://docs.basho.com/riak/latest/ops/tuning/open-files-limit/">Open 
+    Files Limit</A></LI>
+    <LI><A class="riak" href="http://docs.basho.com/riak/latest/ops/tuning/linux/">System 
+    Performance Tuning</A></LI>
+    <LI><A class="riak" 
+    href="http://docs.basho.com/riak/latest/ops/tuning/aws/">AWS Performance 
+    Tuning</A></LI>
+    <LI><A class="riak" href="http://docs.basho.com/riak/latest/ops/tuning/latency-reduction/">Latency 
+    Reduction</A></LI>
+    <LI><A class="riak" href="http://docs.basho.com/riak/latest/ops/advanced/aae/">Managing 
+    Active Anti-Entropy</A></LI></UL></LI>
+  <LI>
+  <H4><SPAN>Running a Cluster</SPAN></H4>
+  <UL class="depth-2 ">
+    <LI><A class="riak" href="http://docs.basho.com/riak/latest/ops/running/backups/">Backing 
+    up Riak</A></LI>
+    <LI>
+    <H4><SPAN>Node Operations</SPAN></H4>
+    <UL class="depth-3 ">
+      <LI><A class="riak" href="http://docs.basho.com/riak/latest/ops/running/nodes/adding-removing/">Adding/Removing</A></LI>
+      <LI><A class="riak" href="http://docs.basho.com/riak/latest/ops/running/nodes/renaming/">Renaming 
+      Nodes</A></LI>
+      <LI><A class="riak" href="http://docs.basho.com/riak/latest/ops/running/nodes/replacing/">Replacing 
+      Nodes</A></LI>
+      <LI><A class="riak" href="http://docs.basho.com/riak/latest/ops/running/nodes/inspecting/">Inspecting 
+      Nodes</A></LI></UL></LI>
+    <LI>
+    <H4><SPAN>Command Line Tools</SPAN></H4>
+    <UL class="depth-3 ">
+      <LI><A class="riak" href="http://docs.basho.com/riak/latest/ops/running/tools/riak/">riak</A></LI>
+      <LI><A class="riak" href="http://docs.basho.com/riak/latest/ops/running/tools/riak-admin/">riak-admin</A></LI></UL></LI>
+    <LI>
+    <H4><SPAN>Repair and Recovery</SPAN></H4>
+    <UL class="depth-3 ">
+      <LI><A class="riak" href="http://docs.basho.com/riak/latest/ops/running/recovery/failure-recovery/">Failure 
+      and Recovery</A></LI>
+      <LI><A class="riak" href="http://docs.basho.com/riak/latest/ops/running/recovery/failed-node/">Recovering 
+      a Failed Node</A></LI>
+      <LI><A class="riak" href="http://docs.basho.com/riak/latest/ops/running/recovery/repairing-partitions/">Repairing 
+      Partitions</A></LI>
+      <LI><A class="riak" href="http://docs.basho.com/riak/latest/ops/running/recovery/repairing-indexes/">Repairing 
+      Indexes</A></LI>
+      <LI><A class="riak" href="http://docs.basho.com/riak/latest/ops/running/recovery/repairing-leveldb/">Repairing 
+      LevelDB</A></LI>
+      <LI><A class="riak" href="http://docs.basho.com/riak/latest/ops/running/recovery/rolling-restart/">Rolling 
+      Restart</A></LI>
+      <LI><A class="riak" href="http://docs.basho.com/riak/latest/ops/running/recovery/errors/">Common 
+      Errors</A></LI></UL></LI>
+    <LI>
+    <H4><SPAN>Monitoring</SPAN></H4>
+    <UL class="depth-3 ">
+      <LI><A class="riak" href="http://docs.basho.com/riak/latest/ops/running/monitoring/stats-and-monitoring/">Statistics 
+      and Monitoring</A></LI>
+      <LI><A class="riak" href="http://docs.basho.com/riak/latest/ops/running/monitoring/collectd/">Riak 
+      Monitoring with collectd</A></LI>
+      <LI><A class="riak" href="http://docs.basho.com/riak/latest/ops/running/monitoring/jmx/">JMX 
+      Monitoring</A></LI>
+      <LI><A class="riak" href="http://docs.basho.com/riak/latest/ops/running/monitoring/snmp/">SNMP</A></LI></UL></LI></UL></LI>
+  <LI>
+  <H4><SPAN>Advanced</SPAN></H4>
+  <UL class="depth-2 ">
+    <LI><A class="riak" href="http://docs.basho.com/riak/latest/ops/advanced/riak-control/">Riak 
+    Control</A></LI>
+    <LI><A class="riak" href="http://docs.basho.com/riak/latest/ops/advanced/install-custom-code/">Installing 
+    Custom Code</A></LI>
+    <LI><A class="riak" href="http://docs.basho.com/riak/latest/ops/advanced/security/">Security 
+    and Firewalls</A></LI>
+    <LI><A class="riak" href="http://docs.basho.com/riak/latest/ops/advanced/deletion/">Object 
+    Deletion</A></LI>
+    <LI><A class="riak" href="http://docs.basho.com/riak/latest/ops/advanced/runtime/">Runtime 
+    Interaction</A></LI>
+    <LI><A class="riak" href="http://docs.basho.com/riak/latest/ops/advanced/strong-consistency/">Managing 
+    Strong Consistency</A></LI>
+    <LI>
+    <H4><SPAN>Configurations</SPAN></H4>
+    <UL class="depth-3 ">
+      <LI><A class="riak" href="http://docs.basho.com/riak/latest/ops/advanced/configs/configuration-files/">Configuration 
+      Files</A></LI>
+      <LI><A class="riak" href="http://docs.basho.com/riak/latest/ops/advanced/configs/mapreduce/">MapReduce</A></LI>
+      <LI><A class="riak" href="http://docs.basho.com/riak/latest/ops/advanced/configs/search/">Search</A></LI>
+      <LI><A class="riak" href="http://docs.basho.com/riak/latest/ops/advanced/configs/secondary-index/">Secondary 
+      Indexes</A></LI>
+      <LI><A class="riak" href="http://docs.basho.com/riak/latest/ops/advanced/configs/load-balancing-proxy/">Load 
+      Balancing &amp; Proxy</A></LI>
+      <LI><A class="riak" href="http://docs.basho.com/riak/latest/dev/advanced/strong-consistency/">Strong 
+      Consistency</A></LI></UL></LI>
+    <LI>
+    <H4><SPAN>Backends</SPAN></H4>
+    <UL class="depth-3 ">
+      <LI><A class="riak" href="http://docs.basho.com/riak/latest/ops/advanced/backends/bitcask/">Bitcask</A></LI>
+      <LI><A class="riak" href="http://docs.basho.com/riak/latest/ops/advanced/backends/leveldb/">LevelDB</A></LI>
+      <LI><A class="riak" href="http://docs.basho.com/riak/latest/ops/advanced/backends/memory/">Memory</A></LI>
+      <LI><A class="riak" href="http://docs.basho.com/riak/latest/ops/advanced/backends/multi/">Multi</A></LI></UL></LI></UL></LI>
+  <LI>
+  <H4><SPAN>Upgrading a Cluster</SPAN></H4>
+  <UL class="depth-2 ">
+    <LI><A class="riak" href="http://docs.basho.com/riak/latest/ops/upgrading/production-checklist/">Production 
+    Checklist</A></LI>
+    <LI><A class="riak" href="http://docs.basho.com/riak/latest/ops/upgrading/rolling-upgrades/">Rolling 
+    Upgrades</A></LI>
+    <LI><A class="riak" href="http://docs.basho.com/riak/latest/ops/upgrading/rolling-downgrades/">Rolling 
+    Downgrades</A></LI>
+    <LI><A class="riak" href="http://docs.basho.com/riak/latest/ops/advanced/upgrading-search-2/">Upgrading 
+    Search from 1.x to 2.x</A></LI></UL></LI>
+  <LI>
+  <H4><SPAN>Multi-Datacenter</SPAN></H4>
+  <UL class="depth-2 ">
+    <LI>
+    <H4><SPAN>Version 2 Replication</SPAN></H4>
+    <UL class="depth-3 ">
+      <LI><A class="riak" href="http://docs.basho.com/riak/latest/ops/mdc/v2/architecture/">Architecture</A></LI>
+      <LI><A class="riak" href="http://docs.basho.com/riak/latest/ops/mdc/v2/configuration/">Configuration</A></LI>
+      <LI><A class="riak" href="http://docs.basho.com/riak/latest/ops/mdc/v2/operations/">Operations</A></LI>
+      <LI><A class="riak" href="http://docs.basho.com/riak/latest/ops/mdc/v2/quick-start/">Quick 
+      Start</A></LI>
+      <LI><A class="riak" href="http://docs.basho.com/riak/latest/ops/mdc/v2/scheduling-fullsync/">Scheduling 
+      Fullsync</A></LI>
+      <LI><A class="riak" href="http://docs.basho.com/riak/latest/ops/mdc/v2/ssl/">SSL</A></LI>
+      <LI><A class="riak" href="http://docs.basho.com/riak/latest/ops/mdc/v2/nat/">With 
+      NAT</A></LI>
+      <LI><A class="riak" href="http://docs.basho.com/riak/latest/ops/mdc/v2/hooks/">Repl 
+      Hooks</A></LI></UL></LI>
+    <LI>
+    <H4><SPAN>Version 3 Replication</SPAN></H4>
+    <UL class="depth-3 ">
+      <LI><A class="riak" href="http://docs.basho.com/riak/latest/ops/mdc/v3/architecture/">Architecture</A></LI>
+      <LI><A class="riak" href="http://docs.basho.com/riak/latest/ops/mdc/v3/configuration/">Configuration</A></LI>
+      <LI><A class="riak" href="http://docs.basho.com/riak/latest/ops/mdc/v3/operations/">Operations</A></LI>
+      <LI><A class="riak" href="http://docs.basho.com/riak/latest/ops/mdc/v3/quick-start/">Quick 
+      Start</A></LI>
+      <LI><A class="riak" href="http://docs.basho.com/riak/latest/ops/mdc/v3/ssl/">SSL</A></LI>
+      <LI><A class="riak" href="http://docs.basho.com/riak/latest/ops/mdc/v3/nat/">With 
+      NAT</A></LI>
+      <LI><A class="riak" href="http://docs.basho.com/riak/latest/ops/mdc/v3/aae/">Active 
+      Anti-Entropy</A></LI>
+      <LI><A class="riak" href="http://docs.basho.com/riak/latest/ops/mdc/v3/cascading-writes/">Cascading 
+      Writes</A></LI></UL></LI>
+    <LI><A class="riak" href="http://docs.basho.com/riak/latest/ops/mdc/system-tuning/">System 
+    Tuning</A></LI>
+    <LI><A class="riak" href="http://docs.basho.com/riak/latest/ops/mdc/comparison/">Version 
+    Comparison</A></LI>
+    <LI><A class="riak" href="http://docs.basho.com/riak/latest/ops/mdc/upgrade-v2-to-v3/">Upgrade 
+    Guide</A></LI>
+    <LI><A class="riak" href="http://docs.basho.com/riak/latest/ops/mdc/statistics/">Statistics</A></LI>
+    <LI><A class="riak" href="http://docs.basho.com/riak/latest/ops/mdc/monitoring/">Monitoring</A></LI>
+    <LI><A class="riak" href="http://docs.basho.com/riak/latest/ops/mdc/per-bucket/">Per 
+    Bucket</A></LI>
+    <LI><A class="riak" href="http://docs.basho.com/riak/latest/ops/mdc/v2/hooks/">Repl 
+    Hooks</A></LI></UL></LI></UL>
+<H3>
+<DIV class="icon-container"><SPAN class="nav-icon" aria-hidden="true" data-icon=""></SPAN></DIV><SPAN 
+class="separator">|</SPAN><SPAN class="menu-title">Theory &amp; Concepts</SPAN>
+<DIV class="clear"></DIV></H3>
+<UL class="depth-1 ">
+  <LI>
+  <H4><SPAN>Concepts</SPAN></H4>
+  <UL class="depth-2 ">
+    <LI><A class="riak" href="http://docs.basho.com/riak/latest/theory/concepts/Buckets/">Buckets</A></LI>
+    <LI><A class="riak" href="http://docs.basho.com/riak/latest/theory/concepts/Clusters/">Clusters</A></LI>
+    <LI><A class="riak" href="http://docs.basho.com/riak/latest/theory/concepts/crdts/">Data 
+    Types</A></LI>
+    <LI><A class="riak" href="http://docs.basho.com/riak/latest/theory/concepts/Eventual-Consistency/">Eventual 
+    Consistency</A></LI>
+    <LI><A class="riak" href="http://docs.basho.com/riak/latest/theory/concepts/strong-consistency/">Strong 
+    Consistency</A></LI>
+    <LI><A class="riak" href="http://docs.basho.com/riak/latest/theory/concepts/keys-and-values/">Keys 
+    and Objects</A></LI>
+    <LI><A class="riak" href="http://docs.basho.com/riak/latest/theory/concepts/dotted-version-vectors/">Dotted 
+    Version Vectors</A></LI>
+    <LI><A class="riak" href="http://docs.basho.com/riak/latest/theory/concepts/aae/">Active 
+    Anti-Entropy</A></LI>
+    <LI><A class="riak" href="http://docs.basho.com/riak/latest/theory/concepts/Replication/">Replication</A></LI>
+    <LI><A class="riak" href="http://docs.basho.com/riak/latest/theory/concepts/Vector-Clocks/">Vector 
+    Clocks</A></LI>
+    <LI><A class="riak" href="http://docs.basho.com/riak/latest/theory/concepts/capability-negotiation/">Capability 
+    Negotiation</A></LI></UL></LI>
+  <LI>
+  <H4><SPAN>Riak Compared to</SPAN></H4>
+  <UL class="depth-2 ">
+    <LI><A class="riak" href="http://docs.basho.com/riak/latest/theory/comparisons/cassandra/">Cassandra</A></LI>
+    <LI><A class="riak" href="http://docs.basho.com/riak/latest/theory/comparisons/couchbase/">Couchbase</A></LI>
+    <LI><A class="riak" href="http://docs.basho.com/riak/latest/theory/comparisons/couchdb/">CouchDB</A></LI>
+    <LI><A class="riak" href="http://docs.basho.com/riak/latest/theory/comparisons/hbase/">HBase</A></LI>
+    <LI><A class="riak" href="http://docs.basho.com/riak/latest/theory/comparisons/mongodb/">MongoDB</A></LI>
+    <LI><A class="riak" href="http://docs.basho.com/riak/latest/theory/comparisons/neo4j/">Neo4j</A></LI>
+    <LI><A class="riak" href="http://docs.basho.com/riak/latest/theory/comparisons/dynamodb/">DynamoDB</A></LI></UL></LI>
+  <LI><A class="riak" href="http://docs.basho.com/riak/latest/theory/concepts/glossary/">Riak 
+  Glossary</A></LI>
+  <LI><A class="riak" 
+  href="http://docs.basho.com/riak/latest/theory/dynamo/">Dynamo 
+Paper</A></LI></UL>
+<H3>
+<DIV class="icon-container"><SPAN class="nav-icon" aria-hidden="true" data-icon=""></SPAN></DIV><SPAN 
+class="separator">|</SPAN><SPAN class="menu-title">Community</SPAN>
+<DIV class="clear"></DIV></H3>
+<UL class="depth-1 ">
+  <LI>
+  <H4><SPAN>Lectures</SPAN></H4>
+  <UL class="depth-2 ">
+    <LI><A class="riak" href="http://docs.basho.com/riak/latest/community/lectures/introductions/">Introductions</A></LI>
+    <LI><A class="riak" href="http://docs.basho.com/riak/latest/community/lectures/developing/">Developing 
+    with Riak</A></LI>
+    <LI><A class="riak" href="http://docs.basho.com/riak/latest/community/lectures/operating/">Operating 
+    in Production</A></LI>
+    <LI><A class="riak" href="http://docs.basho.com/riak/latest/community/lectures/searching-accessing/">Searching 
+    and Accessing</A></LI></UL></LI>
+  <LI>
+  <H4><SPAN>FAQs</SPAN></H4>
+  <UL class="depth-2 ">
+    <LI><A class="riak" 
+    href="http://docs.basho.com/riak/latest/community/faqs/">All FAQs</A></LI>
+    <LI><A class="riak" href="http://docs.basho.com/riak/latest/community/faqs/basics/">The 
+    Basics</A></LI>
+    <LI><A class="riak" href="http://docs.basho.com/riak/latest/community/faqs/developing/">Developing 
+    on Riak</A></LI>
+    <LI><A class="riak" href="http://docs.basho.com/riak/latest/community/faqs/operations/">Operating 
+    Riak</A></LI>
+    <LI><A class="riak" href="http://docs.basho.com/riak/latest/community/faqs/logs/">Log 
+    Messages</A></LI>
+    <LI><A class="riak" href="http://docs.basho.com/riak/latest/community/faqs/community/">Riak 
+    Community</A></LI></UL></LI>
+  <LI><A class="riak" 
+  href="http://docs.basho.com/riak/latest/community/">Community Help</A></LI>
+  <LI><A class="riak" href="http://docs.basho.com/riak/latest/dev/advanced/community-projects/">Community 
+  Projects</A></LI>
+  <LI><A class="riak" href="http://docs.basho.com/riak/latest/community/blog-posts/">Blog 
+  Posts</A></LI>
+  <LI><A class="riak" 
+  href="http://docs.basho.com/riak/latest/community/bugs/">Reporting 
+  Bugs</A></LI>
+  <LI><A class="riak" href="http://docs.basho.com/riak/latest/community/style-guide/">Style 
+  Guide</A></LI>
+  <LI><A class="riak" href="http://docs.basho.com/riak/latest/community/riak-images/">Riak 
+  Images</A></LI>
+  <LI><A class="riak" href="http://docs.basho.com/riak/latest/community/release-notes/">Release 
+  Notes</A></LI></UL>
+<H3>
+<DIV class="icon-container"><SPAN class="nav-icon" aria-hidden="true" data-icon=""></SPAN></DIV><SPAN 
+class="separator">|</SPAN><SPAN class="menu-title">APIs</SPAN>
+<DIV class="clear"></DIV></H3>
+<UL class="depth-1 ">
+  <LI><A class="riak" href="http://docs.basho.com/riak/latest/dev/references/http/">HTTP 
+  API</A></LI>
+  <LI><A class="riak" href="http://docs.basho.com/riak/latest/dev/references/protocol-buffers/">Protocol 
+  Buffers</A></LI></UL>
+<UL></UL></DIV></NAV>
+<UL id="fixed-nav">
+  <LI><A href="https://github.com/basho/basho_docs" target="_blank">
+  <DIV class="icon-container"><SPAN class="nav-icon" aria-hidden="true" 
+  data-icon=""></SPAN></DIV><SPAN class="separator">|</SPAN>Available on 
+  GitHub</A></LI>
+  <LI><A href="http://docs.basho.com/riak/latest/community/">
+  <DIV class="icon-container"><SPAN class="nav-icon" aria-hidden="true" 
+  data-icon=""></SPAN></DIV><SPAN class="separator">|</SPAN>Get 
+Help</A></LI></UL></ASIDE>
+<DIV role="main"><HEADER class="masthead">
+<DIV id="header">
+<DIV id="ricon-temp-banner">
+<DIV class="temp-banner-text">Riak 2.0 is now available. <A class="register" 
+href="http://docs.basho.com/riak/2.0.0/downloads/">Download Here</A></DIV></DIV>
+<DIV id="header-inner">
+<DIV class="icon-reorder" id="nav-toggle"></DIV>
+<DIV id="top-nav"><A href="http://docs.basho.com/riak/latest/downloads/"><SPAN 
+class="icon-download-alt"></SPAN>Downloads</A>
+<DIV id="nav-more"><SPAN class="icon-more"></SPAN></DIV></DIV><A class="responsive-toggle"></A><A 
+class="logo" href="http://docs.basho.com/index.html">
+<H1>Riak Docs</H1></A><SPAN class="tagline">Product tutorials, how-tos, and 
+fully-documented APIs.</SPAN>
+<DIV id="nav-menu">
+<H2>Links</H2>
+<UL>
+  <LI><A href="http://docs.basho.com/">Docs Home</A></LI>
+  <LI><A href="http://basho.com/">Basho Website</A></LI></UL>
+<DIV id="nav-menu-arrow"></DIV>
+<DIV id="nav-menu-arrow-back"></DIV></DIV>
+<DIV class="clear"></DIV>
+<DIV class="header-rule"></DIV></DIV></DIV></HEADER>
+<DIV id="ricon-temp-banner-responsive"><A href="http://docs.basho.com/riak/2.0.0/downloads/">Download 
+Riak 2.0</A></DIV><ARTICLE class="mainarticle">
+<DIV class="versions"></DIV><HEADER>
+<H1>Five-Minute Install</H1></HEADER><NAV id="toc">
+<H2 class="title">Contents</H2>
+<DIV id="toc-wrapper">
+<OL id="toc-items"></OL></DIV></NAV>
+<P>In this tutorial, we'll install Riak and build a <A href="http://basho.com/why-your-riak-cluster-should-have-at-least-five-nodes/">five-node</A>
+ Riak cluster running on your local machine.</P>
+<H2>Install Riak</H2>
+<P>Basho's pre-packaged Riak binaries (found under <A class="riak" href="http://docs.basho.com/riak/latest/downloads/">Downloads</A>) 
+embed the Erlang runtime. This tutorial, however, is based on a source build, so
+ you will need to <A class="riak" href="http://docs.basho.com/riak/latest/ops/building/installing/erlang/">install 
+Erlang</A> if it is not installed on your machine already.</P>
+<P>If you wish to build Riak 2.0 from source, we strongly recommend using
+ Basho's patched version of Erlang. The tar file for this version can be
+ downloaded <A href="http://s3.amazonaws.com/downloads.basho.com/erlang/otp_src_R16B02-basho4.tar.gz">here</A>.</P>
+<UL class="nav nav-tabs">
+  <LI class="active"><A href="http://docs.basho.com/riak/latest/quickstart/#bash000" 
+  data-toggle="tab" data-code="bash">Shell</A></LI></UL>
+<DIV class="tab-content">
+<DIV class="tab-pane active" id="bash000">
+<PRE><CODE class="bash">curl -O http://s3.amazonaws.com/downloads.basho.com/erlang/otp_src_R16B02-basho4.tar.gz
+tar -xvf otp_src_R16B02-basho4.tar.gz
+cd otp_src_R16B02-basho4
+</CODE></PRE></DIV></DIV>
+<P>Once you have unzipped the package, see our guide to <A class="riak" href="http://docs.basho.com/riak/latest/ops/building/installing/erlang/">installing
+ Erlang</A> for installation instructions.</P>
+<H3>Get the Source</H3>
+<P>The following links provide platform-specific instructions for downloading 
+and installing Riak from source.</P>
+<UL>
+  <LI><A class="riak" href="http://docs.basho.com/riak/latest/ops/building/installing/debian-ubuntu/#Installing-From-Source">Debian 
+  and Ubuntu</A></LI>
+  <LI><A class="riak" href="http://docs.basho.com/riak/latest/ops/building/installing/rhel-centos/#Installing-From-Source">RHEL 
+  and CentOS</A></LI>
+  <LI><A class="riak" href="http://docs.basho.com/riak/latest/ops/building/installing/mac-osx/#Installing-From-Source">Mac 
+  OS X</A></LI>
+  <LI><A class="riak" href="http://docs.basho.com/riak/latest/ops/building/installing/freebsd/#Installing-From-Source">FreeBSD</A></LI>
+  <LI><A class="riak" href="http://docs.basho.com/riak/latest/ops/building/installing/suse/">SUSE</A></LI>
+  <LI><A class="riak" href="http://docs.basho.com/riak/latest/ops/building/installing/azure/">Windows 
+  Azure</A></LI>
+  <LI><A class="riak" href="http://docs.basho.com/riak/latest/ops/building/installing/aws-marketplace/">AWS 
+  Marketplace</A></LI>
+  <LI><A class="riak" href="http://docs.basho.com/riak/latest/ops/building/installing/from-source/">Unlisted 
+  Operating System</A></LI></UL>
+<H3>Build Riak</H3>
+<P>Now that you've downloaded and installed Riak using the instructions above, 
+it's time to build it. Access the <CODE>riak</CODE> directory from your install 
+and run <CODE>make all</CODE>:</P>
+<UL class="nav nav-tabs">
+  <LI class="active"><A href="http://docs.basho.com/riak/latest/quickstart/#bash001" 
+  data-toggle="tab" data-code="bash">Shell</A></LI></UL>
+<DIV class="tab-content">
+<DIV class="tab-pane active" id="bash001">
+<PRE><CODE class="bash">cd riak-2.0.0
+make all
+</CODE></PRE></DIV></DIV>
+<P>The <CODE>make all</CODE> command grabs all of Riak's dependencies for you so 
+that you don't have to chase them down on your own. This process will likely
+ take a few moments.</P>
+<H2>Start Up Five Nodes</H2>
+<P>Now that Riak is built, use <A 
+href="https://github.com/basho/rebar">Rebar</A>, a packaging and build system 
+for Erlang applications, to get five self-contained Riak nodes running on your 
+machine. When you put Riak into production, Rebar will enable you to ship a 
+pre-built Riak package to your deployment machines. But for now, we'll just 
+stick to the five nodes. You can set the number of nodes you wish to create via 
+<CODE>DEVNODES</CODE>.</P>
+<P>From the same directory in which you just ran <CODE>make all</CODE>, you can 
+use the following command to start up five nodes:</P>
+<UL class="nav nav-tabs">
+  <LI class="active"><A href="http://docs.basho.com/riak/latest/quickstart/#bash002" 
+  data-toggle="tab" data-code="bash">Shell</A></LI></UL>
+<DIV class="tab-content">
+<DIV class="tab-pane active" id="bash002">
+<PRE><CODE class="bash">make devrel DEVNODES=5
+</CODE></PRE></DIV></DIV>
+<P>You have just generated a <CODE>dev</CODE> directory. Let's go into that 
+directory to check out its contents:</P>
+<UL class="nav nav-tabs">
+  <LI class="active"><A href="http://docs.basho.com/riak/latest/quickstart/#bash003" 
+  data-toggle="tab" data-code="bash">Shell</A></LI></UL>
+<DIV class="tab-content">
+<DIV class="tab-pane active" id="bash003">
+<PRE><CODE class="bash">cd dev; ls
+</CODE></PRE></DIV></DIV>
+<P>You will see that five directories beginning with <CODE>dev</CODE> have been
+ created:</P>
+<UL class="nav nav-tabs">
+  <LI class="active"><A href="http://docs.basho.com/riak/latest/quickstart/#bash004" 
+  data-toggle="tab" data-code="bash">Shell</A></LI></UL>
+<DIV class="tab-content">
+<DIV class="tab-pane active" id="bash004">
+<PRE><CODE class="bash">dev1       dev2       dev3       dev4       dev5
+</CODE></PRE></DIV></DIV>
+<P>Each of these directories is a complete, self-contained package containing a 
+Riak node. We need to start each node individually using the <CODE>start</CODE> 
+command in the <CODE>bin</CODE> directory. Let's start with 
+<CODE>dev1</CODE>:</P>
+<UL class="nav nav-tabs">
+  <LI class="active"><A href="http://docs.basho.com/riak/latest/quickstart/#bash005" 
+  data-toggle="tab" data-code="bash">Shell</A></LI></UL>
+<DIV class="tab-content">
+<DIV class="tab-pane active" id="bash005">
+<PRE><CODE class="bash">dev1/bin/riak start
+</CODE></PRE></DIV></DIV>
+<DIV class="note">
+<DIV class="title"><CODE>ulimit</CODE> warning</DIV>
+<P>At this point, you may receive a warning message to increase the number of 
+open file handles, i.e. <CODE>ulimit</CODE>, in your operating system. See our 
+<A class="riak" href="http://docs.basho.com/riak/latest/ops/tuning/open-files-limit/">Open 
+Files Limit</A> guide for platform-specific instructions on doing so.  
+</P></DIV>
+<P></P>
+<P>Once you've started the node in <CODE>dev1</CODE>, do the same for 
+<CODE>dev2</CODE> through <CODE>dev5</CODE>:</P>
+<UL class="nav nav-tabs">
+  <LI class="active"><A href="http://docs.basho.com/riak/latest/quickstart/#bash006" 
+  data-toggle="tab" data-code="bash">Shell</A></LI></UL>
+<DIV class="tab-content">
+<DIV class="tab-pane active" id="bash006">
+<PRE><CODE class="bash">dev2/bin/riak start
+dev3/bin/riak start
+dev4/bin/riak start
+dev5/bin/riak start
+</CODE></PRE></DIV></DIV>
+<P>Of if you prefer more succinct commands, you can use a <CODE>for</CODE> loop 
+to iterate through and start the available nodes:</P>
+<UL class="nav nav-tabs">
+  <LI class="active"><A href="http://docs.basho.com/riak/latest/quickstart/#bash007" 
+  data-toggle="tab" data-code="bash">Shell</A></LI></UL>
+<DIV class="tab-content">
+<DIV class="tab-pane active" id="bash007">
+<PRE><CODE class="bash">for node in dev*; do $node/bin/riak start; done
+</CODE></PRE></DIV></DIV>
+<H3>Check Running Nodes</H3>
+<P>After you have the nodes up and running, it's time to test them and make sure 
+that they're available. You can do this by taking a quick look at your process 
+list. To do this, run:</P>
+<UL class="nav nav-tabs">
+  <LI class="active"><A href="http://docs.basho.com/riak/latest/quickstart/#bash008" 
+  data-toggle="tab" data-code="bash">Shell</A></LI></UL>
+<DIV class="tab-content">
+<DIV class="tab-pane active" id="bash008">
+<PRE><CODE class="bash">ps aux | grep beam
+</CODE></PRE></DIV></DIV>
+<P>This should give you granular details on the five running Riak nodes. If
+ you'd like to simply check which nodes are running and which are not, you can 
+run the <CODE>riak ping</CODE> command on a specific node:</P>
+<UL class="nav nav-tabs">
+  <LI class="active"><A href="http://docs.basho.com/riak/latest/quickstart/#bash009" 
+  data-toggle="tab" data-code="bash">Shell</A></LI></UL>
+<DIV class="tab-content">
+<DIV class="tab-pane active" id="bash009">
+<PRE><CODE class="bash">dev1/bin/riak ping
+</CODE></PRE></DIV></DIV>
+<P>If the response is <CODE>pong</CODE>, then the node is up and running. 
+Otherwise, the node is currently stopped and will return something like the
+ following:</P>
+<UL class="nav nav-tabs">
+  <LI class="active"><A href="http://docs.basho.com/riak/latest/quickstart/#bash010" 
+  data-toggle="tab" data-code="bash">Shell</A></LI></UL>
+<DIV class="tab-content">
+<DIV class="tab-pane active" id="bash010">
+<PRE><CODE class="bash">Node 'dev1@127.0.0.1' not responding to pings.
+</CODE></PRE></DIV></DIV>
+<P>Alternatively, you can run a command to iterate through each node and return 
+its current status:</P>
+<UL class="nav nav-tabs">
+  <LI class="active"><A href="http://docs.basho.com/riak/latest/quickstart/#bash011" 
+  data-toggle="tab" data-code="bash">Shell</A></LI></UL>
+<DIV class="tab-content">
+<DIV class="tab-pane active" id="bash011">
+<PRE><CODE class="bash">for node in dev*; do $node/bin/riak ping; done
+</CODE></PRE></DIV></DIV>
+<H2>Create the Cluster</H2>
+<P>Although you now have five nodes up and running, they are not yet connected 
+to one another, i.e. they do not yet form a Riak <A class="riak" href="http://docs.basho.com/riak/latest/theory/concepts/Clusters/">cluster</A>. 
+The next step is to join the nodes together into a cohesive unity. You can do 
+this using the <CODE><A class="riak" href="http://docs.basho.com/riak/latest/ops/running/tools/riak-admin/">riak-admin</A></CODE> 
+command interface. The <CODE>riak-admin</CODE> script, like the 
+<CODE>riak</CODE> script used above, is found in the <CODE>bin</CODE> directory 
+of each Riak node.</P>
+<P>The command below will link <CODE>dev1</CODE> to <CODE>dev2</CODE>, 
+<CODE>dev3</CODE>, <CODE>dev4</CODE>, and <CODE>dev5</CODE>:</P>
+<UL class="nav nav-tabs">
+  <LI class="active"><A href="http://docs.basho.com/riak/latest/quickstart/#bash012" 
+  data-toggle="tab" data-code="bash">Shell</A></LI></UL>
+<DIV class="tab-content">
+<DIV class="tab-pane active" id="bash012">
+<PRE><CODE class="bash">dev2/bin/riak-admin cluster join dev1@127.0.0.1
+dev3/bin/riak-admin cluster join dev1@127.0.0.1
+dev4/bin/riak-admin cluster join dev1@127.0.0.1
+dev5/bin/riak-admin cluster join dev1@127.0.0.1
+</CODE></PRE></DIV></DIV>
+<P>Or alternatively:</P>
+<UL class="nav nav-tabs">
+  <LI class="active"><A href="http://docs.basho.com/riak/latest/quickstart/#bash013" 
+  data-toggle="tab" data-code="bash">Shell</A></LI></UL>
+<DIV class="tab-content">
+<DIV class="tab-pane active" id="bash013">
+<PRE><CODE class="bash">for n in {2..5}; do dev$n/bin/riak-admin cluster join dev1@127.0.0.1; done
+</CODE></PRE></DIV></DIV>
+<P>Notice that you don't need to connect every node to every single other node. 
+Once two nodes have been joined, they will share all the information necessary 
+to join <EM>all</EM> of the nodes into a unity. Thus, if <CODE>dev1</CODE> is 
+joined to <CODE>dev2</CODE> and also to <CODE>dev5</CODE>, <CODE>dev2</CODE> and 
+<CODE>dev5</CODE> will be able to communicate with one another.</P>
+<P>At this point, the nodes have not yet been joined. Instead, the join
+ operations have been <EM>staged</EM> and are ready to be committed. To make
+ those joins take effect, you first must review the planned cluster changes:</P>
+<UL class="nav nav-tabs">
+  <LI class="active"><A href="http://docs.basho.com/riak/latest/quickstart/#bash014" 
+  data-toggle="tab" data-code="bash">Shell</A></LI></UL>
+<DIV class="tab-content">
+<DIV class="tab-pane active" id="bash014">
+<PRE><CODE class="bash">dev1/bin/riak-admin cluster plan
+</CODE></PRE></DIV></DIV>
+<P><STRONG>Note</STRONG>: The plan for the entire cluster can be reviewed on 
+<EM>any</EM> node in the cluster.</P>
+<P>The <CODE>plan</CODE> command will print out a synopsis of what changes will 
+be made to the cluster on commit and how the cluster will look after the changes 
+are complete. The output should look like this:</P>
+<UL class="nav nav-tabs"></UL>
+<DIV class="tab-content">
+<DIV class="tab-pane active" id="015">
+<PRE><CODE>=============================== Staged Changes ================================
+Action         Nodes(s)
+-------------------------------------------------------------------------------
+join           'dev2@127.0.0.1'
+join           'dev3@127.0.0.1'
+join           'dev4@127.0.0.1'
+join           'dev5@127.0.0.1'
+-------------------------------------------------------------------------------
+
+
+NOTE: Applying these changes will result in 1 cluster transition
+
+###############################################################################
+                         After cluster transition 1/1
+###############################################################################
+
+================================= Membership ==================================
+Status     Ring    Pending    Node
+-------------------------------------------------------------------------------
+valid     100.0%     20.3%    'dev1@127.0.0.1'
+valid       0.0%     20.3%    'dev2@127.0.0.1'
+valid       0.0%     20.3%    'dev3@127.0.0.1'
+valid       0.0%     20.3%    'dev4@127.0.0.1'
+valid       0.0%     18.8%    'dev5@127.0.0.1'
+-------------------------------------------------------------------------------
+Valid:5 / Leaving:0 / Exiting:0 / Joining:0 / Down:0
+
+Transfers resulting from cluster changes: 51
+  12 transfers from 'dev1@127.0.0.1' to 'dev5@127.0.0.1'
+  13 transfers from 'dev1@127.0.0.1' to 'dev4@127.0.0.1'
+  13 transfers from 'dev1@127.0.0.1' to 'dev3@127.0.0.1'
+  13 transfers from 'dev1@127.0.0.1' to 'dev2@127.0.0.1'
+</CODE></PRE></DIV></DIV>
+<P>Finally, you can commit the join commands that you staged and then
+ reviewed:</P>
+<UL class="nav nav-tabs">
+  <LI class="active"><A href="http://docs.basho.com/riak/latest/quickstart/#bash016" 
+  data-toggle="tab" data-code="bash">Shell</A></LI></UL>
+<DIV class="tab-content">
+<DIV class="tab-pane active" id="bash016">
+<PRE><CODE class="bash">dev2/bin/riak-admin cluster commit
+</CODE></PRE></DIV></DIV>
+<P><STRONG>Note</STRONG>: Changes to a cluster can be committed from any 
+node.</P>
+<DIV class="info">
+<DIV class="title">About <CODE>riak-admin</CODE></DIV>
+<P><CODE>riak-admin</CODE> is Riak's administrative tool. It's used to perform 
+any operational tasks beyond starting and stopping a node (e.g. to make a node 
+join and leave a cluster), to back up data, and to manage general cluster 
+operations. You can read more about the <CODE>riak-admin</CODE> command in the 
+<A class="riak" href="http://docs.basho.com/riak/latest/ops/running/tools/riak-admin/">riak-admin 
+command line</A> documentation.  </P></DIV>
+<P></P>
+<H2>Test the Cluster</H2>
+<P>Now that we have a running five-node Riak cluster, let's make sure that it's 
+working properly. For this we have a couple of options. The simplest is to run 
+the <CODE>member-status</CODE> command on one of our nodes:</P>
+<UL class="nav nav-tabs">
+  <LI class="active"><A href="http://docs.basho.com/riak/latest/quickstart/#bash017" 
+  data-toggle="tab" data-code="bash">Shell</A></LI></UL>
+<DIV class="tab-content">
+<DIV class="tab-pane active" id="bash017">
+<PRE><CODE class="bash">dev1/bin/riak-admin member-status
+</CODE></PRE></DIV></DIV>
+<P>This will give us a high-level view of our cluster and tell us the percentage 
+of the data in the cluster that each node manages:</P>
+<UL class="nav nav-tabs"></UL>
+<DIV class="tab-content">
+<DIV class="tab-pane active" id="018">
+<PRE><CODE>================================= Membership ==================================
+Status     Ring    Pending    Node
+-------------------------------------------------------------------------------
+valid      20.3%      --      'dev1@127.0.0.1'
+valid      20.3%      --      'dev2@127.0.0.1'
+valid      20.3%      --      'dev3@127.0.0.1'
+valid      20.3%      --      'dev4@127.0.0.1'
+valid      18.8%      --      'dev5@127.0.0.1'
+-------------------------------------------------------------------------------
+Valid:5 / Leaving:0 / Exiting:0 / Joining:0 / Down:0
+</CODE></PRE></DIV></DIV>
+<P>In order to test whether our cluster is working properly, let's store an
+ object (just a short text snippet) and then attempt to fetch it. The easiest 
+way to get started is by using Riak's <A class="riak" href="http://docs.basho.com/riak/latest/dev/references/http/">HTTP 
+API</A>. We'll use <A href="http://httpkit.com/resources/HTTP-from-the-Command-Line/">curl</A> 
+to make a <CODE>PUT</CODE> request to the <A class="riak" href="http://docs.basho.com/riak/latest/theory/concepts/keys-and-values/#keys">key</A> 
+<CODE>german</CODE> in the <A class="riak" href="http://docs.basho.com/riak/latest/theory/concepts/Buckets/">bucket</A> 
+<CODE>welcome</CODE>.</P>
+<UL class="nav nav-tabs">
+  <LI class="active"><A href="http://docs.basho.com/riak/latest/quickstart/#curl019" 
+  data-toggle="tab" data-code="curl">HTTP</A></LI></UL>
+<DIV class="tab-content">
+<DIV class="tab-pane active" id="curl019">
+<PRE><CODE class="bash">curl -XPUT http://localhost:10018/buckets/welcome/keys/german \
+  -H 'Content-Type: text/plain' \
+  -d 'herzlich willkommen'
+</CODE></PRE></DIV></DIV>
+<P>Your HTTP port might differ, so check your <A class="riak" href="http://docs.basho.com/riak/latest/ops/advanced/configs/configuration-files/">configuration 
+files</A> for the valid port in your cluster. That information can be found in 
+<CODE>/etc/riak.conf</CODE> if you're using the newer configuration system or in 
+<CODE>/etc/app.config</CODE> if you're using the older system.</P>
+<DIV class="note">
+<DIV class="title">Note on the HTTP API</DIV>
+<P>While the HTTP API can be useful for getting started or for running basic 
+test operations, we strongly recommend using <A class="riak" href="http://docs.basho.com/riak/latest/dev/using/libraries/">client 
+libraries</A> that utilize Riak's <A class="riak" href="http://docs.basho.com/riak/latest/dev/references/protocol-buffers/">Protocol 
+Buffers API</A> when building applications.  </P></DIV>
+<P></P>
+<P>If the <CODE>PUT</CODE> request above succeeded, that means that you've 
+stored your first object in Riak. Now attempt a <CODE>GET</CODE> request to the 
+same HTTP endpoint:</P>
+<UL class="nav nav-tabs">
+  <LI class="active"><A href="http://docs.basho.com/riak/latest/quickstart/#curl020" 
+  data-toggle="tab" data-code="curl">HTTP</A></LI></UL>
+<DIV class="tab-content">
+<DIV class="tab-pane active" id="curl020">
+<PRE><CODE class="bash">curl http://localhost:10018/buckets/hello/keys/german
+</CODE></PRE></DIV></DIV>
+<P>You should get the following result:</P>
+<UL class="nav nav-tabs"></UL>
+<DIV class="tab-content">
+<DIV class="tab-pane active" id="021">
+<PRE><CODE>herzlich willkommen
+</CODE></PRE></DIV></DIV>
+<P>Now try something a little bit more involved. Copy a <A href="http://en.wikipedia.org/wiki/JPEG">JPEG</A> 
+image file from somewhere on your hard drive into the root directory of your 
+cluster:</P>
+<UL class="nav nav-tabs">
+  <LI class="active"><A href="http://docs.basho.com/riak/latest/quickstart/#bash022" 
+  data-toggle="tab" data-code="bash">Shell</A></LI></UL>
+<DIV class="tab-content">
+<DIV class="tab-pane active" id="bash022">
+<PRE><CODE class="bash">cp ~/image/location/&lt;image_name&gt;.jpg .
+</CODE></PRE></DIV></DIV>
+<P>Use curl to <CODE>PUT</CODE> the image into Riak:</P>
+<UL class="nav nav-tabs">
+  <LI class="active"><A href="http://docs.basho.com/riak/latest/quickstart/#curl023" 
+  data-toggle="tab" data-code="curl">HTTP</A></LI></UL>
+<DIV class="tab-content">
+<DIV class="tab-pane active" id="curl023">
+<PRE><CODE class="bash">curl -XPUT http://localhost:10018/buckets/images/keys/&lt;image_name&gt;.jpg \
+  -H 'Content-Type: image/jpeg' \
+  --data-binary @&lt;image_name&gt;.jpg
+</CODE></PRE></DIV></DIV>
+<P>You can verify that the image has been properly stored by navigating to the 
+URL above in a browser or issuing a <CODE>GET</CODE> request:</P>
+<UL class="nav nav-tabs">
+  <LI class="active"><A href="http://docs.basho.com/riak/latest/quickstart/#curl024" 
+  data-toggle="tab" data-code="curl">HTTP</A></LI></UL>
+<DIV class="tab-content">
+<DIV class="tab-pane active" id="curl024">
+<PRE><CODE class="bash">curl -O http://localhost:10018/buckets/images/keys/&lt;image_name&gt;.jpg
+</CODE></PRE></DIV></DIV>
+<P>This will save the image to the current directory. You can open it with an 
+image editor to verify that the image has been stored and retrieved
+ correctly.</P>
+<P>Congratulations! You should now have a five-node Riak cluster up and
+ running.</P>
+<DIV class="note">
+<DIV class="title">HTTP interface ports</DIV>
+<P>The above configuration sets up nodes with HTTP interfaces listening on ports 
+<CODE>10018</CODE>, <CODE>10028</CODE>, <CODE>10038</CODE>, <CODE>10048</CODE>, 
+and <CODE>10058</CODE> for <CODE>dev1</CODE>, <CODE>dev2</CODE>, 
+<CODE>dev3</CODE>, <CODE>dev4</CODE>, and <CODE>dev5</CODE> respectively. The 
+default port for single nodes to listen on is <CODE>10018</CODE>, and users will 
+need to take note of this when trying to use any of the default settings for 
+Riak client libraries.  </P></DIV>
+<P></P>
+<H2>Setting Up Your Riak Client</H2>
+<P>Basho maintains official <A class="riak" href="http://docs.basho.com/riak/latest/dev/using/libraries/">client 
+libraries</A> for Java, Ruby, Python, and Erlang. Below are links to 
+client-specific documentation for each language:</P>
+<UL>
+  <LI><A 
+  href="http://basho.github.io/riak-java-client/2.0.0-SNAPSHOT/">Java</A></LI>
+  <LI><A href="https://github.com/basho/riak-ruby-client">Ruby</A></LI>
+  <LI><A href="http://basho.github.io/riak-python-client/">Python</A></LI>
+  <LI><A href="http://basho.github.io/riak-erlang-client/">Erlang</A></LI></UL>
+<P>In each of the above docs, you'll find detailed client installation and setup 
+instructions. Here, we'll walk you through the basics of establishing a client 
+connection to Riak in each of the four official clients. In each case, it will 
+be assumed that the client has been successfully installed and that your 
+application has been configured to use it.</P>
+<H3>Java</H3>
+<P>In the new 2.0 version of the Java client, Riak is accessed at the <A class="riak" 
+href="http://docs.basho.com/riak/latest/theory/concepts/Clusters/">cluster</A> 
+level rather than at the basic client level, as in previous versions of the 
+client. This enables you to provide host and port information for all of the 
+nodes in your cluster.</P>
+<P>There are a variety of ways to set up cluster interaction with the Java
+ client. We'll start with the simplest way, which is to create a connection to a 
+single node, add that node to our cluster object, and then create a client 
+object (which must refer to a cluster). Let's assume the node is listening on 
+<CODE>localhost</CODE> and the <A class="riak" href="http://docs.basho.com/riak/latest/dev/references/protocol-buffers/">Protocol
+ Buffers</A> port 10017.</P>
+<UL class="nav nav-tabs">
+  <LI class="active"><A href="http://docs.basho.com/riak/latest/quickstart/#java025" 
+  data-toggle="tab" data-code="java">Java</A></LI></UL>
+<DIV class="tab-content">
+<DIV class="tab-pane active" id="java025">
+<PRE><CODE class="java">RiakNode node = new RiakNode.Builder()
+        .withRemoteAddress("127.0.0.1")
+        .withRemotePort(8098)
+        .build();
+RiakCluster cluster = new RiakCluster.Builder(node)
+        .build();
+RiakClient client = new RiakClient(cluster);
+</CODE></PRE></DIV></DIV>
+<P>An important thing to always bear in mind is that you must start your cluster 
+object before it can be used.</P>
+<UL class="nav nav-tabs">
+  <LI class="active"><A href="http://docs.basho.com/riak/latest/quickstart/#java026" 
+  data-toggle="tab" data-code="java">Java</A></LI></UL>
+<DIV class="tab-content">
+<DIV class="tab-pane active" id="java026">
+<PRE><CODE class="java">cluster.start();
+
+// There is also a method to shut the cluster down:
+
+cluster.shutdown();
+</CODE></PRE></DIV></DIV>
+<P>If you do not start up your cluster object, you will see an error like
+ this:</P>
+<UL class="nav nav-tabs">
+  <LI class="active"><A href="http://docs.basho.com/riak/latest/quickstart/#java027" 
+  data-toggle="tab" data-code="java">Java</A></LI></UL>
+<DIV class="tab-content">
+<DIV class="tab-pane active" id="java027">
+<PRE><CODE class="java">Exception in thread "main" java.lang.IllegalStateException: required: [RUNNING] current: CREATED
+</CODE></PRE></DIV></DIV>
+<P>Now let's try to make a more complex cluster with three different nodes. Each 
+node will listen on <CODE>localhost</CODE> but they will listen on ports 10017, 
+10027, and 10037, respectively. Since they all share the same host, we can 
+create a node builder object and create new nodes using that builder. This time, 
+though, we'll add those nodes to a Java <CODE>List</CODE> that we can pass to 
+our cluster object:</P>
+<UL class="nav nav-tabs">
+  <LI class="active"><A href="http://docs.basho.com/riak/latest/quickstart/#java028" 
+  data-toggle="tab" data-code="java">Java</A></LI></UL>
+<DIV class="tab-content">
+<DIV class="tab-pane active" id="java028">
+<PRE><CODE class="java">List&lt;RiakNode&gt; nodes = new LinkedList&lt;RiakNode&gt;();
+RiakNode.Builder nodeBuilder = new RiakNode.Builder()
+        .withRemoteAddress("127.0.0.1");
+
+nodes.add(nodeBuilder.withRemotePort(10017).build());
+nodes.add(nodeBuilder.withRemotePort(10027).build());
+nodes.add(nodeBuilder.withRemotePort(10037).build());
+
+RiakCluster cluster = new RiakCluster(nodes).build();
+RiakClient client = new RiakClient(cluster)l
+</CODE></PRE></DIV></DIV>
+<P>Remember once again that you must run the <CODE>start()</CODE> method on your
+ cluster object.</P>
+<P>A third way to create a cluster object is by using a list of remote addresses 
+(as strings) and a node builder object to create a list of nodes in one go. The 
+following example would create three node objects for nodes on the hosts 
+<CODE>101.0.0.1</CODE>, <CODE>101.0.0.2</CODE>, and <CODE>101.0.0.3</CODE>, 
+respectively, all of which are listening on port 10017:</P>
+<UL class="nav nav-tabs">
+  <LI class="active"><A href="http://docs.basho.com/riak/latest/quickstart/#java029" 
+  data-toggle="tab" data-code="java">Java</A></LI></UL>
+<DIV class="tab-content">
+<DIV class="tab-pane active" id="java029">
+<PRE><CODE class="java">List&lt;String&gt; addresses = new LinkedList&lt;String&gt;();
+addresses.add("101.0.0.1");
+addresses.add("101.0.0.2");
+addresses.add("101.0.0.3");
+
+RiakNode.Builder nodeBuilder = new RiakNode.Builder()
+        .withRemotePort(10017);
+List&lt;RiakNode&gt; nodes = RiakNode.Builder.buildNodes(nodeBuilder, addresses);
+</CODE></PRE></DIV></DIV>
+<P>For some Java code samples to get you started, see our tutorials on <A class="riak" 
+href="http://docs.basho.com/riak/latest/dev/using/basics/">the basics of 
+Riak</A>, <A class="riak" href="http://docs.basho.com/riak/latest/dev/using/data-types/">Riak 
+Data Types</A>, and <A class="riak" href="http://docs.basho.com/riak/latest/dev/using/search/">Riak 
+Search 2.0</A>, as well as a variety of other pages in the <STRONG>Riak for 
+Developers</STRONG> section of the documentation (in the navbar on the 
+left).</P>
+<H3>Ruby</H3>
+<P>How you connect to Riak with the Ruby client depends on whether you're using 
+Riak in a development environment with a one-node <A class="riak" href="http://docs.basho.com/riak/latest/theory/concepts/Clusters/">cluster</A> 
+or if you're using multiple nodes, as you would in any production 
+environment.</P>
+<P>If you're developing using a single-node cluster, you can create a 
+<CODE>client</CODE> object and specify the host and <A class="riak" href="http://docs.basho.com/riak/latest/dev/references/protocol-buffers/">Protocol 
+Buffers</A> port. The below example connects the Ruby client to a one-node 
+cluster running on the host 101.0.0.1 and the port 8087:</P>
+<UL class="nav nav-tabs">
+  <LI class="active"><A href="http://docs.basho.com/riak/latest/quickstart/#ruby030" 
+  data-toggle="tab" data-code="ruby">Ruby</A></LI></UL>
+<DIV class="tab-content">
+<DIV class="tab-pane active" id="ruby030">
+<PRE><CODE class="ruby">require 'riak'
+
+client = Riak::Client.new(host: '101.0.0.1', pb_port: 8087)
+</CODE></PRE></DIV></DIV>
+<P>If connecting to multiple nodes, you can specify the connection information 
+for those nodes when you instantiate the <CODE>client</CODE> object (or whatever 
+you wish to call this object). Let's say that your cluster consists of three 
+nodes, each with a Protocol Buffers port of 8087 and IPs of 101.0.0.1, 
+101.0.0.2, and 101.0.0.3, respectively. We can specify this information in the 
+hash that we pass to the client:</P>
+<UL class="nav nav-tabs">
+  <LI class="active"><A href="http://docs.basho.com/riak/latest/quickstart/#ruby031" 
+  data-toggle="tab" data-code="ruby">Ruby</A></LI></UL>
+<DIV class="tab-content">
+<DIV class="tab-pane active" id="ruby031">
+<PRE><CODE class="ruby">port = 8087
+
+client = Riak::Client.new(nodes: [
+  { host: '101.0.0.1', pb_port: port },
+  { host: '101.0.0.2', pb_port: port },
+  { host: '101.0.0.3', pb_port: port }
+])
+</CODE></PRE></DIV></DIV>
+<P>For some Ruby code samples to get you started, see our tutorials on <A class="riak" 
+href="http://docs.basho.com/riak/latest/dev/using/basics/">the basics of 
+Riak</A>, <A class="riak" href="http://docs.basho.com/riak/latest/dev/using/data-types/">Riak 
+Data Types</A>, <A class="riak" href="http://docs.basho.com/riak/latest/dev/data-modeling/data-types/">data 
+modeling with Riak Data Types</A>, and <A class="riak" href="http://docs.basho.com/riak/latest/dev/using/search/">Riak 
+Search 2.0</A>, as well as a variety of other pages in the <STRONG>Riak for
+ Developers</STRONG> section of the documentation (in the navbar on the 
+left).</P>
+<H3>Python</H3>
+<P>How you connect to Riak with the Python client depends on whether you're
+ using Riak in a development environment with a one-node <A class="riak" href="http://docs.basho.com/riak/latest/theory/concepts/Clusters/">cluster</A> 
+or if you're using multiple nodes, as you would in any production 
+environment.</P>
+<P>If you're developing using a single-node cluster, you can create a 
+<CODE>client</CODE> object and specify the host and <A class="riak" href="http://docs.basho.com/riak/latest/dev/references/protocol-buffers/">Protocol 
+Buffers</A> port. The below example connects the Ruby client to a one-node 
+cluster running on the host 101.0.0.1 and the port 8087:</P>
+<UL class="nav nav-tabs">
+  <LI class="active"><A href="http://docs.basho.com/riak/latest/quickstart/#python032" 
+  data-toggle="tab" data-code="python">Python</A></LI></UL>
+<DIV class="tab-content">
+<DIV class="tab-pane active" id="python032">
+<PRE><CODE class="python">from riak import RiakClient
+
+client = RiakClient(host='101.0.0.1', protocol='pbc', pb_port=8087)
+</CODE></PRE></DIV></DIV>
+<P>If connecting to multiple nodes, you can specify the connection information 
+for those nodes when you instantiate the <CODE>client</CODE> object (or whatever 
+you wish to call this object). Let's say that your cluster consists of three 
+nodes, each with a Protocol Buffers port of 8087 and IPs of 101.0.0.1, 
+101.0.0.2, and 101.0.0.3, respectively. We can specify this information in the 
+hash that we pass to the client:</P>
+<UL class="nav nav-tabs">
+  <LI class="active"><A href="http://docs.basho.com/riak/latest/quickstart/#python033" 
+  data-toggle="tab" data-code="python">Python</A></LI></UL>
+<DIV class="tab-content">
+<DIV class="tab-pane active" id="python033">
+<PRE><CODE class="python">protocol = 'pbc'
+port = 8087
+
+client = Riak::Client.new(nodes=[
+  { 'host': '127.0.0.1', 'protocol': protocol, 'pb_port': port },
+  { 'host': '127.0.0.2', 'protocol': protocol, 'pb_port': port },
+  { 'host': '127.0.0.3', 'protocol': protocol, 'pb_port': port }
+])
+</CODE></PRE></DIV></DIV>
+<P>For some Python code samples to get you started, see our tutorials on <A 
+class="riak" href="http://docs.basho.com/riak/latest/dev/using/basics/">the 
+basics of Riak</A>, <A class="riak" href="http://docs.basho.com/riak/latest/dev/using/data-types/">Riak 
+Data Types</A>, and <A class="riak" href="http://docs.basho.com/riak/latest/dev/using/search/">Riak 
+Search 2.0</A>, as well as a variety of other pages in the <STRONG>Riak for 
+Developers</STRONG> section of the documentation (in the navbar on the 
+left).</P>
+<H3>Erlang</H3>
+<P>How you connect to Riak with the Erlang client depends on whether you're
+ using Riak in a development environment with a one-node <A class="riak" href="http://docs.basho.com/riak/latest/theory/concepts/Clusters/">cluster</A> 
+or if you're using multiple nodes, as you would in any production 
+environment.</P>
+<P>If you're developing using a single-node cluster, you can specify a single 
+process identifier (i.e. <A href="http://www.erlang.org/doc/reference_manual/data_types.html#id66818">pid</A>)
+ to which your client will connect on the basis of the host and Protocol Buffers 
+port you provide. The example below connects the Erlang client to a one-node 
+cluster running on the host 101.0.0.1 and the port 8087:</P>
+<UL class="nav nav-tabs">
+  <LI class="active"><A href="http://docs.basho.com/riak/latest/quickstart/#erlang034" 
+  data-toggle="tab" data-code="erlang">Erlang</A></LI></UL>
+<DIV class="tab-content">
+<DIV class="tab-pane active" id="erlang034">
+<PRE><CODE class="erlang">{ok, Pid} = riakc_pb_socket:start_link("101.0.0.1", 8087).
+</CODE></PRE></DIV></DIV>
+<P>If connecting to multiple nodes, you can specify the connection information 
+for those nodes and produce multiple process identifiers. Let's say that your 
+cluster consists of three nodes, each with a <A class="riak" href="http://docs.basho.com/riak/latest/dev/references/protocol-buffers/">Protocol 
+Buffers</A> port of 8087 and IPs of 101.0.0.1, 101.0.0.2, and 101.0.0.3, 
+respectively. The following would produce separate process identifiers for 
+each:</P>
+<UL class="nav nav-tabs">
+  <LI class="active"><A href="http://docs.basho.com/riak/latest/quickstart/#erlang035" 
+  data-toggle="tab" data-code="erlang">Erlang</A></LI></UL>
+<DIV class="tab-content">
+<DIV class="tab-pane active" id="erlang035">
+<PRE><CODE class="erlang">{ok, Pid1} = riakc_pb_socket:start_link("101.0.0.1", 8087),
+{ok, Pid2} = riakc_pb_socket:start_link("101.0.0.2", 8087),
+{ok, Pid3} = riakc_pb_socket:start_link("101.0.0.3", 8087).
+</CODE></PRE></DIV></DIV>
+<P>For some Erlang code samples to get you started, see our tutorials on <A 
+class="riak" href="http://docs.basho.com/riak/latest/dev/using/basics/">the 
+basics of Riak</A>, <A class="riak" href="http://docs.basho.com/riak/latest/dev/using/data-types/">Riak 
+Data Types</A>, and <A class="riak" href="http://docs.basho.com/riak/latest/dev/using/search/">Riak 
+Search 2.0</A>, as well as a variety of other pages in the <STRONG>Riak for 
+Developers</STRONG> section of the documentation (in the navbar on the 
+left).</P>
+<DIV class="clear"></DIV><SECTION class="right-sidebar"><ASIDE class="secondary" 
+role="complementary"><NAV class="suggestions">
+<H4>These May Also Interest You</H4>
+<DIV class="columns">
+<UL>
+  <LI><A class="riak" href="http://docs.basho.com/riak/latest/intro-v20/">Riak 
+  2.0</A></LI>
+  <LI><A class="riak" 
+  href="http://docs.basho.com/riak/latest/upgrade-v20/">Upgrading to 
+2.0</A></LI>
+  <LI><A class="riak" 
+  href="http://docs.basho.com/riak/latest/dev/advanced/2i/">Advanced Secondary 
+  Indexes</A></LI>
+  <LI><A class="riak" href="http://docs.basho.com/riak/latest/dev/advanced/bucket-types/">Using 
+  Bucket Types</A></LI>
+  <LI><A class="riak" href="http://docs.basho.com/riak/latest/dev/advanced/cluster-metadata/">Cluster 
+  Metadata</A></LI>
+  <LI><A class="riak" href="http://docs.basho.com/riak/latest/dev/advanced/commit-hooks/">Advanced 
+  Commit Hooks</A></LI></UL></DIV></NAV><NAV class="keywords">
+<H4>Keywords:</H4><A href="http://docs.basho.com/riak/latest/keywords/developers/">developers</A>, 
+<A 
+href="http://docs.basho.com/riak/latest/keywords/2i/">2i</A></NAV></ASIDE></SECTION></ARTICLE>
+<DIV class="watermark-wrapper" itemtype="http://schema.org/CreativeWork" 
+itemscope="itemscope">
+<DIV class="version-icon-watermark"></DIV>
+<META content="2.0.0" itemprop="version"></DIV><FOOTER class="mastfooter">This 
+work is licensed under a <A href="http://creativecommons.org/licenses/by/3.0/" 
+target="_blank">Creative Commons Attribution 3.0 Unported License</A><BR>© 
+2011-2014 <A href="http://www.basho.com/">Basho Technologies, 
+Inc.</A></FOOTER></DIV>
+<SCRIPT type="text/javascript">var _gaq = [['_setAccount', 'UA-10051263-6'], ['_trackPageview']];
+(function(d, t) {
+var g = d.createElement(t),
+s = d.getElementsByTagName(t)[0];
+g.async = true;
+g.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+s.parentNode.insertBefore(g, s);
+})(document, 'script');</SCRIPT>
+<!-- Start Alexa Certify Javascript -->
+<SCRIPT type="text/javascript">_atrk_opts = { atrk_acct:"BgVif1aMIw00Wl", domain:"basho.com",dynamic: true};(function() { var as = document.createElement('script'); as.type = 'text/javascript'; as.async = true; as.src = "https://d31qbv1cthcecs.cloudfront.net/atrk.js"; var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(as, s); })();</SCRIPT>
+<NOSCRIPT>&lt;img 
+src="https://d5nxst8fruw4z.cloudfront.net/atrk.gif?account=BgVif1aMIw00Wl" 
+style="display:none" height="1" width="1" alt="" /&gt;</NOSCRIPT><!-- End Alexa Certify Javascript --></BODY></HTML>

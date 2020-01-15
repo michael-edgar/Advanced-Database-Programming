@@ -1,0 +1,48 @@
+a.externalLink {
+	background: none; padding-right: 0px;
+}
+a.externalLink:link {
+	background: none; padding-right: 0px;
+}
+a.externalLink:visited {
+	background: none; padding-right: 0px;
+}
+a.externalLink:active {
+	background: none; padding-right: 0px;
+}
+a.externalLink:hover {
+	background: none; padding-right: 0px;
+}
+#downloadbox {
+	margin: 0px 10px 20px 20px; padding: 5px; border: 1px solid rgb(153, 153, 153); border-image: none; float: right; background-color: rgb(238, 238, 238);
+}
+#downloadbox h5 {
+	margin: 0px; padding: 0px; color: rgb(0, 0, 0); font-size: smaller; border-bottom-color: rgb(170, 170, 170); border-bottom-width: 1px; border-bottom-style: solid;
+}
+#downloadbox p {
+	margin-top: 1em; margin-bottom: 0px;
+}
+#downloadbox ul {
+	margin-top: 0px; margin-bottom: 1em; list-style-type: disc;
+}
+#downloadbox li {
+	font-size: smaller;
+}
+#banner {
+	background: none; padding: 10px;
+}
+#breadcrumbs {
+	background-image: none;
+}
+#footer {
+	border-top-color: currentColor; border-top-width: 0px; border-top-style: none;
+}
+.frontpagebox {
+	width: 15em; text-align: center; margin-top: 2em; margin-right: 0.5em; margin-left: 0.5em; float: left;
+}
+.headline {
+	padding-top: 1px; padding-bottom: 5px; font-size: 120%; font-weight: bold; background-image: url("../images/breadcrumbs.jpg"); background-repeat: repeat-x;
+}
+.section {
+	padding-top: 0px; padding-bottom: 0px;
+}

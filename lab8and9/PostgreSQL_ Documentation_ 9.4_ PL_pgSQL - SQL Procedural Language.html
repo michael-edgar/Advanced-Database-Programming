@@ -1,0 +1,387 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- saved from url=(0063)http://www.postgresql.org/docs/current/interactive/plpgsql.html -->
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en" dir="ltr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>PostgreSQL: Documentation: 9.4: PL/pgSQL - SQL Procedural Language</title>
+    <style type="text/css" media="screen" title="Normal Text">@import url("/dyncss/docs.css?e2742ea0");</style>
+    <script type="text/javascript" async="" src="./PostgreSQL_ Documentation_ 9.4_ PL_pgSQL - SQL Procedural Language_files/ga.js"></script><script type="text/javascript" src="./PostgreSQL_ Documentation_ 9.4_ PL_pgSQL - SQL Procedural Language_files/monospacefix.js"></script></head><body><pre id="monotest" style="display: none;">&nbsp;</pre><p id="paratest" style="display: none;">&nbsp;</p><style type="text/css" media="screen">#docContainer tt, #docContainer pre, #docContainer code{font-size: 1.3em;}</style>
+
+    <script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-1345454-1']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+<div id="docHeader">
+	<div id="docHeaderLogo">
+		<a href="http://www.postgresql.org/" title="PostgreSQL"><img src="./PostgreSQL_ Documentation_ 9.4_ PL_pgSQL - SQL Procedural Language_files/hdr_logo.png" width="206" height="80" alt="PostgreSQL"></a>
+	</div>
+</div>
+
+<div id="docContainerWrap">
+<div id="docContainer">
+<div id="docNavSearchContainer">
+<div id="docSearch">
+	<form action="http://www.postgresql.org/search/" method="get">
+	<div>
+	<input type="hidden" name="u" value="/docs/9.4/">
+	<label for="q">Search Documentation:&nbsp;</label><input type="text" id="q" name="q" size="20" onfocus="if( this.value==this.defaultValue ) this.value=&#39;&#39;;" value="Search"><input id="submit" type="submit" value="Search">
+	</div>
+	</form>
+</div>
+<div id="docNav">
+<a href="http://www.postgresql.org/" title="Home">Home</a> → <a href="http://www.postgresql.org/docs" title="Documentation">Documentation</a> → <a href="http://www.postgresql.org/docs/manuals" title="Manuals">Manuals</a> → <a href="http://www.postgresql.org/docs/9.4/interactive/index.html">PostgreSQL 9.4</a>
+</div>
+<div id="docVersions">
+This page in other versions:
+
+
+	
+	
+	<a href="http://www.postgresql.org/docs/9.0/interactive/plpgsql.html" title="This page in version 9.0">9.0</a>
+	
+
+	/
+	
+	<a href="http://www.postgresql.org/docs/9.1/interactive/plpgsql.html" title="This page in version 9.1">9.1</a>
+	
+
+	/
+	
+	<a href="http://www.postgresql.org/docs/9.2/interactive/plpgsql.html" title="This page in version 9.2">9.2</a>
+	
+
+	/
+	
+	<a href="http://www.postgresql.org/docs/9.3/interactive/plpgsql.html" title="This page in version 9.3">9.3</a>
+	
+
+	/
+	
+	<b>9.4</b>
+	
+
+
+
+
+&nbsp;|&nbsp; Development versions:
+
+	
+	
+	<a href="http://www.postgresql.org/docs/devel/interactive/plpgsql.html" title="This page in version devel" rel="nofollow">devel</a>
+	
+
+
+
+
+&nbsp;|&nbsp; Unsupported versions:
+
+	
+	
+	<a href="http://www.postgresql.org/docs/7.1/interactive/plpgsql.html" title="This page in version 7.1" rel="nofollow">7.1</a>
+	
+
+	/
+	
+	<a href="http://www.postgresql.org/docs/7.2/interactive/plpgsql.html" title="This page in version 7.2" rel="nofollow">7.2</a>
+	
+
+	/
+	
+	<a href="http://www.postgresql.org/docs/7.3/interactive/plpgsql.html" title="This page in version 7.3" rel="nofollow">7.3</a>
+	
+
+	/
+	
+	<a href="http://www.postgresql.org/docs/7.4/interactive/plpgsql.html" title="This page in version 7.4" rel="nofollow">7.4</a>
+	
+
+	/
+	
+	<a href="http://www.postgresql.org/docs/8.0/interactive/plpgsql.html" title="This page in version 8.0" rel="nofollow">8.0</a>
+	
+
+	/
+	
+	<a href="http://www.postgresql.org/docs/8.1/interactive/plpgsql.html" title="This page in version 8.1" rel="nofollow">8.1</a>
+	
+
+	/
+	
+	<a href="http://www.postgresql.org/docs/8.2/interactive/plpgsql.html" title="This page in version 8.2" rel="nofollow">8.2</a>
+	
+
+	/
+	
+	<a href="http://www.postgresql.org/docs/8.3/interactive/plpgsql.html" title="This page in version 8.3" rel="nofollow">8.3</a>
+	
+
+	/
+	
+	<a href="http://www.postgresql.org/docs/8.4/interactive/plpgsql.html" title="This page in version 8.4" rel="nofollow">8.4</a>
+	
+
+
+</div>
+</div>
+
+<div id="docContent">
+<div class="NAVHEADER">
+  <table summary="Header navigation table" width="100%" border="0" cellpadding="0" cellspacing="0">
+    <tbody><tr>
+      <th colspan="4" align="center" valign="bottom"><a href="http://www.postgresql.org/docs/current/interactive/index.html">PostgreSQL 9.4.2 Documentation</a></th>
+    </tr>
+
+    <tr>
+      <td width="10%" align="left" valign="top"><a title="Installing Procedural Languages" href="http://www.postgresql.org/docs/current/interactive/xplang-install.html" accesskey="P">Prev</a></td>
+
+      <td width="10%" align="left" valign="top"><a href="http://www.postgresql.org/docs/current/interactive/server-programming.html" accesskey="U">Up</a></td>
+
+      <td width="60%" align="center" valign="bottom"></td>
+
+      <td width="20%" align="right" valign="top"><a title="Overview" href="http://www.postgresql.org/docs/current/interactive/plpgsql-overview.html" accesskey="N">Next</a></td>
+    </tr>
+  </tbody></table>
+  <hr class="c1" width="100%">
+</div>
+
+<div class="CHAPTER">
+  <h1><a name="PLPGSQL" id="PLPGSQL"></a>Chapter 40. <span class="APPLICATION">PL/pgSQL</span> - <acronym class="ACRONYM">SQL</acronym> Procedural Language</h1>
+
+  <div class="TOC">
+    <dl>
+      <dt class="c2">Table of Contents</dt>
+
+      <dt>40.1. <a href="http://www.postgresql.org/docs/current/interactive/plpgsql-overview.html">Overview</a></dt>
+
+      <dd>
+        <dl>
+          <dt>40.1.1. <a href="http://www.postgresql.org/docs/current/interactive/plpgsql-overview.html#PLPGSQL-ADVANTAGES">Advantages of
+          Using <span class="APPLICATION">PL/pgSQL</span></a></dt>
+
+          <dt>40.1.2. <a href="http://www.postgresql.org/docs/current/interactive/plpgsql-overview.html#PLPGSQL-ARGS-RESULTS">Supported
+          Argument and Result Data Types</a></dt>
+        </dl>
+      </dd>
+
+      <dt>40.2. <a href="http://www.postgresql.org/docs/current/interactive/plpgsql-structure.html">Structure of
+      <span class="APPLICATION">PL/pgSQL</span></a></dt>
+
+      <dt>40.3. <a href="http://www.postgresql.org/docs/current/interactive/plpgsql-declarations.html">Declarations</a></dt>
+
+      <dd>
+        <dl>
+          <dt>40.3.1. <a href="http://www.postgresql.org/docs/current/interactive/plpgsql-declarations.html#PLPGSQL-DECLARATION-PARAMETERS">
+          Declaring Function Parameters</a></dt>
+
+          <dt>40.3.2. <a href="http://www.postgresql.org/docs/current/interactive/plpgsql-declarations.html#PLPGSQL-DECLARATION-ALIAS"><tt class="LITERAL">
+          ALIAS</tt></a></dt>
+
+          <dt>40.3.3. <a href="http://www.postgresql.org/docs/current/interactive/plpgsql-declarations.html#PLPGSQL-DECLARATION-TYPE">Copying
+          Types</a></dt>
+
+          <dt>40.3.4. <a href="http://www.postgresql.org/docs/current/interactive/plpgsql-declarations.html#PLPGSQL-DECLARATION-ROWTYPES">Row
+          Types</a></dt>
+
+          <dt>40.3.5. <a href="http://www.postgresql.org/docs/current/interactive/plpgsql-declarations.html#PLPGSQL-DECLARATION-RECORDS">Record
+          Types</a></dt>
+
+          <dt>40.3.6. <a href="http://www.postgresql.org/docs/current/interactive/plpgsql-declarations.html#PLPGSQL-DECLARATION-COLLATION">
+          Collation of <span class="APPLICATION">PL/pgSQL</span>
+          Variables</a></dt>
+        </dl>
+      </dd>
+
+      <dt>40.4. <a href="http://www.postgresql.org/docs/current/interactive/plpgsql-expressions.html">Expressions</a></dt>
+
+      <dt>40.5. <a href="http://www.postgresql.org/docs/current/interactive/plpgsql-statements.html">Basic
+      Statements</a></dt>
+
+      <dd>
+        <dl>
+          <dt>40.5.1. <a href="http://www.postgresql.org/docs/current/interactive/plpgsql-statements.html#PLPGSQL-STATEMENTS-ASSIGNMENT">Assignment</a></dt>
+
+          <dt>40.5.2. <a href="http://www.postgresql.org/docs/current/interactive/plpgsql-statements.html#PLPGSQL-STATEMENTS-SQL-NORESULT">
+          Executing a Command With No Result</a></dt>
+
+          <dt>40.5.3. <a href="http://www.postgresql.org/docs/current/interactive/plpgsql-statements.html#PLPGSQL-STATEMENTS-SQL-ONEROW">Executing
+          a Query with a Single-row Result</a></dt>
+
+          <dt>40.5.4. <a href="http://www.postgresql.org/docs/current/interactive/plpgsql-statements.html#PLPGSQL-STATEMENTS-EXECUTING-DYN">
+          Executing Dynamic Commands</a></dt>
+
+          <dt>40.5.5. <a href="http://www.postgresql.org/docs/current/interactive/plpgsql-statements.html#PLPGSQL-STATEMENTS-DIAGNOSTICS">Obtaining
+          the Result Status</a></dt>
+
+          <dt>40.5.6. <a href="http://www.postgresql.org/docs/current/interactive/plpgsql-statements.html#PLPGSQL-STATEMENTS-NULL">Doing
+          Nothing At All</a></dt>
+        </dl>
+      </dd>
+
+      <dt>40.6. <a href="http://www.postgresql.org/docs/current/interactive/plpgsql-control-structures.html">Control
+      Structures</a></dt>
+
+      <dd>
+        <dl>
+          <dt>40.6.1. <a href="http://www.postgresql.org/docs/current/interactive/plpgsql-control-structures.html#PLPGSQL-STATEMENTS-RETURNING">
+          Returning From a Function</a></dt>
+
+          <dt>40.6.2. <a href="http://www.postgresql.org/docs/current/interactive/plpgsql-control-structures.html#PLPGSQL-CONDITIONALS">Conditionals</a></dt>
+
+          <dt>40.6.3. <a href="http://www.postgresql.org/docs/current/interactive/plpgsql-control-structures.html#PLPGSQL-CONTROL-STRUCTURES-LOOPS">
+          Simple Loops</a></dt>
+
+          <dt>40.6.4. <a href="http://www.postgresql.org/docs/current/interactive/plpgsql-control-structures.html#PLPGSQL-RECORDS-ITERATING">
+          Looping Through Query Results</a></dt>
+
+          <dt>40.6.5. <a href="http://www.postgresql.org/docs/current/interactive/plpgsql-control-structures.html#PLPGSQL-FOREACH-ARRAY">Looping
+          Through Arrays</a></dt>
+
+          <dt>40.6.6. <a href="http://www.postgresql.org/docs/current/interactive/plpgsql-control-structures.html#PLPGSQL-ERROR-TRAPPING">Trapping
+          Errors</a></dt>
+
+          <dt>40.6.7. <a href="http://www.postgresql.org/docs/current/interactive/plpgsql-control-structures.html#PLPGSQL-GET-DIAGNOSTICS-CONTEXT">
+          Obtaining Current Execution Information</a></dt>
+        </dl>
+      </dd>
+
+      <dt>40.7. <a href="http://www.postgresql.org/docs/current/interactive/plpgsql-cursors.html">Cursors</a></dt>
+
+      <dd>
+        <dl>
+          <dt>40.7.1. <a href="http://www.postgresql.org/docs/current/interactive/plpgsql-cursors.html#PLPGSQL-CURSOR-DECLARATIONS">Declaring
+          Cursor Variables</a></dt>
+
+          <dt>40.7.2. <a href="http://www.postgresql.org/docs/current/interactive/plpgsql-cursors.html#PLPGSQL-CURSOR-OPENING">Opening
+          Cursors</a></dt>
+
+          <dt>40.7.3. <a href="http://www.postgresql.org/docs/current/interactive/plpgsql-cursors.html#PLPGSQL-CURSOR-USING">Using
+          Cursors</a></dt>
+
+          <dt>40.7.4. <a href="http://www.postgresql.org/docs/current/interactive/plpgsql-cursors.html#PLPGSQL-CURSOR-FOR-LOOP">Looping
+          Through a Cursor's Result</a></dt>
+        </dl>
+      </dd>
+
+      <dt>40.8. <a href="http://www.postgresql.org/docs/current/interactive/plpgsql-errors-and-messages.html">Errors
+      and Messages</a></dt>
+
+      <dt>40.9. <a href="http://www.postgresql.org/docs/current/interactive/plpgsql-trigger.html">Trigger
+      Procedures</a></dt>
+
+      <dd>
+        <dl>
+          <dt>40.9.1. <a href="http://www.postgresql.org/docs/current/interactive/plpgsql-trigger.html#PLPGSQL-DML-TRIGGER">Triggers on
+          Data Changes</a></dt>
+
+          <dt>40.9.2. <a href="http://www.postgresql.org/docs/current/interactive/plpgsql-trigger.html#PLPGSQL-EVENT-TRIGGER">Triggers on
+          Events</a></dt>
+        </dl>
+      </dd>
+
+      <dt>40.10. <a href="http://www.postgresql.org/docs/current/interactive/plpgsql-implementation.html"><span class="APPLICATION">PL/pgSQL</span> Under the Hood</a></dt>
+
+      <dd>
+        <dl>
+          <dt>40.10.1. <a href="http://www.postgresql.org/docs/current/interactive/plpgsql-implementation.html#PLPGSQL-VAR-SUBST">Variable
+          Substitution</a></dt>
+
+          <dt>40.10.2. <a href="http://www.postgresql.org/docs/current/interactive/plpgsql-implementation.html#PLPGSQL-PLAN-CACHING">Plan
+          Caching</a></dt>
+        </dl>
+      </dd>
+
+      <dt>40.11. <a href="http://www.postgresql.org/docs/current/interactive/plpgsql-development-tips.html">Tips for
+      Developing in <span class="APPLICATION">PL/pgSQL</span></a></dt>
+
+      <dd>
+        <dl>
+          <dt>40.11.1. <a href="http://www.postgresql.org/docs/current/interactive/plpgsql-development-tips.html#PLPGSQL-QUOTE-TIPS">Handling
+          of Quotation Marks</a></dt>
+
+          <dt>40.11.2. <a href="http://www.postgresql.org/docs/current/interactive/plpgsql-development-tips.html#PLPGSQL-EXTRA-CHECKS">Additional
+          Compile-time Checks</a></dt>
+        </dl>
+      </dd>
+
+      <dt>40.12. <a href="http://www.postgresql.org/docs/current/interactive/plpgsql-porting.html">Porting from
+      <span class="PRODUCTNAME">Oracle</span> PL/SQL</a></dt>
+
+      <dd>
+        <dl>
+          <dt>40.12.1. <a href="http://www.postgresql.org/docs/current/interactive/plpgsql-porting.html#AEN62007">Porting Examples</a></dt>
+
+          <dt>40.12.2. <a href="http://www.postgresql.org/docs/current/interactive/plpgsql-porting.html#PLPGSQL-PORTING-OTHER">Other Things
+          to Watch For</a></dt>
+
+          <dt>40.12.3. <a href="http://www.postgresql.org/docs/current/interactive/plpgsql-porting.html#PLPGSQL-PORTING-APPENDIX">Appendix</a></dt>
+        </dl>
+      </dd>
+    </dl>
+  </div>
+</div>
+
+<div class="NAVFOOTER">
+  <hr class="c1" width="100%">
+
+  <table summary="Footer navigation table" width="100%" border="0" cellpadding="0" cellspacing="0">
+    <tbody><tr>
+      <td width="33%" align="left" valign="top"><a href="http://www.postgresql.org/docs/current/interactive/xplang-install.html" accesskey="P">Prev</a></td>
+
+      <td width="34%" align="center" valign="top"><a href="http://www.postgresql.org/docs/current/interactive/index.html" accesskey="H">Home</a></td>
+
+      <td width="33%" align="right" valign="top"><a href="http://www.postgresql.org/docs/current/interactive/plpgsql-overview.html" accesskey="N">Next</a></td>
+    </tr>
+
+    <tr>
+      <td width="33%" align="left" valign="top">Installing
+      Procedural Languages</td>
+
+      <td width="34%" align="center" valign="top"><a href="http://www.postgresql.org/docs/current/interactive/server-programming.html" accesskey="U">Up</a></td>
+
+      <td width="33%" align="right" valign="top">Overview</td>
+    </tr>
+  </tbody></table>
+</div>
+
+</div>
+
+<div id="docComments">
+
+
+
+<h2>Add Comment</h2>
+<p>
+Please use this form to add your own comments regarding your experience with
+particular features of PostgreSQL, clarifications of the documentation, or
+hints for other users. Please note, this is <strong>not</strong> a support
+forum, and your IP address will be logged. If you have a question or need help,
+please see the <a href="http://www.postgresql.org/docs/faq/">faq</a>, try a
+<a href="http://www.postgresql.org/community/lists/">mailing list</a>, or join
+us on <a href="http://www.postgresql.org/community/irc">IRC</a>.
+Note that submissions containing URLs or other keywords commonly found in
+'spam' comments may be silently discarded. Please contact the
+<a href="mailto:webmaster@postgresql.org">webmaster</a> if you think this
+is happening to you in error.
+</p>
+<p>
+Proceed to the <a href="http://www.postgresql.org/account/comments/new/9.4/plpgsql.html/" rel="nofollow">comment form</a>.
+</p>
+
+</div>
+
+<div id="docFooter">
+    <a href="http://www.postgresql.org/about/privacypolicy">Privacy Policy</a> |
+    <a href="http://www.postgresql.org/about/">About PostgreSQL</a><br>
+Copyright © 1996-2015 The PostgreSQL Global Development Group
+</div>
+</div>
+</div>
+
+
+</body></html>

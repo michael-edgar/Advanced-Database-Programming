@@ -1,0 +1,180 @@
+body {
+	padding: 0px; font-family: Verdana, Helvetica, Arial, sans-serif; font-size: 13px; margin-right: auto; margin-left: auto; background-repeat: repeat-y; background-color: rgb(255, 255, 255);
+}
+td {
+	color: rgb(51, 51, 51); font-family: Verdana, Helvetica, Arial, sans-serif; font-size: 12px;
+}
+select {
+	color: rgb(51, 51, 51); font-family: Verdana, Helvetica, Arial, sans-serif; font-size: 12px;
+}
+input {
+	color: rgb(51, 51, 51); font-family: Verdana, Helvetica, Arial, sans-serif; font-size: 12px;
+}
+li {
+	color: rgb(51, 51, 51); font-family: Verdana, Helvetica, Arial, sans-serif; font-size: 12px;
+}
+code {
+	font-size: 12px;
+}
+a {
+	text-decoration: none;
+}
+a:link {
+	color: rgb(68, 119, 170);
+}
+a:visited {
+	color: rgb(102, 136, 170);
+}
+a:active {
+	color: rgb(153, 0, 0);
+}
+a:hover {
+	color: rgb(153, 0, 0);
+}
+#legend li.externalLink {
+	background: url("../images/external.png") no-repeat left top; padding-left: 18px;
+}
+a.externalLink {
+	background: url("../images/external.png") no-repeat right; padding-right: 18px;
+}
+a.externalLink:link {
+	background: url("../images/external.png") no-repeat right; padding-right: 18px;
+}
+a.externalLink:visited {
+	background: url("../images/external.png") no-repeat right; padding-right: 18px;
+}
+a.externalLink:active {
+	background: url("../images/external.png") no-repeat right; padding-right: 18px;
+}
+a.externalLink:hover {
+	background: url("../images/external.png") no-repeat right; padding-right: 18px;
+}
+#legend li.newWindow {
+	background: url("../images/newwindow.png") no-repeat left top; padding-left: 18px;
+}
+a.newWindow {
+	background: url("../images/newwindow.png") no-repeat right; padding-right: 18px;
+}
+a.newWindow:link {
+	background: url("../images/newwindow.png") no-repeat right; padding-right: 18px;
+}
+a.newWindow:visited {
+	background: url("../images/newwindow.png") no-repeat right; padding-right: 18px;
+}
+a.newWindow:active {
+	background: url("../images/newwindow.png") no-repeat right; padding-right: 18px;
+}
+a.newWindow:hover {
+	background: url("../images/newwindow.png") no-repeat right; padding-right: 18px;
+}
+h2 {
+	color: rgb(51, 51, 51); font-size: 17px;
+}
+h3 {
+	background-position: left bottom; padding: 4px 4px 4px 24px; color: rgb(102, 102, 102); font-size: 14px; font-weight: bold; background-image: url("../images/h3.jpg"); background-repeat: no-repeat; background-color: rgb(204, 204, 204);
+}
+p {
+	color: rgb(0, 0, 0); line-height: 1.3em; font-size: 12px;
+}
+#breadcrumbs {
+	padding: 5px 10px 14px 20px; height: 13px; background-image: url("../images/breadcrumbs.jpg");
+}
+* html #breadcrumbs {
+	padding-bottom: 8px;
+}
+#leftColumn {
+	margin: 10px 0px; padding-right: 5px; padding-left: 5px; border-top-color: rgb(204, 204, 204); border-right-color: rgb(204, 204, 204); border-bottom-color: rgb(204, 204, 204); border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-top-style: solid; border-right-style: solid; border-bottom-style: solid;
+}
+#navcolumn h5 {
+	background-position: left bottom; color: rgb(73, 99, 90); padding-top: 2px; padding-left: 9px; font-size: smaller; border-bottom-color: rgb(170, 170, 170); border-bottom-width: 1px; border-bottom-style: solid; background-image: url("../images/h5.jpg"); background-repeat: no-repeat;
+}
+table.bodyTable th {
+	text-align: left; color: white; font-weight: bold; background-color: rgb(187, 187, 187);
+}
+table.bodyTable th {
+	font-size: 11px;
+}
+table.bodyTable td {
+	font-size: 11px;
+}
+table.bodyTable tr.a {
+	background-color: rgb(221, 221, 221);
+}
+table.bodyTable tr.b {
+	background-color: rgb(238, 238, 238);
+}
+table.bodyTable tr.a:hover {
+	background: rgb(223, 227, 219);
+}
+table.bodyTable tr.b:hover {
+	background: rgb(223, 227, 219);
+}
+.source {
+	border: 1px solid rgb(153, 153, 153); border-image: none; overflow: auto;
+}
+dt {
+	background-position: left bottom; padding: 4px 4px 4px 24px; color: rgb(51, 51, 51); font-size: 14px; font-weight: bold; background-image: url("../images/h3.jpg"); background-repeat: no-repeat; background-color: rgb(204, 204, 204);
+}
+.subsectionTitle {
+	color: rgb(102, 102, 102); font-size: 13px; font-weight: bold;
+}
+table {
+	font-size: 10px;
+}
+.xright a:link {
+	color: rgb(102, 102, 102);
+}
+.xright a:visited {
+	color: rgb(102, 102, 102);
+}
+.xright a:active {
+	color: rgb(102, 102, 102);
+}
+.xright a:hover {
+	color: rgb(0, 51, 0);
+}
+#banner {
+	background: url("../images/banner.jpg"); height: 93px;
+}
+#navcolumn ul {
+	margin: 5px 0px 15px 0em;
+}
+#navcolumn ul a {
+	color: rgb(51, 51, 51);
+}
+#navcolumn ul a:hover {
+	color: red;
+}
+#intro {
+	margin: 6px 0px 0px; padding: 10px 40px; border: 1px solid rgb(204, 204, 204); border-image: none;
+}
+.subsection {
+	color: rgb(51, 51, 51); margin-left: 3px;
+}
+.subsection p {
+	font-size: 12px;
+}
+#footer {
+	margin: 20px 0px; padding: 10px; color: rgb(51, 51, 51); border-top-color: rgb(204, 204, 204); border-top-width: 1px; border-top-style: solid;
+}
+.errormark {
+	background: url("../images/icon_error_sml.gif") no-repeat;
+}
+.warningmark {
+	background: url("../images/icon_error_sml.gif") no-repeat;
+}
+.donemark {
+	background: url("../images/icon_error_sml.gif") no-repeat;
+}
+.infomark {
+	background: url("../images/icon_error_sml.gif") no-repeat;
+}
+.warningmark {
+	background-image: url("../images/icon_warning_sml.gif");
+}
+.donemark {
+	background-image: url("../images/icon_success_sml.gif");
+}
+.infomark {
+	background-image: url("../images/icon_info_sml.gif");
+}

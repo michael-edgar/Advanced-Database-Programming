@@ -1,0 +1,87 @@
+body {
+	color: black !important;
+}
+body * {
+	color: black !important;
+}
+body div[role='main'] {
+	margin: 0px;
+}
+body div[role='main'] header.masthead {
+	display: none;
+}
+body div[role='main'] footer.mastfooter {
+	display: none;
+}
+body div[role='main'] article.mainarticle aside#download-button {
+	display: none;
+}
+body div[role='main'] article.mainarticle section.right-sidebar {
+	display: none;
+}
+body div[role='main'] article.mainarticle nav.tutorial {
+	display: none;
+}
+body div[role='main'] article.mainarticle #nav-toggle {
+	display: none;
+}
+body div[role='main'] article.mainarticle ol.versions {
+	display: none;
+}
+body div[role='main'] article.mainarticle p {
+	max-width: 100%;
+}
+body div[role='main'] article.mainarticle ol {
+	max-width: 100%;
+}
+body div[role='main'] article.mainarticle ul {
+	max-width: 100%;
+}
+body div[role='main'] article.mainarticle h2 {
+	max-width: 100%;
+}
+body div[role='main'] article.mainarticle h3 {
+	max-width: 100%;
+}
+body div[role='main'] article.mainarticle h4 {
+	max-width: 100%;
+}
+body div[role='main'] article.mainarticle h5 {
+	max-width: 100%;
+}
+body div[role='main'] article.mainarticle h6 {
+	max-width: 100%;
+}
+body div[role='main'] article.mainarticle table {
+	max-width: 100%;
+}
+body div[role='main'] article.mainarticle blockquote {
+	max-width: 100%;
+}
+body div[role='main'] article.mainarticle .CodeRay {
+	max-width: 100%;
+}
+body div[role='main'] article.mainarticle .info {
+	max-width: 100%;
+}
+body div[role='main'] article.mainarticle .note {
+	max-width: 100%;
+}
+body div[role='main'] article.mainarticle .info {
+	background: none;
+}
+body div[role='main'] article.mainarticle .note {
+	background: none;
+}
+body div[role='main'] article.mainarticle .code {
+	background: none;
+}
+body div[role='main'] article.mainarticle .code {
+	border: 1px solid rgb(204, 204, 204); border-image: none; box-shadow: none;
+}
+body aside#nav-container {
+	display: none;
+}
+body .page-break {
+	display: block; page-break-before: always;
+}

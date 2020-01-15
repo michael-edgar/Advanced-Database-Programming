@@ -1,0 +1,904 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- saved from url=(0072)http://blog.cloudera.com/blog/2013/07/guide-to-using-apache-hbase-ports/ -->
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US" class=" js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths"><script type="text/javascript" async="" src="./Guide to Using Apache HBase Ports_files/ga.js"></script><script id="tinyhippos-injected">if (window.top.ripple) { window.top.ripple("bootstrap").inject(window, document); }</script><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Guide to Using Apache HBase Ports | Cloudera Engineering Blog</title>
+
+<meta name="keywords" content="hadoop, hadoop training, cloudera, hadoop tutorial, hadoop certification, apache hadoop, hadoop download, big data, open source">
+<meta name="description" content="">
+
+<meta name="msvalidate.01" content="8857B9071A02F989DE3F8BEE557BB584">
+
+<link rel="search" type="application/opensearchdescription+xml" href="http://blog.cloudera.com/assets/opensearch.xml" title="Cloudera">
+
+<meta property="og:title" content="Guide to Using Apache HBase Ports">
+<meta property="og:type" content="article">
+<meta property="og:url" content="http://blog.cloudera.com/blog/2013/07/guide-to-using-apache-hbase-ports/">
+<meta property="og:site_name" content="Cloudera Developer Blog">
+
+
+<link rel="icon" href="http://blog.cloudera.com/wp-content/themes/solutionset/assets/favicon.ico" type="image/x-icon"> 
+<link rel="stylesheet" media="all" type="text/css" href="./Guide to Using Apache HBase Ports_files/960.css">
+<link rel="stylesheet" media="all" type="text/css" href="./Guide to Using Apache HBase Ports_files/reset.css">
+<link rel="stylesheet" media="all" type="text/css" href="./Guide to Using Apache HBase Ports_files/all.css">
+<link rel="stylesheet" media="all" type="text/css" href="./Guide to Using Apache HBase Ports_files/wp.css"> 
+
+<!--[if lt IE 7]><link rel="stylesheet" type="text/css" href="http://blog.cloudera.com/wp-content/themes/solutionset/assets/css/ie6.css?20120605" media="screen"/><![endif]-->
+<!--[if lt IE 8]><link rel="stylesheet" type="text/css" href="http://blog.cloudera.com/wp-content/themes/solutionset/assets/css/ie6-7.css?20120605" media="screen"/><![endif]-->
+<!--[if lt IE 9]><link rel="stylesheet" type="text/css" href="http://blog.cloudera.com/wp-content/themes/solutionset/assets/css/ie.css?20120605" media="screen"/><![endif]-->
+
+<script type="text/javascript" src="./Guide to Using Apache HBase Ports_files/modernizr-2.6.1.min.js"></script>
+<script type="text/javascript" src="./Guide to Using Apache HBase Ports_files/mootools-1.2.4-yui.js"></script>
+<script type="text/javascript" src="./Guide to Using Apache HBase Ports_files/mootools-1.2.4.4-more-yui.js"></script>
+<script type="text/javascript" src="./Guide to Using Apache HBase Ports_files/jquery-1.6.2.min.js"></script>
+<script type="text/javascript"> jQuery.noConflict(); </script>
+<script type="text/javascript" src="./Guide to Using Apache HBase Ports_files/jquery.colorbox-min.js"></script>
+<script type="text/javascript" src="./Guide to Using Apache HBase Ports_files/global.js"></script>
+<script type="text/javascript">var switchTo5x=true;</script>
+<script type="text/javascript" src="./Guide to Using Apache HBase Ports_files/buttons.js"></script>
+<script type="text/javascript">stLight.options({publisher: "ur-aa86c136-1042-b30d-950-dd905bb179a0", doNotHash: true, doNotCopy: true, hashAddressBar: false});</script>
+
+
+<link rel="pingback" href="http://blog.cloudera.com/xmlrpc.php">
+<link rel="alternate" type="application/rss+xml" title="Cloudera Developer Blog » Feed" href="http://blog.cloudera.com/feed/">
+<link rel="alternate" type="application/rss+xml" title="Cloudera Developer Blog » Comments Feed" href="http://blog.cloudera.com/comments/feed/">
+<link rel="stylesheet" id="prettify-gc-syntax-highlighter-css" href="./Guide to Using Apache HBase Ports_files/prettify.css" type="text/css" media="all">
+<link rel="stylesheet" id="crayon-css" href="./Guide to Using Apache HBase Ports_files/crayon.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="cptchStylesheet-css" href="./Guide to Using Apache HBase Ports_files/style_wp_before_3.8.css" type="text/css" media="all">
+<script type="text/javascript" src="./Guide to Using Apache HBase Ports_files/jquery.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var CrayonSyntaxSettings = {"version":"2.6.6","is_admin":"0","ajaxurl":"https:\/\/blog.cloudera.com\/wp-admin\/admin-ajax.php","prefix":"crayon-","setting":"crayon-setting","selected":"crayon-setting-selected","changed":"crayon-setting-changed","special":"crayon-setting-special","orig_value":"data-orig-value","debug":""};;
+var CrayonSyntaxStrings = {"copy":"Press %s to Copy, %s to Paste","minimize":"Click To Expand Code"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Guide to Using Apache HBase Ports_files/crayon.min.js"></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://blog.cloudera.com/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://blog.cloudera.com/wp-includes/wlwmanifest.xml"> 
+<link rel="prev" title="Myrrix Joins Cloudera to Bring &quot;Big Learning&quot; to Hadoop" href="http://blog.cloudera.com/blog/2013/07/myrrix-joins-cloudera-to-bring-big-learning-to-hadoop/">
+<link rel="next" title="How HiveServer2 Brings Security and Concurrency to Apache Hive" href="http://blog.cloudera.com/blog/2013/07/how-hiveserver2-brings-security-and-concurrency-to-apache-hive/">
+<meta name="generator" content="WordPress 3.3.2">
+<link rel="canonical" href="./Guide to Using Apache HBase Ports_files/Guide to Using Apache HBase Ports.html">
+<link rel="shortlink" href="http://blog.cloudera.com/?p=22523">
+
+
+<script type="text/javascript">
+ var _gaq = _gaq || [];
+ _gaq.push(['_setAccount', 'UA-2275969-16']);
+ _gaq.push(['_trackPageview']);
+
+ (function() {
+   var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+   ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+   var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+ })();
+</script>
+
+
+<script type="text/javascript" src="./Guide to Using Apache HBase Ports_files/getAllAppDefault.esi"></script><script type="text/javascript" src="./Guide to Using Apache HBase Ports_files/checkOAuth.esi"></script><style type="text/css" id="ki-fka-f8"></style><style type="text/css" id="ki-fka-f5"></style><link rel="stylesheet" type="text/css" href="./Guide to Using Apache HBase Ports_files/buttons.f72ae7c4435271cf3af83d1f10fbbbb0.css"></head>
+<body class="single single-post postid-22523 single-format-standard devcenter" data-twttr-rendered="true" style="overflow-x: hidden;"><iframe id="twttrHubFrameSecure" allowtransparency="true" frameborder="0" scrolling="no" tabindex="0" name="twttrHubFrameSecure" src="./Guide to Using Apache HBase Ports_files/hub.1c5a573e465d84666458a45e49b0a735(1).html" style="position: absolute; top: -9999em; width: 10px; height: 10px;"></iframe><iframe id="twttrHubFrame" allowtransparency="true" frameborder="0" scrolling="no" tabindex="0" name="twttrHubFrame" src="./Guide to Using Apache HBase Ports_files/hub.1c5a573e465d84666458a45e49b0a735.html" style="position: absolute; top: -9999em; width: 10px; height: 10px;"></iframe><div id="cboxOverlay" style="display: none;"></div><div id="colorbox" class="" style="padding-bottom: 0px; padding-right: 0px; display: none;"><div id="cboxWrapper"><div><div id="cboxTopLeft" style="float: left;"></div><div id="cboxTopCenter" style="float: left;"></div><div id="cboxTopRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxMiddleLeft" style="float: left;"></div><div id="cboxContent" style="float: left;"><div id="cboxLoadedContent" class="" style="width: 0px; height: 0px; overflow: hidden;"></div><div id="cboxLoadingOverlay" class=""></div><div id="cboxLoadingGraphic" class=""></div><div id="cboxTitle" class=""></div><div id="cboxCurrent" class=""></div><div id="cboxNext" class=""></div><div id="cboxPrevious" class=""></div><div id="cboxSlideshow" class=""></div><div id="cboxClose" class=""></div></div><div id="cboxMiddleRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxBottomLeft" style="float: left;"></div><div id="cboxBottomCenter" style="float: left;"></div><div id="cboxBottomRight" style="float: left;"></div></div></div><div style="position: absolute; width: 9999px; visibility: hidden; display: none;"></div></div>
+			
+		
+			
+	<header id="site-head">
+<nav class="properties">
+            <div class="container">
+                <ul>
+                    <!--<li><a href="http://www.cloudera.com">Cloudera.com</a></li>-->
+                     <!--<li><a href="http://university.cloudera.com">Cloudera University</a></li>
+                   <li><a href="${config.LINK_CCP}/display/DOC/Documentation">Documentation</a></li>-->
+                    <li><a id="support_home_page" href="http://cloudera.com/content/support/en/home.html" class="active">Support</a></li>
+                    <li><a href="http://cloudera.com/content/dev-center/en/home.html">Developers</a></li>
+                  <!--<li><a href="http://cloudera.com/content/cloudera/en/partners.html">PARTNERS</a></li>-->
+                   
+                </ul>
+                <ul class="user">
+                    <li>
+                       <!--<a id="signinLink" class="hidden" href="https://clouderapkb.echolane.cs3.force.com/idp/login?app=0spQ00000004CD5">Sign In</a>-->
+<a id="signinLink" class="hidden" href="https://cloudera.secure.force.com/">Sign In</a>
+                    </li>
+                    <li><a id="registerLink" class="hidden" href="http://cloudera.com/content/support/en/user-registration.html">Register</a></li>
+                    <li><a href="http://cloudera.com/content/cloudera/en/about/contact-us.html">Contact Us</a></li>
+                    <li><a href="http://cloudera.com/content/support/en/downloads.html">Downloads</a></li>
+                    <li>
+                        <div id="dropdownAction" class="dropdown" style="display:none">
+                            <a id="lnkDropdowntoogle" data-toggle="dropdown" class="dropdown-toggle" href="http://blog.cloudera.com/blog/2013/07/guide-to-using-apache-hbase-ports/#">
+
+                            </a>
+                            <ul aria-labelledby="dropdownMenu" tole="menu" class="dropdown-menu">
+                                <li><a href="http://cloudera.com/content/support/en/edit-user-profile.html" id="editProfileLink" tabindex="-1">Edit Profile</a></li>
+                                <li class="divider"></li>
+                                <li>
+                                <a id="logoutLink" tabindex="-1" href="http://blog.cloudera.com/blog/2013/07/guide-to-using-apache-hbase-ports/#">Logout</a>
+                                
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="bg-fix"></div>
+        </nav>
+<!--</div>-->
+
+<div class="wrapper">
+    <div class="bg-fix"></div>
+    <h1 class="logo">
+        <a href="http://cloudera.com/content/cloudera/en/home.html">Cloudera</a>
+    </h1>
+
+<nav class="site">
+        <ul>
+    <li class="">
+ <a href="http://community.cloudera.com/" data-link="external">Community</a>
+</li>
+<li class="">
+ <a href="http://cloudera.com/content/support/en/documentation.html" data-link="external">Documentation</a>
+</li>
+ <li class="">
+                    <a href="http://cloudera.com/content/support/en/downloads.html" data-link="external">Downloads</a>
+   </li>
+     <li class="">
+                    <a href="http://university.cloudera.com/" data-link="external">Training</a>
+     </li>
+<li class="">
+                    <a href="http://blog.cloudera.com/" data-link="external" class="active">Blogs</a>
+                    <nav class="subnav menu"> <nav><ul>
+<li><a href="http://vision.cloudera.com/">Cloudera Vision</a></li>
+<!--<li><a href="http://blog.cloudera.com/blog">Developer Blog</a></li>-->
+</ul>
+</nav> </nav>
+</li>
+            
+        </ul>
+    </nav>
+
+
+    <div class="form-holder">
+		
+	    <form action="http://cloudera.com/content/cloudera/en/search.html" id="site-search" method="get" novalidate=""> 
+	        <label for="q" class="visuallyhidden">Search</label> 
+	        <input type="search" name="q" id="q" placeholder="Search"><i class="icon-search"></i> 
+	    </form>
+    </div>
+    </div><!--</div>-->
+        </header>
+				
+	<div role="main" class="main">
+		<div class="wrapper">
+			<section class="two-col">
+
+	
+<aside class="left-col">
+
+				<nav>
+			<ul class=" ">
+			
+								
+							<li class="">
+				<a href="http://www.cloudera.com/content/cloudera/en/why-cloudera/hadoop-and-big-data.html" title="Hadoop &amp; Big Data" class="" target="_blank">
+					Hadoop &amp; Big Data				</a>
+
+							</li>
+			
+					<li class="">
+				<a href="http://www.cloudera.com/content/cloudera/en/why-cloudera/our-customers.html" title="Our Customers" class="" target="_blank">
+					Our Customers				</a>
+
+							</li>
+			
+					<li class="">
+				<a href="http://www.cloudera.com/content/cloudera/en/why-cloudera/faqs.html" title="FAQs" class="" target="_blank">
+					FAQs				</a>
+
+							</li>
+			
+					<li class="current">
+				<a href="http://blog.cloudera.com/blog/" title="Blog" class="blog">
+					Blog				</a>
+
+									<ul>
+									<li class="">
+				<a href="http://blog.cloudera.com/blog/category/accumulo/" title="Accumulo (1)" class="">
+					Accumulo (1)				</a>
+
+							</li>
+			
+					<li class="">
+				<a href="http://blog.cloudera.com/blog/category/avro/" title="Avro (16)" class="">
+					Avro (16)				</a>
+
+							</li>
+			
+					<li class="">
+				<a href="http://blog.cloudera.com/blog/category/bigtop/" title="Bigtop (6)" class="">
+					Bigtop (6)				</a>
+
+							</li>
+			
+					<li class="">
+				<a href="http://blog.cloudera.com/blog/category/books/" title="Books (10)" class="">
+					Books (10)				</a>
+
+							</li>
+			
+					<li class="">
+				<a href="http://blog.cloudera.com/blog/category/careers/" title="Careers (14)" class="">
+					Careers (14)				</a>
+
+							</li>
+			
+					<li class="">
+				<a href="http://blog.cloudera.com/blog/category/cdh/" title="CDH (144)" class="">
+					CDH (144)				</a>
+
+							</li>
+			
+					<li class="">
+				<a href="http://blog.cloudera.com/blog/category/cloud-2/" title="Cloud (16)" class="">
+					Cloud (16)				</a>
+
+							</li>
+			
+					<li class="">
+				<a href="http://blog.cloudera.com/blog/category/cloudera-life/" title="Cloudera Life (5)" class="">
+					Cloudera Life (5)				</a>
+
+							</li>
+			
+					<li class="">
+				<a href="http://blog.cloudera.com/blog/category/cloudera-manager/" title="Cloudera Manager (68)" class="">
+					Cloudera Manager (68)				</a>
+
+							</li>
+			
+					<li class="">
+				<a href="http://blog.cloudera.com/blog/category/community/" title="Community (195)" class="">
+					Community (195)				</a>
+
+							</li>
+			
+					<li class="">
+				<a href="http://blog.cloudera.com/blog/category/data-collection/" title="Data Collection (17)" class="">
+					Data Collection (17)				</a>
+
+							</li>
+			
+					<li class="">
+				<a href="http://blog.cloudera.com/blog/category/data-science/" title="Data Science (32)" class="">
+					Data Science (32)				</a>
+
+							</li>
+			
+					<li class="">
+				<a href="http://blog.cloudera.com/blog/category/distribution/" title="Distribution (36)" class="">
+					Distribution (36)				</a>
+
+							</li>
+			
+					<li class="">
+				<a href="http://blog.cloudera.com/blog/category/events/" title="Events (41)" class="">
+					Events (41)				</a>
+
+							</li>
+			
+					<li class="">
+				<a href="http://blog.cloudera.com/blog/category/flume/" title="Flume (21)" class="">
+					Flume (21)				</a>
+
+							</li>
+			
+					<li class="">
+				<a href="http://blog.cloudera.com/blog/category/general/" title="General (332)" class="">
+					General (332)				</a>
+
+							</li>
+			
+					<li class="">
+				<a href="http://blog.cloudera.com/blog/category/graph-processing/" title="Graph Processing (3)" class="">
+					Graph Processing (3)				</a>
+
+							</li>
+			
+					<li class="">
+				<a href="http://blog.cloudera.com/blog/category/guest/" title="Guest (88)" class="">
+					Guest (88)				</a>
+
+							</li>
+			
+					<li class="">
+				<a href="http://blog.cloudera.com/blog/category/hadoop/" title="Hadoop (320)" class="">
+					Hadoop (320)				</a>
+
+							</li>
+			
+					<li class="">
+				<a href="http://blog.cloudera.com/blog/category/hardware/" title="Hardware (4)" class="">
+					Hardware (4)				</a>
+
+							</li>
+			
+					<li class="">
+				<a href="http://blog.cloudera.com/blog/category/hbase/" title="HBase (129)" class="">
+					HBase (129)				</a>
+
+							</li>
+			
+					<li class="">
+				<a href="http://blog.cloudera.com/blog/category/hdfs/" title="HDFS (49)" class="">
+					HDFS (49)				</a>
+
+							</li>
+			
+					<li class="">
+				<a href="http://blog.cloudera.com/blog/category/hive/" title="Hive (68)" class="">
+					Hive (68)				</a>
+
+							</li>
+			
+					<li class="">
+				<a href="http://blog.cloudera.com/blog/category/how-to/" title="How-to (68)" class="">
+					How-to (68)				</a>
+
+							</li>
+			
+					<li class="">
+				<a href="http://blog.cloudera.com/blog/category/hue/" title="Hue (33)" class="">
+					Hue (33)				</a>
+
+							</li>
+			
+					<li class="">
+				<a href="http://blog.cloudera.com/blog/category/impala/" title="Impala (78)" class="">
+					Impala (78)				</a>
+
+							</li>
+			
+					<li class="">
+				<a href="http://blog.cloudera.com/blog/category/kafka/" title="Kafka (4)" class="">
+					Kafka (4)				</a>
+
+							</li>
+			
+					<li class="">
+				<a href="http://blog.cloudera.com/blog/category/kite-sdk/" title="Kite SDK (15)" class="">
+					Kite SDK (15)				</a>
+
+							</li>
+			
+					<li class="">
+				<a href="http://blog.cloudera.com/blog/category/mahout-2/" title="Mahout (5)" class="">
+					Mahout (5)				</a>
+
+							</li>
+			
+					<li class="">
+				<a href="http://blog.cloudera.com/blog/category/mapreduce/" title="MapReduce (72)" class="">
+					MapReduce (72)				</a>
+
+							</li>
+			
+					<li class="">
+				<a href="http://blog.cloudera.com/blog/category/meet-the-engineer/" title="Meet The Engineer (22)" class="">
+					Meet The Engineer (22)				</a>
+
+							</li>
+			
+					<li class="">
+				<a href="http://blog.cloudera.com/blog/category/oozie/" title="Oozie (26)" class="">
+					Oozie (26)				</a>
+
+							</li>
+			
+					<li class="">
+				<a href="http://blog.cloudera.com/blog/category/ops/" title="Ops And DevOps (22)" class="">
+					Ops And DevOps (22)				</a>
+
+							</li>
+			
+					<li class="">
+				<a href="http://blog.cloudera.com/blog/category/parquet-2/" title="Parquet (11)" class="">
+					Parquet (11)				</a>
+
+							</li>
+			
+					<li class="">
+				<a href="http://blog.cloudera.com/blog/category/pig/" title="Pig (36)" class="">
+					Pig (36)				</a>
+
+							</li>
+			
+					<li class="">
+				<a href="http://blog.cloudera.com/blog/category/project-rhino/" title="Project Rhino (3)" class="">
+					Project Rhino (3)				</a>
+
+							</li>
+			
+					<li class="">
+				<a href="http://blog.cloudera.com/blog/category/quickstart-vm/" title="QuickStart VM (5)" class="">
+					QuickStart VM (5)				</a>
+
+							</li>
+			
+					<li class="">
+				<a href="http://blog.cloudera.com/blog/category/search/" title="Search (23)" class="">
+					Search (23)				</a>
+
+							</li>
+			
+					<li class="">
+				<a href="http://blog.cloudera.com/blog/category/security-2/" title="Security (25)" class="">
+					Security (25)				</a>
+
+							</li>
+			
+					<li class="">
+				<a href="http://blog.cloudera.com/blog/category/spark/" title="Spark (23)" class="">
+					Spark (23)				</a>
+
+							</li>
+			
+					<li class="">
+				<a href="http://blog.cloudera.com/blog/category/sqoop/" title="Sqoop (21)" class="">
+					Sqoop (21)				</a>
+
+							</li>
+			
+					<li class="">
+				<a href="http://blog.cloudera.com/blog/category/support/" title="Support (5)" class="">
+					Support (5)				</a>
+
+							</li>
+			
+					<li class="">
+				<a href="http://blog.cloudera.com/blog/category/testing/" title="Testing (8)" class="">
+					Testing (8)				</a>
+
+							</li>
+			
+					<li class="">
+				<a href="http://blog.cloudera.com/blog/category/this-month-in-the-ecosystem/" title="This Month In The Ecosystem (13)" class="">
+					This Month In The Ecosystem (13)				</a>
+
+							</li>
+			
+					<li class="">
+				<a href="http://blog.cloudera.com/blog/category/tools/" title="Tools (8)" class="">
+					Tools (8)				</a>
+
+							</li>
+			
+					<li class="">
+				<a href="http://blog.cloudera.com/blog/category/training-2/" title="Training (45)" class="">
+					Training (45)				</a>
+
+							</li>
+			
+					<li class="">
+				<a href="http://blog.cloudera.com/blog/category/use-case/" title="Use Case (66)" class="">
+					Use Case (66)				</a>
+
+							</li>
+			
+					<li class="">
+				<a href="http://blog.cloudera.com/blog/category/whirr/" title="Whirr (6)" class="">
+					Whirr (6)				</a>
+
+							</li>
+			
+					<li class="">
+				<a href="http://blog.cloudera.com/blog/category/yarn/" title="YARN (15)" class="">
+					YARN (15)				</a>
+
+							</li>
+			
+					<li class="">
+				<a href="http://blog.cloudera.com/blog/category/zookeeper/" title="ZooKeeper (24)" class="">
+					ZooKeeper (24)				</a>
+
+							</li>
+			
+					<li class="">
+				<a href="http://blog.cloudera.com/archive/" title="Archives by Month" class="">
+					Archives by Month				</a>
+
+							</li>
+			
+							</ul>
+							</li>
+			
+						
+			    
+			
+				<div style="clear:both"></div>
+			</ul>
+			</nav>
+			<div class="menu-special">
+				<ul>
+							
+				
+				
+		
+				
+		
+				
+				
+				
+				
+
+		
+					</ul>
+			</div>
+			
+</aside>
+
+
+<section>
+			<h1 class="heading ">Guide to Using Apache HBase Ports</h1>
+			
+			<script type="text/javascript" src="./Guide to Using Apache HBase Ports_files/widgets.js"></script>
+			
+			<ul class="post-info">
+				<li>by <a href="http://blog.cloudera.com/blog/author/jxiang/" title="Posts by Jimmy Xiang" rel="author">Jimmy Xiang</a></li>
+				<li>July 17, 2013</li>
+				<li class="comment"><a href="http://blog.cloudera.com/blog/2013/07/guide-to-using-apache-hbase-ports/#comments">no comments</a></li>
+				
+			</ul>
+			
+			<div class="text-block">
+				<p>For those people new to <a href="http://hbase.apache.org/">Apache HBase</a>&nbsp;(version 0.90 and later), the configuration of network ports used by the system can be a little overwhelming.</p>
+<p>In this blog post, you will learn all the TCP ports used by the different HBase processes and how and why they are used (all in one place) — to help administrators troubleshoot and set up firewall settings, and help new developers how to debug.</p>
+<p>A typical HBase cluster has one active master, one or several backup masters, and a list of region servers. The backup masters are standby masters waiting to be the next active one. Before they are active, they do not listen on any ports. (Learn more about how HBase scalability works <a href="http://blog.cloudera.com/blog/2013/04/how-scaling-really-works-in-apache-hbase/">here</a>.)</p>
+<p>Each server in the cluster listens to a main port for requests from clients and/or other HBase servers. Each server also has an embedded Jetty web UI server.</p>
+<p>The following diagram shows the communication among different components. (Blue components belong to the HBase cluster, usually behind a firewall; grey components are external clients, usually outside the HBase cluster firewall; green component is a web browser, usually outside the firewall too.)</p>
+<p align="center"><img title="ports1" src="./Guide to Using Apache HBase Ports_files/ports1.png" alt="" width="600" height="405"></p>
+<ol>
+<li>Client applications talk to Apache ZooKeeper to find out the location of the master and the meta region server (the root region is removed in HBase version 0.96).</li>
+<li>Client applications talk to region servers to read from/write to/scan a table.</li>
+<li>Client applications talk to the master to get information about an existing table, dynamically create/remove a table, add/remove a column family.</li>
+<li>The master talks to region servers to open/close/move/split/flush/compact regions.</li>
+<li>The master puts data in ZooKeeper to store the active master and meta region server location, create log splitting tasks, track region servers’ statuses.</li>
+<li>Region servers read data in ZooKeeper to do log splitting, track the master location and the cluster status.</li>
+<li>Region servers talk to the master to report region server start-ups, loads.</li>
+<li>Occasionally, region servers talk to meta region to check the status of a region, create new daughter regions in region splitting.</li>
+<li>REST clients talk to REST servers to access HBase.</li>
+<li>Thrift clients talk to Thrift servers to access HBase.</li>
+<li>Users access the master web UI from browsers.</li>
+<li>Users access region servers’ web UI from browsers.</li>
+<li>Users access REST servers’ web UI from browsers.</li>
+<li>Users access Thrift servers’ web UI from browsers.</li>
+</ol>
+<p>Some HBase clusters may have a list of REST or Thrift servers. Both the REST server and the Thrift server are optional; they are needed only if you want to provide REST/Thrift access to your HBase cluster. To HBase, they are just other client applications. Just like other HBase servers, they also listen to a main port for client requests, and a web UI port.</p>
+<p>The following table shows the ports used by client applications to talk to an HBase cluster, users to check cluster information, and different HBase components to talk to each other.</p>
+<table width="500" border="1" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td style="font-family: Arial, Helvetica, sans-serif; font-size: 12px; text-align: center;" align="center" width="83"><strong>Component </strong></td>
+<td style="font-family: Arial, Helvetica, sans-serif; font-size: 12px;" width="210">
+<p align="center"><strong>Configuration parameter</strong></p>
+</td>
+<td style="font-family: Arial, Helvetica, sans-serif; font-size: 12px;" width="79">
+<p align="center"><strong>Default value</strong></p>
+</td>
+<td style="font-family: Arial, Helvetica, sans-serif; font-size: 12px;" width="118">
+<p align="center"><strong>Used places</strong></p>
+</td>
+</tr>
+<tr>
+<td style="font-family: Arial, Helvetica, sans-serif; font-size: 12px;">
+<p align="center">ZooKeeper</p>
+</td>
+<td style="font-family: Arial, Helvetica, sans-serif; font-size: 12px;">
+<p align="center"><code>hbase.zookeeper.property.clientPort</code></p>
+</td>
+<td style="font-family: Arial, Helvetica, sans-serif; font-size: 12px;">
+<p align="center">2181</p>
+</td>
+<td style="font-family: Arial, Helvetica, sans-serif; font-size: 12px;">
+<p align="center">1,5,6</p>
+</td>
+</tr>
+<tr>
+<td style="font-family: Arial, Helvetica, sans-serif; font-size: 12px;">
+<p align="center">Master</p>
+</td>
+<td style="font-family: Arial, Helvetica, sans-serif; font-size: 12px;">
+<p align="center"><code>hbase.master.port</code></p>
+</td>
+<td style="font-family: Arial, Helvetica, sans-serif; font-size: 12px;">
+<p align="center">60000</p>
+</td>
+<td style="font-family: Arial, Helvetica, sans-serif; font-size: 12px;">
+<p align="center">3,7</p>
+</td>
+</tr>
+<tr>
+<td style="font-family: Arial, Helvetica, sans-serif; font-size: 12px;">
+<p align="center">Master</p>
+</td>
+<td style="font-family: Arial, Helvetica, sans-serif; font-size: 12px;">
+<p align="center"><code>hbase.master.info.port</code></p>
+</td>
+<td style="font-family: Arial, Helvetica, sans-serif; font-size: 12px;">
+<p align="center">60010</p>
+</td>
+<td style="font-family: Arial, Helvetica, sans-serif; font-size: 12px;">
+<p align="center">11</p>
+</td>
+</tr>
+<tr>
+<td style="font-family: Arial, Helvetica, sans-serif; font-size: 12px;">
+<p align="center">Region server</p>
+</td>
+<td style="font-family: Arial, Helvetica, sans-serif; font-size: 12px;">
+<p align="center"><code>hbase.regionserver.port</code></p>
+</td>
+<td style="font-family: Arial, Helvetica, sans-serif; font-size: 12px;">
+<p align="center">60020</p>
+</td>
+<td style="font-family: Arial, Helvetica, sans-serif; font-size: 12px;">
+<p align="center">2,4,8</p>
+</td>
+</tr>
+<tr>
+<td style="font-family: Arial, Helvetica, sans-serif; font-size: 12px;">
+<p align="center">Region server</p>
+</td>
+<td style="font-family: Arial, Helvetica, sans-serif; font-size: 12px;">
+<p align="center"><code>hbase.regionserver.info.port</code></p>
+</td>
+<td style="font-family: Arial, Helvetica, sans-serif; font-size: 12px;">
+<p align="center">60030</p>
+</td>
+<td style="font-family: Arial, Helvetica, sans-serif; font-size: 12px;">
+<p align="center">12</p>
+</td>
+</tr>
+<tr>
+<td style="font-family: Arial, Helvetica, sans-serif; font-size: 12px;">
+<p align="center">REST server</p>
+</td>
+<td style="font-family: Arial, Helvetica, sans-serif; font-size: 12px;">
+<p align="center"><code>hbase.rest.port</code>**</p>
+</td>
+<td style="font-family: Arial, Helvetica, sans-serif; font-size: 12px;">
+<p align="center">8080</p>
+</td>
+<td style="font-family: Arial, Helvetica, sans-serif; font-size: 12px;">
+<p align="center">9</p>
+</td>
+</tr>
+<tr>
+<td style="font-family: Arial, Helvetica, sans-serif; font-size: 12px;">
+<p align="center">REST server</p>
+</td>
+<td style="font-family: Arial, Helvetica, sans-serif; font-size: 12px;">
+<p align="center"><code>hbase.rest.info.port</code>*</p>
+</td>
+<td style="font-family: Arial, Helvetica, sans-serif; font-size: 12px;">
+<p align="center">8085</p>
+</td>
+<td style="font-family: Arial, Helvetica, sans-serif; font-size: 12px;">
+<p align="center">13</p>
+</td>
+</tr>
+<tr>
+<td style="font-family: Arial, Helvetica, sans-serif; font-size: 12px;">
+<p align="center">Thrift server</p>
+</td>
+<td style="font-family: Arial, Helvetica, sans-serif; font-size: 12px;">
+<p align="center"><code>hbase.regionserver.thrift.port</code>**</p>
+</td>
+<td style="font-family: Arial, Helvetica, sans-serif; font-size: 12px;">
+<p align="center">9090</p>
+</td>
+<td style="font-family: Arial, Helvetica, sans-serif; font-size: 12px;">
+<p align="center">10</p>
+</td>
+</tr>
+<tr>
+<td style="font-family: Arial, Helvetica, sans-serif; font-size: 12px;">
+<p align="center">Thrift server</p>
+</td>
+<td style="font-family: Arial, Helvetica, sans-serif; font-size: 12px;">
+<p align="center"><code>hbase.thrift.info.port</code>*</p>
+</td>
+<td style="font-family: Arial, Helvetica, sans-serif; font-size: 12px;">
+<p align="center">9095</p>
+</td>
+<td style="font-family: Arial, Helvetica, sans-serif; font-size: 12px;">
+<p align="center">14</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>* Introduced in HBase version 0.94.5. They can also be specified with command line option <code>--infoport</code> when starting up the corresponding server.<br> ** They can also be specified with command line option <code>-p</code> when starting up the corresponding server.</p>
+<p>One port is not listed in the table — the HDFS namenode port – because here is not a separate parameter for it. It is configured as a part of “hbase.root” (for example, “hdfs://namenode.foobar.com:35802/hbase”) with the HDFS NameNode port configured to be 35802. Unless otherwise specified in the value of “hbase.root”, the default is 8020.</p>
+<p>Besides the main port, each server in the cluster (ZooKeeper excepted) also listens to a web UI port. A web UI is an embedded Jetty server in its corresponding server. The web UI provides human-readable information about the corresponding server — for example, the thread dump and local logs. The master web UI has links to all region server web UIs, which makes it the perfect entry point for checking the current status of an HBase cluster.</p>
+<p>The REST/Thrift servers are optional proxies to HBase. They talk to HBase the same way other HBase client applications do. However, they are usually deployed inside the HBase cluster, together with other HBase servers.</p>
+<p>Client applications are usually deployed out of the HBase cluster. REST/Thrift clients are deployed outside the cluster too. If the HBase cluster is behind a firewall, these corresponding ports should be open by default:</p>
+<p>To allow client application access:</p>
+<ul>
+<li>2181 (hbase.zookeeper.property.clientPort)</li>
+<li>60000 (hbase.master.port)</li>
+<li>60020 (hbase.regionserver.port)</li>
+</ul>
+<p>To allow REST/Thrift client access:</p>
+<ul>
+<li>8080 (hbase.rest.port)</li>
+<li>9090 (hbase.regionserver.thrift.port)</li>
+</ul>
+<p>If web UI access from out of firewall is allowed, the corresponding web UI ports should be open too:</p>
+<ul>
+<li>60010 (hbase.master.info.port)</li>
+<li>60030 (hbase.regionserver.info.port)</li>
+<li>8085 (hbase.rest.info.port)</li>
+<li>9095 (hbase.thrift.info.port)</li>
+</ul>
+<h2>Conclusion</h2>
+<p>In this post, you got a summary of the ports used by HBase internal components, client applications, and by users/administrators, organized by use case.&nbsp;</p>
+<p>However, because HBase runs on top of HDFS, it is also important to know HDFS ports. To run MapReduce with HBase, you need to know MapReduce ports too. For these Hadoop related ports, please refer to <a href="http://blog.cloudera.com/blog/2009/08/hadoop-default-ports-quick-reference/"><em>Hadoop Default Ports Quick Reference</em></a>.</p>
+<p><em>Jimmy Xiang is a Software Engineer on the Platform team.</em></p>
+<p>&gt; Have questions? Post them to the&nbsp;<a href="http://community.cloudera.com/t5/Realtime-Random-Access-Apache/bd-p/HBase">Community Forum for HBase</a>.</p>
+
+				<div class="social-buttons">
+<span class="st_facebook_large" displaytext="Facebook" st_processed="yes"><span style="text-decoration:none;color:#000000;display:inline-block;cursor:pointer;" class="stButton"><span class="stLarge" style="background-image: url(http://w.sharethis.com/images/facebook_32.png);"></span></span></span>
+<span class="st_twitter_large" displaytext="Tweet" st_processed="yes"><span style="text-decoration:none;color:#000000;display:inline-block;cursor:pointer;" class="stButton"><span class="stLarge" style="background-image: url(http://w.sharethis.com/images/twitter_32.png);"></span></span></span>
+<span class="st_linkedin_large" displaytext="LinkedIn" st_processed="yes"><span style="text-decoration:none;color:#000000;display:inline-block;cursor:pointer;" class="stButton"><span class="stLarge" style="background-image: url(http://w.sharethis.com/images/linkedin_32.png);"></span></span></span>
+<span class="st_googleplus_large" displaytext="Google +" st_processed="yes"><span style="text-decoration:none;color:#000000;display:inline-block;cursor:pointer;" class="stButton"><span class="stLarge" style="background-image: url(http://w.sharethis.com/images/googleplus_32.png);"></span></span></span>
+<span class="st_email_large" displaytext="Email" st_processed="yes"><span style="text-decoration:none;color:#000000;display:inline-block;cursor:pointer;" class="stButton"><span class="stLarge" style="background-image: url(http://w.sharethis.com/images/email_32.png);"></span></span></span>
+				</div>
+			</div>
+
+			<div class="grid_2" style="margin:0">
+  <div class="comments comments-2">
+    <div class="field-under">
+      <h4>Filed under:</h4>
+      <ul class="post-categories">
+	<li><a href="http://blog.cloudera.com/blog/category/hadoop/" title="View all posts in Hadoop" rel="category tag">Hadoop</a></li>
+	<li><a href="http://blog.cloudera.com/blog/category/hbase/" title="View all posts in HBase" rel="category tag">HBase</a></li></ul>  	</div>
+  	
+  <a name="comments"></a>
+  <div class="comments-head">
+    <strong>No Responses</strong>
+   
+  </div>
+  <ul class="comments-list">
+    </ul>
+  <a name="leave-comment"></a>
+  <form action="http://blog.cloudera.com/wp-comments-post.php" method="POST">
+  	<div class="comment-form">
+  		<h4>Leave a comment</h4>
+  		<div class="row">
+  			<input type="text" value="" class="txt" name="author">
+  			<label>Name <span>required</span></label>
+  		</div>
+  		<div class="row">
+  			<input type="text" value="" class="txt" name="email">
+  			<label class="published">Email <span>required</span> <em>(will not be published)</em></label>
+  		</div>
+  		<div class="row">
+  			<input type="text" value="" class="txt" name="url">
+  			<label>Website</label>
+  		</div>
+  		<div class="row">
+  			<textarea rows="10" cols="30" class="area" name="comment"></textarea>
+  			<label>Comment</label>
+  		</div>
+  		<fieldset>
+  			<input type="button" value="Leave Comment" class="btn cta">
+  		</fieldset>
+  	</div>
+  	<input type="hidden" name="comment_post_ID" value="22523" id="comment_post_ID">
+<input type="hidden" name="comment_parent" id="comment_parent" value="0">
+  	<p class="cptch_block"><label>Prove you're human!<span class="required"> *</span></label><br>		<input type="hidden" name="cptch_result" value="t8M=">
+		<input type="hidden" name="cptch_time" value="1415717154">
+		<input type="hidden" value="Version: 2.4">
+		4 + <input id="cptch_input" type="text" autocomplete="off" name="cptch_number" value="" maxlength="2" size="2" aria-required="true" required="required" style="margin-bottom:0;display:inline;font-size: 12px;width: 40px;"> =  five	</p>  </form>
+</div></div></section>
+
+
+
+
+<!-- Google Code for New Remarketing Pixel -->
+<!-- Remarketing tags may not be associated with personally identifiable information or placed on pages related to sensitive categories. For instructions on adding this tag and more information on the above requirements, read the setup guide: google.com/ads/remarketingsetup -->
+<script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 1035979479;
+var google_conversion_label = "xel9CJ-P0QMQ15X_7QM";
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Guide to Using Apache HBase Ports_files/conversion.js">
+</script><iframe name="google_conversion_frame" title="Google conversion frame" width="300" height="13" src="./Guide to Using Apache HBase Ports_files/saved_resource.html" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no">&lt;img height="1" width="1" border="0" alt="" src="http://googleads.g.doubleclick.net/pagead/viewthroughconversion/1035979479/?frame=0&amp;random=1415717172513&amp;cv=7&amp;fst=1415717172513&amp;num=1&amp;fmt=1&amp;label=xel9CJ-P0QMQ15X_7QM&amp;guid=ON&amp;u_h=768&amp;u_w=1280&amp;u_ah=720&amp;u_aw=1280&amp;u_cd=24&amp;u_his=5&amp;u_tz=0&amp;u_java=true&amp;u_nplug=25&amp;u_nmime=104&amp;frm=0&amp;url=http%3A//blog.cloudera.com/blog/2013/07/guide-to-using-apache-hbase-ports/&amp;ref=https%3A//www.google.ie/&amp;vis=1" /&gt;</iframe>
+
+<noscript>
+&lt;div style="display:inline;"&gt; &lt;img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/1035979479/?value=0&amp;label=xel9CJ-P0QMQ15X_7QM&amp;guid=ON&amp;script=0"/&gt; &lt;/div&gt;
+</noscript>
+</section>
+<span class="bg-fix"></span>
+</div>
+</div>
+<footer id="global-footer">
+<div class="footerContent parbase">
+<footer>
+  <div class="wrapper">
+    <div class="bg-fix"></div>
+    <nav>
+      <ul>
+        <li class="section"><a href="http://www.cloudera.com/content/cloudera/en/products-and-services.html">Products</a></li>
+        <li><a href="http://www.cloudera.com/content/cloudera/en/products/cloudera-enterprise.html">Cloudera Enterprise</a></li>
+        <li><a href="http://www.cloudera.com/content/cloudera/en/products-and-services/cloudera-express.html">Cloudera Express</a></li>
+        <li><a href="http://www.cloudera.com/content/cloudera/en/products-and-services/cloudera-enterprise/cloudera-manager.html">Cloudera Manager</a></li>
+        <li><a href="http://www.cloudera.com/content/cloudera/en/products-and-services/cdh.html">CDH</a></li>
+        <li><a href="http://www.cloudera.com/content/support/en/downloads.html">All Downloads</a></li>
+        <li><a href="http://www.cloudera.com/content/cloudera/en/products-and-services/professional-services.html">Professional Services</a></li>
+        <li><a href="http://www.cloudera.com/content/cloudera/en/training.html">Training</a></li>
+      </ul>
+      <ul>
+        <li class="section"><a href="http://www.cloudera.com/content/cloudera/en/solutions.html">Solutions</a></li>
+        <li><a href="http://www.cloudera.com/content/cloudera/en/solutions/enterprise-solutions.html">Enterprise Solutions</a></li>
+        <li><a href="http://www.cloudera.com/content/cloudera/en/solutions/partner.html">Partner Solutions</a></li>
+        <li><a href="http://www.cloudera.com/content/cloudera/en/solutions/industries.html">Industry Solutions</a></li>
+      </ul>
+      <ul>
+        <li class="section"><a href="http://www.cloudera.com/content/cloudera/en/partners.html">Partners</a></li>
+        <li class="section"><a href="http://www.cloudera.com/content/cloudera/en/resources/library.html">Resource Library</a></li>
+        <li class="section"><a href="https://ccp.cloudera.com/display/SUPPORT/Get+Support">Support</a></li>
+      </ul>
+      <ul>
+        <li class="section"><a href="http://www.cloudera.com/content/cloudera/en/about.html">About</a></li>
+        <li><a href="http://www.cloudera.com/content/cloudera/en/about/hadoop-and-big-data.html">Hadoop &amp; Big Data</a></li>
+        <li><a href="http://www.cloudera.com/content/cloudera/en/about/management.html">Management Team</a></li>
+        <li><a href="http://www.cloudera.com/content/cloudera/en/about/board.html">Board</a></li>
+        <li><a href="http://www.cloudera.com/content/cloudera/en/about/events.html">Events</a></li>
+        <li><a href="http://www.cloudera.com/content/cloudera/en/about/press-center.html">Press Center</a></li>
+        <li><a href="http://www.cloudera.com/content/cloudera/en/about/careers.html">Careers</a></li>
+        <li><a href="http://www.cloudera.com/content/cloudera/en/about/contact-form.html">Contact Us</a></li>
+        <li><a href="http://www.cloudera.com/content/cloudera/en/subscription-center.html">Subscription Center</a></li>
+      </ul>
+      <div class="locale-and-social" style="float:right">
+        <div>
+          <div class="locale-and-social">
+            <div class="locale">
+              <select onchange="this.options[this.selectedIndex].value &amp;&amp; (window.location = this.options[this.selectedIndex].value);" class="site-language">
+                <option value="http://www.cloudera.com" name="English">English</option>
+                <option value="http://www.cloudera.co.jp/">Japanese</option>
+              </select>
+            </div>
+            <div class="social"><span class="follow">Follow us:</span><span class="share">Share:<i class="icon-share"></i></span>
+              <ul>
+                <li><a class="linkedIn" target="_blank" href="http://www.linkedin.com/company/cloudera">LinkedIn</a></li>
+                <li><a class="twitter" target="_blank" href="http://twitter.com/cloudera">Twitter</a></li>
+                <li><a class="facebook" target="_blank" href="http://www.facebook.com/cloudera">Facebook</a></li>
+                <li><a class="youtube" target="_blank" href="http://www.youtube.com/user/clouderahadoop">YouTube</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <nav class="global-footer"><span class="logo"><a>Cloudera</a></span>
+      <address>
+      <span>Cloudera, Inc.</span> <span><a target="_blank" href="http://www.google.com/maps?q=1001+Page+Mill+Rd,+Palo+Alto,+CA+94306">1001 Page Mill Road Bldg 2</a></span> <span>Palo Alto, CA 94304</span>
+      </address>
+      <address>
+      <span><a href="http://www.cloudera.com/">www.cloudera.com</a></span> <span>US: 1-888-789-1488</span> <span>Intl: 1-650-362-0488</span>
+      </address>
+      <div class="copyright"><span><span class="piped">©2014 Cloudera, Inc. All rights reserved</span><span class="piped"><a href="http://www.cloudera.com/content/cloudera/en/terms-of-service.html">Terms &amp; Conditions</a></span><a href="http://www.cloudera.com/content/cloudera/en/privacy-policy.html">Privacy Policy</a></span> <span>Hadoop and the Hadoop elephant logo are trademarks of the <a target="_blank" href="http://www.apache.org/">Apache Software Foundation</a>.</span></div>
+    </nav>
+  </div>
+</footer>
+<script type="text/javascript" src="./Guide to Using Apache HBase Ports_files/prettify.js"></script>
+<script type="text/javascript" src="./Guide to Using Apache HBase Ports_files/launch.js"></script>
+<div class="modal" style="display:none">
+  <div id="password-required">
+    <div class="inner"> </div>
+  </div>
+</div>
+<div class="tooltip" style="display:none">
+</div>
+<script type="text/javascript" src="./Guide to Using Apache HBase Ports_files/2160.js"></script>
+<script type="text/javascript">var _kiq = _kiq || [];</script> 
+<script type="text/javascript" src="./Guide to Using Apache HBase Ports_files/2Sr.js" async=""></script>
+</div></footer><iframe id="stSegmentFrame" name="stSegmentFrame" src="./Guide to Using Apache HBase Ports_files/getSegment.html" frameborder="0" scrolling="no" width="0px" height="0px" style="display:none;"></iframe><div id="stwrapper" class="stwrapper stwrapper5x" style="display: none; z-index: 89999999;"><iframe allowtransparency="true" id="stLframe" class="stLframe stframe5x" name="stLframe" frameborder="0" scrolling="no" width="514px" height="419px" src="./Guide to Using Apache HBase Ports_files/index.cf3727cef3867c5556624d0554f110b8.html" style="top: 0px; left: 0px;"></iframe></div><div id="stOverlay" onclick="javascript:stWidget.closeWidget();" style="height: 100%; width: 100%; opacity: 0.6; position: fixed; display: none; left: 0px; top: 0px; z-index: 89999990; background-color: rgb(0, 0, 0);"></div></body></html>
